@@ -1,6 +1,7 @@
 node_modules/
 .blume/
 .wrangler/
+.serena/
 dist/
 reports/
 test-results/
@@ -8,3 +9,4 @@ playwright-report/
 .env*
 *.zip
 *.tar.gz
+CLAUDE.md
