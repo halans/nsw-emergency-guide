@@ -27,6 +27,12 @@ After installation with that override, npm reported **7 moderate findings, 0 hig
 - No quick-exit or browsing-history erasure claim.
 - No service worker caches an old warning feed; this site does not carry a feed.
 
+## Security headers and reporting
+
+`npm run build` runs `scripts/security-headers.mjs` after Blume. It appends a Content-Security-Policy and related headers (`X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy: no-referrer`, `Permissions-Policy`, `Cross-Origin-Opener-Policy`, `Strict-Transport-Security`) to Blume's generated `dist/_headers`, which Cloudflare Pages and Workers static assets read. It also adds `rel="noopener noreferrer"` to every external link. Script hashes in the CSP are computed from the built HTML. Styles allow `'unsafe-inline'` because pages use inline style attributes. `blume preview` does not apply `_headers`; verify with `npm run test:headers`, which serves `dist/` through `wrangler dev`. A `public/_headers` file would replace Blume's rather than merge with it, so don't add one. `poweredBy` is disabled.
+
+`public/.well-known/security.txt` points to the GitHub issues page for security reports and corrections. Its `Expires` date must be renewed before it passes (a content test fails after that), and must stay under a year away. GitHub private vulnerability reporting is not enabled on the repository; if you enable it, add its advisory URL as an extra `Contact:` line and prefer it for vulnerabilities.
+
 ## Hosting and deployment
 
 Use your own new Cloudflare destination, HTTPS, correct canonical origin and appropriate account permissions. CLI login/credentials remain on the user's own machine or in CI secrets, not in this repository. A Wrangler dry run was run; no real deployment was executed. Wrangler telemetry was disabled for the packaged deployment-check command.
