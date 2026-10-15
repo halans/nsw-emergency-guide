@@ -16,7 +16,7 @@ export default defineConfig({
   feedback: false,
   export: { pdf: true, epub: false },
   markdown: { externalLinks: false },
-  footer: { links: [{ label: 'Independent directory · not a live alert service', href: '/about' }, { label: 'Sources & review dates', href: '/sources' }] },
+  footer: { links: [{ label: 'Independent directory · not a live alert service', href: '/about' }, { label: 'Sources & review dates', href: '/sources' }, { label: 'Source code on GitHub', href: 'https://github.com/halans/nsw-emergency-guide' }] },
   agents: { catalog: false, skillMd: false, mcp: { enabled: false } },
   seo: { og: { enabled: false }, sitemap: Boolean(site), robots: true },
   deployment: site ? { site } : {},
