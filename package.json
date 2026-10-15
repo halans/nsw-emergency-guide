@@ -15,6 +15,7 @@
     "verify:files": "node scripts/checksums.mjs --verify",
     "checksums": "node scripts/checksums.mjs",
     "prebuild": "node scripts/generate-content.mjs",
+    "postbuild": "node scripts/security-headers.mjs",
     "content:check": "node scripts/generate-content.mjs --check",
     "deploy:check": "WRANGLER_SEND_METRICS=false wrangler deploy --dry-run --outdir reports/worker-dry-run"
   },

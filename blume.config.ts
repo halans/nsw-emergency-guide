@@ -6,6 +6,7 @@ const site = process.env.SITE_URL;
 if (site && !/^https:\/\/[^/]+\/?$/.test(site)) throw new Error('SITE_URL must be an HTTPS origin without a path.');
 export default defineConfig({
   title: 'Emergency Ready',
+  poweredBy: false,
   description: 'An independent guide to official Australian and NSW emergency contacts, warnings, preparation and recovery resources.',
   content: { root: 'docs' },
   theme: { accent: { light: '#075985', dark: '#7dd3fc' }, radius: 'md', mode: 'light', fonts: { display: localInter, body: localInter, mono: localInter } },
