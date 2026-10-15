@@ -1,0 +1,42 @@
+{
+  "name": "nsw-emergency-guide",
+  "version": "1.0.0",
+  "description": "Independent Australian and NSW emergency resource directory built with Blume",
+  "main": "index.js",
+  "scripts": {
+    "dev": "blume dev --host 0.0.0.0",
+    "build": "blume build",
+    "preview": "blume preview --host 0.0.0.0",
+    "doctor": "blume doctor",
+    "validate": "blume validate",
+    "test": "node --test tests/content.test.mjs",
+    "test:browser": "playwright test",
+    "check:links": "node scripts/check-links.mjs",
+    "verify:files": "node scripts/checksums.mjs --verify",
+    "checksums": "node scripts/checksums.mjs",
+    "prebuild": "node scripts/generate-content.mjs",
+    "content:check": "node scripts/generate-content.mjs --check",
+    "deploy:check": "WRANGLER_SEND_METRICS=false wrangler deploy --dry-run --outdir reports/worker-dry-run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "blume": "2.2.3"
+  },
+  "devDependencies": {
+    "@fontsource/inter": "5.3.0",
+    "@playwright/test": "1.64.0",
+    "wrangler": "4.150.0"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "overrides": {
+    "@vercel/routing-utils": {
+      "path-to-regexp": "6.3.0"
+    }
+  }
+}

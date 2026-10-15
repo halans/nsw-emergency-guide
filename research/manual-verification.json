@@ -1,0 +1,12 @@
+{
+  "reviewed": "2026-10-14",
+  "note": "Browser checks supplemented HTTP checks where server-to-server requests timed out. This record describes observed content, not current live warning status.",
+  "checks": [
+    {"url":"https://birdflu.gov.au/","method":"browser","resolvedUrl":"https://www.agriculture.gov.au/campaigns/birdflu","observed":"Australian Government H5 bird flu hub with local advice and reporting; 24-hour Emergency Animal Disease Hotline 1800 675 888; do not touch or closely approach sick or dead birds or other animals. Volatile event counts were deliberately not copied into the directory."},
+    {"url":"https://www.rfs.nsw.gov.au/","method":"browser","observed":"NSW RFS homepage links to Fires Near Me, fire danger ratings and total fire bans, major updates and bushfire survival planning. Exact linked URLs were read from the page."},
+    {"url":"https://www.myfireplan.com.au/","method":"Exa full page extraction","observed":"NSW RFS household bushfire planning tool; leaving early described as safest choice; advises not to wait for an official warning to decide when to leave."},
+    {"url":"https://www.hazardwatch.gov.au/","method":"Exa and HTTP","observed":"HazardWatch hazard-warning map. Its current displayed warnings were not copied or interpreted as a safety assessment."},
+    {"url":"https://www.accesshub.gov.au/about-the-nrs/how-to-make-an-emergency-call-using-the-nrs","method":"browser full main-content read","observed":"Detailed NRS emergency-call instructions for Chat, SMS Relay, Voice Relay, Captions and TTY. TTY instructions specify 106. Video Relay is not recommended because emergency calls cannot be prioritised and hours are limited."},
+    {"url":"https://www.triplezero.gov.au/","method":"browser","resolvedUrl":"https://www.infrastructure.gov.au/media-communications/phone/triple-zero","observed":"Official Triple Zero destination reached through the supplied short address. NSW Government emergency pages independently corroborate 000 for life-threatening emergencies."}
+  ]
+}

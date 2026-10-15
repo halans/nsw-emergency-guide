@@ -1,0 +1,10 @@
+node_modules/
+.blume/
+.wrangler/
+dist/
+reports/
+test-results/
+playwright-report/
+.env*
+*.zip
+*.tar.gz

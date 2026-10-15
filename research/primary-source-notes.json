@@ -1,0 +1,186 @@
+{
+  "title": "Australian national and NSW emergency resources — verified primary-source shortlist",
+  "research_note": "Directory-ready facts. Hours are included only where stated on the cited source. Re-check dynamic warning, evacuation-centre and disaster-assistance pages at point of publication/use.",
+  "global_safety_caveat": "For an immediate or life-threatening emergency, call Triple Zero (000). Do not use non-emergency, advice, recovery or web resources as a substitute for emergency response. Give the call-taker your exact location and follow emergency-service directions.",
+  "resources": [
+    {
+      "name": "Triple Zero (000)",
+      "jurisdiction": "Australia",
+      "phone": "000",
+      "scope": "Primary emergency number for Police, Fire or Ambulance; calls are free.",
+      "safety_caveat": "Use for emergencies only. A mobile cannot reach the Emergency Call Service where there is no coverage from any mobile network.",
+      "source_url": "https://www.triplezero.gov.au/"
+    },
+    {
+      "name": "Emergency Relay Service / National Relay Service (NRS)",
+      "jurisdiction": "Australia",
+      "phone": "106 (TTY/TDD emergency calls)",
+      "scope": "For people who are d/Deaf or have hearing/speech difficulty to contact Police, Fire or Ambulance through the NRS. NRS Chat, SMS Relay, NRS Captions, Voice Relay and TTY emergency calls receive queue priority.",
+      "hours": "NRS is available 24/7 except Video Relay; Video Relay hours are limited.",
+      "safety_caveat": "Video Relay is not recommended for emergency calls: it cannot be identified/prioritised as emergency and operates only limited hours. Internet/mobile-based relay may be less reliable than 106 and may not identify caller/location. For a TTY, dial 106 first.",
+      "source_url": "https://www.accesshub.gov.au/about-the-nrs/how-to-make-an-emergency-call-using-the-nrs"
+    },
+    {
+      "name": "NSW State Emergency Service (NSW SES)",
+      "jurisdiction": "NSW",
+      "phone": "132 500",
+      "scope": "Emergency assistance for flood, storm or tsunami, including storm/wind/fallen-tree damage. Requests are prioritised.",
+      "safety_caveat": "If anyone is trapped or injured, call 000. The online contact form is not monitored for storm/flood emergencies; call 132 500.",
+      "source_url": "https://www.ses.nsw.gov.au/contact-nsw-ses"
+    },
+    {
+      "name": "Police Assistance Line",
+      "jurisdiction": "NSW",
+      "phone": "131 444",
+      "scope": "Non-urgent police assistance, minor-crime reporting and general enquiries.",
+      "safety_caveat": "For emergencies or a crime in progress, call 000 instead.",
+      "source_url": "https://www.police.nsw.gov.au/contact_us_form"
+    },
+    {
+      "name": "Poisons Information Centre",
+      "jurisdiction": "Australia",
+      "phone": "13 11 26",
+      "scope": "Expert phone advice for suspected exposure to poisons, including medicines, chemicals, cleaning products, bites and stings.",
+      "hours": "24/7",
+      "safety_caveat": "Call promptly; do not wait for symptoms. If someone has stopped breathing or collapsed, call 000 for an ambulance.",
+      "source_url": "https://www.healthdirect.gov.au/poisoning"
+    },
+    {
+      "name": "healthdirect helpline",
+      "jurisdiction": "Australia",
+      "phone": "1800 022 222",
+      "scope": "Health advice from a registered nurse for any health concern.",
+      "hours": "24/7",
+      "safety_caveat": "For urgent medical help, call 000.",
+      "source_url": "https://www.healthdirect.gov.au/contact-us"
+    },
+    {
+      "name": "Lifeline crisis support",
+      "jurisdiction": "Australia",
+      "phone": "13 11 14",
+      "scope": "Confidential crisis support with a trained crisis supporter; text is also available at 0477 13 11 14.",
+      "hours": "24/7",
+      "safety_caveat": "If life is in danger, call 000.",
+      "source_url": "https://www.lifeline.org.au/131114"
+    },
+    {
+      "name": "1800RESPECT",
+      "jurisdiction": "Australia",
+      "phone": "1800 737 732",
+      "scope": "National counselling, information and support for people impacted by domestic, family or sexual violence. Text: 0458 737 732; online chat and video call are also offered.",
+      "hours": "24/7",
+      "safety_caveat": "If in immediate danger, call 000. Calls/texts may appear on a phone bill; consider safety when contacting the service.",
+      "source_url": "https://1800respect.org.au/calling-1800respect"
+    },
+    {
+      "name": "Kids Helpline",
+      "jurisdiction": "Australia",
+      "phone": "1800 551 800",
+      "scope": "Free, confidential phone and online-chat counselling for children and young people aged 5–25.",
+      "hours": "24/7",
+      "source_url": "https://www.lifeline.org.au/get-help/national-services/kids-helpline"
+    },
+    {
+      "name": "NSW Mental Health Line",
+      "jurisdiction": "NSW",
+      "phone": "1800 011 511",
+      "scope": "Free statewide advice, triage and connection to NSW Health mental health services; a trained professional completes a brief assessment and recommends appropriate care.",
+      "hours": "24/7",
+      "language_access": "For another language, call TIS National 131 450 and ask to be connected. Relay options are listed on the source page.",
+      "safety_caveat": "Not a one-off counselling service. If someone is in immediate danger, call 000 or attend an emergency department.",
+      "source_url": "https://www.health.nsw.gov.au/mentalhealth/Pages/mental-health-line.aspx"
+    },
+    {
+      "name": "Service NSW — emergencies and natural disasters",
+      "jurisdiction": "NSW",
+      "phone": "13 77 88",
+      "scope": "Disaster preparation/recovery information, personalised support pathways, relief/grants information and replacement-document help; includes support-hub information.",
+      "hours": "Monday–Friday, 7am–7pm Sydney time",
+      "safety_caveat": "In an emergency, call 000; for flood/storm/tsunami assistance, call NSW SES 132 500.",
+      "source_url": "https://www.service.nsw.gov.au/services/emergencies-and-natural-disasters"
+    },
+    {
+      "name": "Temporary and emergency housing / Link2Home",
+      "jurisdiction": "NSW",
+      "phone": "1800 152 152 (Link2Home); 13 77 88 (Service NSW disaster accommodation support)",
+      "scope": "Link2Home helps people who are homeless or at risk of homelessness. Service NSW/recovery centres can help disaster-affected residents access accommodation support.",
+      "hours": "Link2Home: 24/7",
+      "source_url": "https://www.nsw.gov.au/emergency/recovery/temporary-housing"
+    },
+    {
+      "name": "Legal Aid NSW — Disaster Response Legal Service",
+      "jurisdiction": "NSW",
+      "phone": "1800 801 529",
+      "scope": "Free legal help after bushfire, storm or flood: insurance claims/disputes, tenancy/housing, disaster grants, financial hardship, Centrelink, work rights and documents.",
+      "hours": "Monday–Friday, 9am–5pm",
+      "source_url": "https://www.legalaid.nsw.gov.au/my-problem-is-about/disasters/disaster-response-legal-service"
+    },
+    {
+      "name": "Bureau of Meteorology — NSW warnings summary",
+      "jurisdiction": "NSW",
+      "scope": "Official current NSW weather-warning summary; automatically refreshes when warnings are issued.",
+      "safety_caveat": "Read the linked warning in full and follow local emergency-service directions.",
+      "source_url": "https://www.bom.gov.au/nsw/warnings.shtml"
+    },
+    {
+      "name": "Bureau of Meteorology — national warning phone service",
+      "jurisdiction": "Australia",
+      "phone": "1300 659 210",
+      "scope": "Latest weather warnings by phone.",
+      "hours": "Available at any time",
+      "source_url": "https://www.bom.gov.au/resources/learn-and-explore/severe-weather-knowledge-centre/severe-weather-and-coastal-hazard-warning-services"
+    },
+    {
+      "name": "Live Traffic NSW",
+      "jurisdiction": "NSW",
+      "phone": "132 701",
+      "scope": "Transport for NSW official real-time road incidents, closures and changed conditions; a text-to-speech Traffic Info Line and operator assistance are available.",
+      "hours": "132 701: 24/7; Transport Management Centre publishes information 24/7",
+      "safety_caveat": "Always read individual incident advice/restrictions and do not drive into floodwater or a closed road.",
+      "source_url": "https://www.livetraffic.com/help"
+    },
+    {
+      "name": "NSW SES evacuation centres",
+      "jurisdiction": "NSW",
+      "scope": "Current evacuation-centre locations and opening hours; the page also gives evacuation guidance.",
+      "safety_caveat": "Centres open only during emergencies and status changes. Follow evacuation instructions immediately; check routes via Live Traffic. For fires, consult NSW RFS as directed by the page.",
+      "source_url": "https://www.ses.nsw.gov.au/during-an-emergency/evacuation-centres"
+    },
+    {
+      "name": "NSW SES accessibility resources",
+      "jurisdiction": "NSW",
+      "scope": "Flood/storm/tsunami planning resources for low/no hearing or vision, disability/mobility, intellectual disability, mental health conditions, carers and Easy Read; includes Auslan and NRS information.",
+      "safety_caveat": "Create a tailored plan and support network before an emergency; plan backup power/transport for life-sustaining and mobility equipment.",
+      "source_url": "https://www.ses.nsw.gov.au/accessibility-resources"
+    },
+    {
+      "name": "NSW SES — household pets emergency planning",
+      "jurisdiction": "NSW",
+      "scope": "Pet evacuation planning and a 3–7-day animal emergency-kit checklist.",
+      "safety_caveat": "Plan to take pets, but evacuation centres may not always be available or suitable for animals; arrange alternative safe options. Assistance animals have separate access guidance.",
+      "source_url": "https://www.ses.nsw.gov.au/plan-and-prepare/animal-safety/plan-for-your-household-pets"
+    },
+    {
+      "name": "NSW SES — assistance animals emergency planning",
+      "jurisdiction": "NSW",
+      "scope": "Planning guidance and kit checklist for assistance animals during evacuation.",
+      "safety_caveat": "The NSW SES page says people should not be denied transport or evacuation-centre access because of an assistance animal; plan travel and specific animal needs in advance.",
+      "source_url": "https://www.ses.nsw.gov.au/plan-and-prepare/animal-safety/plan-for-assistance-animals"
+    },
+    {
+      "name": "NSW Government — Get Ready Animals",
+      "jurisdiction": "NSW",
+      "scope": "Emergency planning for companion animals, larger pets, horses and livestock, including a Pet Ready Plan.",
+      "safety_caveat": "Never leave a pet behind; secure/transport it early. Not all evacuation centres allow pets, so plan alternatives.",
+      "source_url": "https://www.nsw.gov.au/emergency/get-ready/get-ready-animals"
+    },
+    {
+      "name": "Translating and Interpreting Service (TIS National) pathway for NSW mental-health support",
+      "jurisdiction": "NSW / Australia",
+      "phone": "131 450",
+      "scope": "Interpreter connection pathway: ask TIS to ring NSW Mental Health Line 1800 011 511.",
+      "safety_caveat": "For immediate danger, call 000 rather than waiting for a support connection.",
+      "source_url": "https://www.health.nsw.gov.au/mentalhealth/Pages/mental-health-line.aspx"
+    }
+  ]
+}

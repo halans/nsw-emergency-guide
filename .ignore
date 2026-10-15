@@ -1,0 +1,13 @@
+# Read by ripgrep, fd, ag and editors built on them (not by git).
+# This directory isn't a git repo, so rg skips .gitignore here; mirror it.
+node_modules/
+.blume/
+.wrangler/
+dist/
+test-results/
+playwright-report/
+
+# Generated / noisy
+package-lock.json
+SHA256SUMS.json
+.DS_Store
