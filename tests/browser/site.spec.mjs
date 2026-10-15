@@ -8,8 +8,8 @@ for(const route of routes)test(`readable page and no overflow ${route}`,async({p
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
   expect(errors).toEqual([]);
 });
-test('local search returns actual resource details',async({page})=>{
-  const remote=[];page.on('request',r=>{if(!r.url().startsWith('http://localhost:4321')&&!r.url().startsWith('data:'))remote.push(r.url())});
+test('local search returns actual resource details',async({page,baseURL})=>{
+  const remote=[];page.on('request',r=>{if(!r.url().startsWith(baseURL)&&!r.url().startsWith('data:'))remote.push(r.url())});
   await page.goto('/');await page.getByRole('button',{name:'Search',exact:true}).click();
   const input=page.getByRole('dialog').locator('input').first();await input.fill('Poisons');
   await expect(page.getByRole('dialog').getByText('Poisons',{exact:false}).first()).toBeVisible();

@@ -1,0 +1,6 @@
+# Emergency Ready is an independent directory, not an emergency service. For an emergency, call 000.
+# Report a security problem, or a wrong, missing or out-of-date contact or link, through the project's GitHub repository.
+# Do not post exploit details or personal information in a public issue: open an issue asking for a private route instead.
+Contact: https://github.com/halans/nsw-emergency-guide/issues
+Expires: 2027-04-16T00:00:00.000Z
+Preferred-Languages: en

@@ -7,6 +7,23 @@ import crypto from 'node:crypto';
 const dist = 'dist', file = path.join(dist, '_headers');
 const BEGIN = '# BEGIN security headers', END = '# END security headers';
 const html = dir => fs.readdirSync(dir, { withFileTypes: true }).flatMap(e => { const p = path.join(dir, e.name); return e.isDirectory() ? html(p) : p.endsWith('.html') ? [p] : []; });
+// Every external link gets rel="noopener noreferrer" (added to, or merged with, any existing rel). Links open in the same tab, so this
+// is belt and braces next to the Referrer-Policy header, but it also covers hosts that ignore _headers.
+export function addExternalRel() {
+  let changed = 0;
+  for (const f of html(dist)) {
+    const before = fs.readFileSync(f, 'utf8');
+    const after = before.replace(/<a\b[^>]*>/g, tag => {
+      if (!/\bhref="https?:\/\//.test(tag)) return tag;
+      const m = tag.match(/\brel="([^"]*)"/);
+      if (!m) return tag.replace(/^<a\b/, '<a rel="noopener noreferrer"');
+      const tokens = new Set(m[1].split(/\s+/).filter(Boolean)); tokens.add('noopener'); tokens.add('noreferrer');
+      return tag.replace(m[0], `rel="${[...tokens].join(' ')}"`);
+    });
+    if (after !== before) { fs.writeFileSync(f, after); changed++; }
+  }
+  return changed;
+}
 export function inlineScriptHashes() {
   const hashes = new Set();
   for (const f of html(dist)) for (const [, attrs, body] of fs.readFileSync(f, 'utf8').matchAll(/<script\b(?![^>]*\bsrc=)([^>]*)>([\s\S]*?)<\/script>/g)) {
@@ -40,6 +57,7 @@ export function securityBlock() {
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === path.resolve(import.meta.filename)) {
   if (!fs.existsSync(file)) throw new Error(`${file} not found; run the Blume build first.`);
+  console.log(`rel="noopener noreferrer" ensured on external links in ${addExternalRel()} HTML file(s).`);
   const base = fs.readFileSync(file, 'utf8').replace(new RegExp(`\\n*${BEGIN}[\\s\\S]*?${END}\\n*`), '\n').trimEnd();
   fs.writeFileSync(file, `${base}\n\n${securityBlock()}\n`);
   console.log(`Security headers appended to ${file} (${inlineScriptHashes().length} inline script hash(es)).`);

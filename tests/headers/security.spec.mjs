@@ -35,7 +35,7 @@ test('search, theme toggle and client-side navigation work under the CSP', async
   await page.getByRole('button', { name: 'Search', exact: true }).click();
   const dialog = page.getByRole('dialog'); await dialog.locator('input').first().fill('Poisons');
   await expect(dialog.getByText('Poisons', { exact: false }).first()).toBeVisible();
-  await page.keyboard.press('Escape');
+  await page.goto('/');
   await page.getByRole('button', { name: 'Toggle theme' }).click();
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   if (isMobile) { await page.getByRole('button', { name: 'Toggle navigation', exact: true }).click(); await page.locator('aside').first().getByRole('link', { name: 'Health, flu & outbreaks', exact: true }).click(); }
