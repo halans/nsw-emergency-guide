@@ -1,12 +1,12 @@
 # Emergency Ready
 
-A real **Blume 2.2.3** site: 32 Australian national and NSW resources across 12 pages, researched on 14 October 2026. Independent, unofficial, and not a live warning service.
+A **Blume 2.2.3** (AI ready) site: 32 Australian national and NSW resources across 12 pages, researched on 14 October 2026. Independent, unofficial, and not a live warning service.
 
 ## Deploy without a build
 
-Upload the contents of `dist/` to a new Cloudflare Pages Direct Upload project. The separate `emergency-ready-cloudflare-upload.zip` has exactly those files at its root and can be dragged into the dashboard. **Do not upload this source-project ZIP as the website.** See [DEPLOY.md](DEPLOY.md).
+Upload the contents of `dist/` to a new Cloudflare Pages Direct Upload project. **Do not upload this source-project ZIP as the website.** See [DEPLOY.md](DEPLOY.md).
 
-The portable prebuilt site deliberately has no fixed production canonical URL or sitemap. Configure `SITE_URL` to your own stable HTTPS origin and rebuild when you know the final domain. Do not invent a domain or use a per-deployment preview URL for production canonical metadata.
+Configure `SITE_URL` to your own stable HTTPS origin and rebuild when you know the final domain. Do not invent a domain or use a per-deployment preview URL for production canonical metadata.
 
 ## Build and preview
 
