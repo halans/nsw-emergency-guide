@@ -11,6 +11,7 @@
     "validate": "blume validate",
     "test": "node --test tests/content.test.mjs",
     "test:browser": "playwright test",
+    "test:headers": "playwright test -c playwright.headers.config.mjs",
     "check:links": "node scripts/check-links.mjs",
     "verify:files": "node scripts/checksums.mjs --verify",
     "checksums": "node scripts/checksums.mjs",
