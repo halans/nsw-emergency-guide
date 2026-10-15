@@ -15,7 +15,7 @@ See the files in `reports/`, captured from actual runs rather than illustrative 
 - `dependency-audit.json`: remaining dependency findings; see SECURITY.md.
 - Screenshots show the desktop home and fresh-loaded phone home. An early resize-transition screenshot was discarded rather than treated as the final phone view.
 
-The browser tests cover all 12 routes for overflow, h1 and emergency-banner visibility; actual search for a resource detail; phone drawer navigation; dark mode; no-JavaScript essential reading; and a 320px-wide viewport. They do not claim a full WCAG audit or testing on physical iOS/Safari devices.
+The browser tests cover all 13 routes for overflow, h1 and emergency-banner visibility; actual search for a resource detail; phone drawer navigation; dark mode; no-JavaScript essential reading; and a 320px-wide viewport. They do not claim a full WCAG audit or testing on physical iOS/Safari devices.
 
 ## Run checks
 

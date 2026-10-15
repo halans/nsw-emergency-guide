@@ -2,11 +2,47 @@
   "reviewed": "2026-10-14",
   "note": "Browser checks supplemented HTTP checks where server-to-server requests timed out. This record describes observed content, not current live warning status.",
   "checks": [
-    {"url":"https://birdflu.gov.au/","method":"browser","resolvedUrl":"https://www.agriculture.gov.au/campaigns/birdflu","observed":"Australian Government H5 bird flu hub with local advice and reporting; 24-hour Emergency Animal Disease Hotline 1800 675 888; do not touch or closely approach sick or dead birds or other animals. Volatile event counts were deliberately not copied into the directory."},
-    {"url":"https://www.rfs.nsw.gov.au/","method":"browser","observed":"NSW RFS homepage links to Fires Near Me, fire danger ratings and total fire bans, major updates and bushfire survival planning. Exact linked URLs were read from the page."},
-    {"url":"https://www.myfireplan.com.au/","method":"Exa full page extraction","observed":"NSW RFS household bushfire planning tool; leaving early described as safest choice; advises not to wait for an official warning to decide when to leave."},
-    {"url":"https://www.hazardwatch.gov.au/","method":"Exa and HTTP","observed":"HazardWatch hazard-warning map. Its current displayed warnings were not copied or interpreted as a safety assessment."},
-    {"url":"https://www.accesshub.gov.au/about-the-nrs/how-to-make-an-emergency-call-using-the-nrs","method":"browser full main-content read","observed":"Detailed NRS emergency-call instructions for Chat, SMS Relay, Voice Relay, Captions and TTY. TTY instructions specify 106. Video Relay is not recommended because emergency calls cannot be prioritised and hours are limited."},
-    {"url":"https://www.triplezero.gov.au/","method":"browser","resolvedUrl":"https://www.infrastructure.gov.au/media-communications/phone/triple-zero","observed":"Official Triple Zero destination reached through the supplied short address. NSW Government emergency pages independently corroborate 000 for life-threatening emergencies."}
+    {
+      "url": "https://birdflu.gov.au/",
+      "method": "browser",
+      "resolvedUrl": "https://www.agriculture.gov.au/campaigns/birdflu",
+      "observed": "Australian Government H5 bird flu hub with local advice and reporting; 24-hour Emergency Animal Disease Hotline 1800 675 888; do not touch or closely approach sick or dead birds or other animals. Volatile event counts were deliberately not copied into the directory."
+    },
+    {
+      "url": "https://www.rfs.nsw.gov.au/",
+      "method": "browser",
+      "observed": "NSW RFS homepage links to Fires Near Me, fire danger ratings and total fire bans, major updates and bushfire survival planning. Exact linked URLs were read from the page."
+    },
+    {
+      "url": "https://www.myfireplan.com.au/",
+      "method": "Exa full page extraction",
+      "observed": "NSW RFS household bushfire planning tool; leaving early described as safest choice; advises not to wait for an official warning to decide when to leave."
+    },
+    {
+      "url": "https://www.hazardwatch.gov.au/",
+      "method": "Exa and HTTP",
+      "observed": "HazardWatch hazard-warning map. Its current displayed warnings were not copied or interpreted as a safety assessment."
+    },
+    {
+      "url": "https://www.accesshub.gov.au/about-the-nrs/how-to-make-an-emergency-call-using-the-nrs",
+      "method": "browser full main-content read",
+      "observed": "Detailed NRS emergency-call instructions for Chat, SMS Relay, Voice Relay, Captions and TTY. TTY instructions specify 106. Video Relay is not recommended because emergency calls cannot be prioritised and hours are limited."
+    },
+    {
+      "url": "https://www.triplezero.gov.au/",
+      "method": "browser",
+      "resolvedUrl": "https://www.infrastructure.gov.au/media-communications/phone/triple-zero",
+      "observed": "Official Triple Zero destination reached through the supplied short address. NSW Government emergency pages independently corroborate 000 for life-threatening emergencies."
+    },
+    {
+      "url": "https://www.health.gov.au/topics/covid-19",
+      "method": "http",
+      "observed": "2026-10-16: fetch timed out twice; not content-verified. Search results describe COVID-19 as managed like other communicable diseases since the Chief Medical Officer ended the emergency determination on 20 October 2023."
+    },
+    {
+      "url": "1800 020 080 (National Coronavirus Helpline)",
+      "method": "secondary sources",
+      "observed": "2026-10-16: Not in service. AMA services communication kit (Nov 2023) said the helpline and Easy Vaccine Access would close after 4 December 2023; Brisbane South PHN (updated 24 January 2024) and NSW Far West LHD confirm it is no longer in service. No health.gov.au notice was found, so this rests on secondary sources. The number is deliberately excluded from the directory, and the health page warns that it still appears on older material."
+    }
   ]
 }

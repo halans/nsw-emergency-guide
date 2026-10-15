@@ -181,6 +181,64 @@
       "scope": "Interpreter connection pathway: ask TIS to ring NSW Mental Health Line 1800 011 511.",
       "safety_caveat": "For immediate danger, call 000 rather than waiting for a support connection.",
       "source_url": "https://www.health.nsw.gov.au/mentalhealth/Pages/mental-health-line.aspx"
+    },
+    {
+      "name": "NSW Health — respiratory illness (flu, COVID-19 and RSV)",
+      "jurisdiction": "NSW",
+      "scope": "Vaccination, stay-home, mask and testing advice; links to weekly respiratory surveillance reports. No symptom triage or phone numbers on the page.",
+      "safety_caveat": "For urgent medical help, call 000.",
+      "source_url": "https://health.nsw.gov.au/Infectious/respiratory",
+      "verification": "Page fetched 2026-10-16; page footer read \"Current as at: Thursday 6 August 2026\"."
+    },
+    {
+      "name": "healthdirect — COVID-19",
+      "jurisdiction": "Australia",
+      "scope": "COVID-19 vaccination, testing and symptoms guide.",
+      "safety_caveat": "For urgent medical help, call 000.",
+      "source_url": "https://www.healthdirect.gov.au/covid-19",
+      "verification": "Page fetched 2026-10-16 but only the title text (\"COVID-19 — vaccination, testing, symptoms | healthdirect\") was returned; body content not read."
+    },
+    {
+      "name": "Australian Government — influenza (flu) vaccine",
+      "jurisdiction": "Australia",
+      "scope": "Yearly flu vaccination recommendation and National Immunisation Program free-vaccine groups.",
+      "safety_caveat": "For urgent medical help, call 000.",
+      "source_url": "https://www.health.gov.au/topics/immunisation/vaccines/influenza-flu-vaccine",
+      "verification": "URL and content taken from a 2026-10-16 web-search result; direct page fetch timed out. Needs manual review."
+    },
+    {
+      "name": "Australian Government — COVID-19 vaccine",
+      "jurisdiction": "Australia",
+      "scope": "COVID-19 vaccine information and free-vaccine eligibility under the National Immunisation Program.",
+      "safety_caveat": "For urgent medical help, call 000.",
+      "source_url": "https://www.health.gov.au/topics/immunisation/vaccines/covid-19-vaccine",
+      "verification": "URL and content taken from a 2026-10-16 web-search result (page listed as last updated 1 October 2026); direct page fetch timed out. Needs manual review."
+    },
+    {
+      "name": "NSW Health — immunisation programs",
+      "jurisdiction": "NSW",
+      "scope": "Index of vaccination information by age and situation, including flu, RSV, COVID-19 and travel vaccines. No phone numbers on the page.",
+      "safety_caveat": "For urgent medical help, call 000.",
+      "source_url": "https://www.health.nsw.gov.au/immunisation/Pages/default.aspx",
+      "verification": "Page fetched 2026-10-16."
+    },
+    {
+      "name": "NSW Health — infectious diseases",
+      "jurisdiction": "NSW",
+      "phone": "1300 066 055",
+      "scope": "Fact sheets, A–Z of diseases, weekly respiratory update, outbreak alerts; page text says to call 1300 066 055 to be connected to your local Public Health Unit.",
+      "safety_caveat": "For urgent medical help, call 000.",
+      "source_url": "https://www.health.nsw.gov.au/Infectious/Pages/default.aspx",
+      "verification": "Page fetched 2026-10-16; footer read \"Current as at: Tuesday 4 November 2025\"."
+    },
+    {
+      "name": "NSW Public Health Units",
+      "jurisdiction": "NSW",
+      "phone": "1300 066 055",
+      "scope": "Connects automatically to the local Public Health Unit. Page does not state hours, or whether the line is for the public or clinicians.",
+      "safety_caveat": "For urgent medical help, call 000. Not an emergency or clinical advice line.",
+      "source_url": "https://www.health.nsw.gov.au/Infectious/Pages/phus.aspx",
+      "verification": "Page fetched 2026-10-16."
     }
   ]
 }

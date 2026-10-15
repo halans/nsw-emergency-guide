@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-const routes=['/','/urgent-help','/warnings','/bushfire','/bird-flu','/prepare','/accessible-help','/animals','/crisis-support','/recovery','/sources','/about'];
+const routes=['/','/urgent-help','/warnings','/bushfire','/bird-flu','/health','/prepare','/accessible-help','/animals','/crisis-support','/recovery','/sources','/about'];
 for(const route of routes)test(`readable page and no overflow ${route}`,async({page})=>{
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   const response=await page.goto(route);expect(response.status()).toBe(200);

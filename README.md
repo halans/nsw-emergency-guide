@@ -1,6 +1,6 @@
 # Emergency Ready
 
-A **Blume 2.2.3** (AI ready) site: 32 Australian national and NSW resources across 12 pages, researched on 14 October 2026. Independent, unofficial, and not a live warning service.
+A **Blume 2.2.3** (AI ready) site: 39 Australian national and NSW resources across 13 pages, researched on 14 October 2026 (health and outbreaks resources added 16 October 2026). Independent, unofficial, and not a live warning service.
 
 ## Deploy without a build
 
@@ -35,7 +35,7 @@ Open the local URL printed by the preview command. Local browser testing is docu
 
 ## Coverage
 
-Urgent contacts; official weather/hazard/fire/road links; NSW RFS and MyFirePlan; birdflu.gov.au and animal-disease reporting; mental-health/violence/youth support; household and animal preparation; accessible/relay/language resources; housing, recovery and legal assistance.
+Urgent contacts; official weather/hazard/fire/road links; NSW RFS and MyFirePlan; birdflu.gov.au and animal-disease reporting; mental-health/violence/youth support; health, flu, COVID-19 and vaccination information; household and animal preparation; accessible/relay/language resources; housing, recovery and legal assistance.
 
 ## Safety and privacy
 
