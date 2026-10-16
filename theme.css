@@ -33,4 +33,4 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
 [data-theme='dark'] .urgent-box { background: #330e15; border-color: #fda4af; }
 [data-theme='dark'] .urgent-box a,[data-theme='dark'] .urgent-box strong { color: #fecdd3; }
 @media(max-width: 480px) { .quick-grid { grid-template-columns: 1fr; } .resource-card { padding: 1rem; } .resource-meta { flex-wrap: wrap; } .quick-grid a { min-height: 100px; } }
-@media print { .resource-card { border: 1px solid #777; } .source-link::after { content: ' (' attr(href) ')'; font-size: .75rem; overflow-wrap: anywhere; } .resource-meta { color: #333; } }
+@media print { h1,h2,h3,h4 { break-after: avoid; } .resource-card { border: 1px solid #777; break-inside: avoid; } .source-link { display: block; min-height: 0; } .source-link::after { content: ' (' attr(href) ')'; font-size: .75rem; overflow-wrap: anywhere; } .phone-link { min-height: 0; padding: .2rem 0; } .resource-meta { color: #333; } }

@@ -43,3 +43,12 @@ test('small phone has no clipping and visible call action',async({page})=>{
   expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
   await expect(page.locator('.urgent-box a[href="tel:000"]')).toBeVisible();
 });
+test('print layout keeps headings with their content and source links on one line flow',async({page})=>{
+  await page.goto('/urgent-help');await page.emulateMedia({media:'print'});
+  const s=await page.evaluate(()=>{
+    const cs=sel=>getComputedStyle(document.querySelector(sel));
+    return {h2:cs('#blume-content h2').breakAfter,h3:cs('.resource-card h3').breakAfter,link:cs('.source-link').display,card:cs('.resource-card').breakInside};
+  });
+  expect(s.h2).toBe('avoid');expect(s.h3).toBe('avoid');
+  expect(s.link).not.toMatch(/flex/);expect(s.card).toBe('avoid');
+});
