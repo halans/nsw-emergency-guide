@@ -168,7 +168,7 @@
   "playwright.headers.config.mjs": "7a116c44d5d9629f7d4cba0b7e83932e2465f0f0f70e37667892ae5d2193aa3a",
   "public/.well-known/security.txt": "b00cdb30a23cda484f2a8314d56c4555eed8d65f294ba626e92a9c569f924743",
   "public/resources.json": "39c64d1bab05213eae8ea7957a95188926b06c368cb2fbf852f09dbc8a9590ab",
-  "reports/browser-results.json": "f6331af1add9e810e4fd19cc5ebd672811ee117c1020d82ab890572db2a2bf26",
+  "reports/browser-results.json": "53a1df3b0d47bdcc3cab589cfbc6003b9cae63a628edf2517a37401d22c59108",
   "reports/browser-tests.txt": "0d0c08006f9fa0180598d637f07e84d4bc48bcf3ce4ce62ea0ebd737a1999a84",
   "reports/build.txt": "4c09ddcc01aa07eae975a1510c83e377a6ab9eeafe235b84874f120857e64e2b",
   "reports/cloudflare-dry-run.txt": "bd4c4adcc358adec8ec30b8a54835aab9ccc5faabe432679cea29f77fb84a2f3",
