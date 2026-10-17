@@ -1,0 +1,13 @@
+{
+  "phones": {
+    "nt-ses": "132 500",
+    "nt-fire": "08 8999 3473",
+    "nt-police": "131 444"
+  },
+  "requiredUrls": [
+    "https://pfes.nt.gov.au/nt-emergency-service-general-enquiries",
+    "https://pfes.nt.gov.au/fire-and-rescue-service",
+    "https://pfes.nt.gov.au/fire-and-rescue-service/fire-incident-map",
+    "https://pfes.nt.gov.au/online-services/police-contacts"
+  ]
+}

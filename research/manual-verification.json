@@ -181,6 +181,36 @@
       "method": "manual review needed",
       "state": "ACT",
       "observed": "Weak fit for the health role: no dedicated public-facing ACT infectious-diseases or public health page with contact details was found. The diseases index carries a health-professionals disclaimer. Look for a better page."
+    },
+    {
+      "url": "https://securent.nt.gov.au/alerts",
+      "method": "manual review needed",
+      "state": "NT",
+      "observed": "Warnings only partly covered: the all-hazards NT warnings site appears to be SecureNT, which returned 403 to automated requests, so it was not opened. The warnings record is the fire-focused NTFRS Fire Incident Map. Check SecureNT before adding it."
+    },
+    {
+      "url": "https://health.nt.gov.au/",
+      "method": "manual review needed",
+      "state": "NT",
+      "observed": "Health role not covered: health.nt.gov.au returned 403 to automated requests; no infectious diseases or public health page was opened."
+    },
+    {
+      "url": "https://nt.gov.au/wellbeing/mental-health/24-hour-mental-health-hotlines",
+      "method": "manual review needed",
+      "state": "NT",
+      "observed": "Mental health role not covered: nt.gov.au returned 403, so no NT mental health line, number or hours were confirmed on an opened official page."
+    },
+    {
+      "url": "https://nt.gov.au/emergency",
+      "method": "manual review needed",
+      "state": "NT",
+      "observed": "Recovery role not covered: nt.gov.au and securent.nt.gov.au returned 403 and no NT recovery page was opened. Terms for health, mental health and recovery are neutral placeholders."
+    },
+    {
+      "url": "https://nt.gov.au/emergency/bushfire/managing/bushfires-nt",
+      "method": "manual review needed",
+      "state": "NT",
+      "observed": "Bushfires NT (rural bushfire body) returned 403, so the fire role is filled by NTFRS only. A manual check could add a separate Bushfires NT record."
     }
   ]
 }

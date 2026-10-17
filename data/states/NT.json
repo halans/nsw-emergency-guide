@@ -1,0 +1,80 @@
+{
+  "name": "NT",
+  "longName": "Northern Territory",
+  "terms": {
+    "ses": "NTES",
+    "fire": "NTFRS",
+    "warnings": "NTFRS Fire Incident Map",
+    "police": "NT Police Force",
+    "health": "NT Government health authorities",
+    "mentalHealth": "NT Government mental health services",
+    "recovery": "NT Government recovery services"
+  },
+  "missingRoles": [
+    "health",
+    "mentalHealth",
+    "recovery"
+  ],
+  "resources": [
+    {
+      "id": "nt-ses",
+      "category": "urgent",
+      "name": "NT Emergency Service (NTES)",
+      "jurisdiction": "NT",
+      "roles": [
+        "ses"
+      ],
+      "url": "https://pfes.nt.gov.au/nt-emergency-service-general-enquiries",
+      "summary": "Help from the NT Emergency Service during floods, storms or cyclones, plus headquarters contacts and an email address for general enquiries. NTES is part of NT Police, Fire and Emergency Services.",
+      "reviewed": "2026-10-18",
+      "phone": "132 500",
+      "phoneLabel": "132 500 — NTES (floods, storms, cyclones)",
+      "caution": "The official page says to save 000 for other emergencies. Headquarters numbers (Northern 08 8922 3630, Southern 08 8951 9300) are listed under business hours, not for emergencies."
+    },
+    {
+      "id": "nt-fire",
+      "category": "fire",
+      "name": "NT Fire and Rescue Service (NTFRS)",
+      "jurisdiction": "NT",
+      "roles": [
+        "fire"
+      ],
+      "url": "https://pfes.nt.gov.au/fire-and-rescue-service",
+      "summary": "NT Fire and Rescue Service responds to fires, road crash rescues and hazardous materials incidents. The site has bushfire safety guidance, permits to burn, fire station profiles and a fire incident map.",
+      "reviewed": "2026-10-18",
+      "phone": "08 8999 3473",
+      "phoneLabel": "08 8999 3473 — NTFRS (non-emergency)",
+      "hours": "24 hours (listed under 24 hour assistance lines for non-emergencies)",
+      "caution": "This number is for non-emergency fire assistance only. In an emergency always dial 000."
+    },
+    {
+      "id": "nt-fire-incident-map",
+      "category": "warnings",
+      "name": "NTFRS Fire Incident Map",
+      "jurisdiction": "NT",
+      "roles": [
+        "warnings"
+      ],
+      "url": "https://pfes.nt.gov.au/fire-and-rescue-service/fire-incident-map",
+      "summary": "Interactive map of NT Fire and Rescue Service incidents and bushfire warning levels, published by NT Police, Fire and Emergency Services.",
+      "reviewed": "2026-10-18",
+      "caution": "Partial coverage only: this is a fire-focused incident map, not an all-hazards warnings site, and it is not real time (the page says it updates roughly every 10 to 15 minutes and advises using more than one source). It does not cover flood, storm or cyclone warnings. In an emergency call 000."
+    },
+    {
+      "id": "nt-police",
+      "category": "urgent",
+      "name": "NT Police Force: police contacts",
+      "jurisdiction": "NT",
+      "roles": [
+        "police"
+      ],
+      "url": "https://pfes.nt.gov.au/online-services/police-contacts",
+      "summary": "Police assistance where there is no immediate danger, with local station numbers and other police contacts.",
+      "reviewed": "2026-10-18",
+      "phone": "131 444",
+      "phoneLabel": "131 444 — NT Police (non-emergency)",
+      "hours": "24 hours (listed under 24 hour assistance lines for non-emergencies)",
+      "caution": "For non-emergencies only. In an emergency or life-threatening situation call 000."
+    }
+  ]
+}
