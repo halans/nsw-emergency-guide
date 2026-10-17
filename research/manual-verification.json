@@ -72,7 +72,7 @@
       "url": "https://www.police.qld.gov.au/policelink-reporting",
       "method": "manual review needed",
       "state": "QLD",
-      "observed": "Police assistance number conflict: qld.gov.au police page gives Policelink 131 444 (24 hours, 7 days) and the record uses it; the getready.qld.gov.au emergency contacts page lists Policelink general enquiries as 13 14 44, which conflicts. police.qld.gov.au returned empty to automated requests (bot protection). Check the police site and report the discrepancy."
+      "observed": "Police assistance number: the qld.gov.au police page gives Policelink 131 444 (24 hours, 7 days) and the record uses it. The getready.qld.gov.au emergency contacts page prints Policelink general enquiries as 13 14 44: the same digits (131444) with different spacing, not a different number (corrected 2026-10-18; earlier notes called this a conflict). police.qld.gov.au returned empty to automated requests (bot protection), so the police site itself was not opened."
     },
     {
       "url": "https://www.fire.qld.gov.au/",
@@ -114,25 +114,29 @@
       "url": "https://www.police.sa.gov.au/about-us/key-contacts",
       "method": "manual review needed",
       "state": "SA",
-      "observed": "Police role not covered: police.sa.gov.au (key contacts, contact us, make a report to police) returned 403, so the non-urgent police number could not be confirmed on an opened official page. Alternative lead: https://www.police.sa.gov.au/services-and-events/make-a-report-to-police"
+      "observed": "Police role not covered: police.sa.gov.au (key contacts, contact us, make a report to police) returned 403, so the non-urgent police number could not be confirmed on an opened official page. Alternative lead: https://www.police.sa.gov.au/services-and-events/make-a-report-to-police",
+      "role": "police"
     },
     {
       "url": "https://www.sahealth.sa.gov.au/",
       "method": "manual review needed",
       "state": "SA",
-      "observed": "Health role not covered: sahealth.sa.gov.au (notifiable conditions, Communicable Disease Control Branch, home) returned 403 on every page tried; a related mirror had an expired certificate."
+      "observed": "Health role not covered: sahealth.sa.gov.au (notifiable conditions, Communicable Disease Control Branch, home) returned 403 on every page tried; a related mirror had an expired certificate.",
+      "role": "health"
     },
     {
       "url": "https://www.sahealth.sa.gov.au/",
       "method": "manual review needed",
       "state": "SA",
-      "observed": "Mental health role not covered: SA Health pages (including its mental health help page) returned 403 or a certificate error, so no crisis or triage service, number or hours were confirmed on an opened official page."
+      "observed": "Mental health role not covered: SA Health pages (including its mental health help page) returned 403 or a certificate error, so no crisis or triage service, number or hours were confirmed on an opened official page.",
+      "role": "mentalHealth"
     },
     {
       "url": "https://www.recovery.sa.gov.au/",
       "method": "manual review needed",
       "state": "SA",
-      "observed": "Recovery role not covered: recovery.sa.gov.au, dhs.sa.gov.au and housing.sa.gov.au returned 403 or a certificate error. Which agency now leads state recovery information is unconfirmed."
+      "observed": "Recovery role not covered: recovery.sa.gov.au, dhs.sa.gov.au and housing.sa.gov.au returned 403 or a certificate error. Which agency now leads state recovery information is unconfirmed.",
+      "role": "recovery"
     },
     {
       "url": "https://www.mfs.sa.gov.au/",
@@ -150,13 +154,15 @@
       "url": "https://www.health.tas.gov.au/health-topics/infectious-diseases",
       "method": "manual review needed",
       "state": "TAS",
-      "observed": "Health role not covered: the Department of Health site (health.tas.gov.au) returned 403 to every automated request, so no infectious diseases or public health page was opened. Search results suggested this page and a public health hotline, but neither was verified."
+      "observed": "Health role not covered: the Department of Health site (health.tas.gov.au) returned 403 to every automated request, so no infectious diseases or public health page was opened. Search results suggested this page and a public health hotline, but neither was verified.",
+      "role": "health"
     },
     {
       "url": "https://www.health.tas.gov.au/health-topics/mental-health/tasmanias-mental-health-system/access-mental-health",
       "method": "manual review needed",
       "state": "TAS",
-      "observed": "Mental health role not covered: Access Mental Health pages on health.tas.gov.au and cbos.tas.gov.au returned 403. Search results described a 24/7 line run with Lifeline Tasmania, but older sources give different hours and one summary showed a possible typo variant of the number, so the number and hours need manual confirmation on an official page."
+      "observed": "Mental health role not covered: Access Mental Health pages on health.tas.gov.au and cbos.tas.gov.au returned 403. Search results described a 24/7 line run with Lifeline Tasmania, but older sources give different hours and one summary showed a possible typo variant of the number, so the number and hours need manual confirmation on an official page.",
+      "role": "mentalHealth"
     },
     {
       "url": "https://www.police.tas.gov.au/contact-us/",
@@ -192,25 +198,33 @@
       "url": "https://health.nt.gov.au/",
       "method": "manual review needed",
       "state": "NT",
-      "observed": "Health role not covered: health.nt.gov.au returned 403 to automated requests; no infectious diseases or public health page was opened."
+      "observed": "Health role not covered: health.nt.gov.au returned 403 to automated requests; no infectious diseases or public health page was opened.",
+      "role": "health"
     },
     {
       "url": "https://nt.gov.au/wellbeing/mental-health/24-hour-mental-health-hotlines",
       "method": "manual review needed",
       "state": "NT",
-      "observed": "Mental health role not covered: nt.gov.au returned 403, so no NT mental health line, number or hours were confirmed on an opened official page."
+      "observed": "Mental health role not covered: nt.gov.au returned 403, so no NT mental health line, number or hours were confirmed on an opened official page.",
+      "role": "mentalHealth"
     },
     {
       "url": "https://nt.gov.au/emergency",
       "method": "manual review needed",
       "state": "NT",
-      "observed": "Recovery role not covered: nt.gov.au and securent.nt.gov.au returned 403 and no NT recovery page was opened. Terms for health, mental health and recovery are neutral placeholders."
+      "observed": "Recovery role not covered: nt.gov.au and securent.nt.gov.au returned 403 and no NT recovery page was opened. Terms for health, mental health and recovery are neutral placeholders.",
+      "role": "recovery"
     },
     {
       "url": "https://nt.gov.au/emergency/bushfire/managing/bushfires-nt",
       "method": "manual review needed",
       "state": "NT",
       "observed": "Bushfires NT (rural bushfire body) returned 403, so the fire role is filled by NTFRS only. A manual check could add a separate Bushfires NT record."
+    },
+    {
+      "url": "https://www.tisnational.gov.au/en/Non-English-speakers/Interpreting-services",
+      "method": "WebFetch full page (2026-10-18)",
+      "observed": "TIS National \"Interpreting services\" page (Department of Home Affairs; home page names \"The Translating and Interpreting Service (TIS National)\"). States: \"TIS National's immediate phone interpreting service is available 24 hours a day, every day of the year by calling 131 450.\" Steps: call 131 450, state the language, the operator finds an interpreter and connects you to the organisation requested. \"The majority of TIS National interpreting services are free to non-English speakers.\" Mobile calls may attract a higher rate. No statement about emergencies or Triple Zero. Used for the national tis-national record."
     }
   ]
 }

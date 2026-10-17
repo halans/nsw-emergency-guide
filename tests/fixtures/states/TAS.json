@@ -10,5 +10,9 @@
     "https://alert.tas.gov.au/",
     "https://www.police.tas.gov.au/contact-us/",
     "https://alert.tas.gov.au/recovery/"
+  ],
+  "missingRoles": [
+    "health",
+    "mentalHealth"
   ]
 }

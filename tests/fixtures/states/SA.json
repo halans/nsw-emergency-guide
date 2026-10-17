@@ -7,5 +7,11 @@
     "https://ses.sa.gov.au/about-us/contact-us",
     "https://www.cfs.sa.gov.au/incidents/",
     "https://safecom.sa.gov.au/emergencies/emergenciesinformationjsp/"
+  ],
+  "missingRoles": [
+    "police",
+    "health",
+    "mentalHealth",
+    "recovery"
   ]
 }

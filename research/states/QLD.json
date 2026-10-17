@@ -34,7 +34,7 @@
       "url": "https://www.qld.gov.au/youth/legal-support-and-your-rights/police-services-crime-prevention",
       "checked": "2026-10-18",
       "method": "WebFetch full page",
-      "observed": "Titled 'Police services and crime prevention - qld.gov.au'. Lists Policelink 131 444 '24 hours 7 days'; for non-emergency police assistance phone Policelink or use the Policelink online report; examples property damage, stealing, break and enters, stolen vehicles, lost property; urgent matters go to Triple Zero (000). police.qld.gov.au pages returned empty to automated fetches; qld.gov.au report-a-crime page 301-redirects to police.qld.gov.au/policelink-reporting. Separately, the getready.qld.gov.au emergency contacts page lists 'Policelink (general enquiries): 13 14 44', which conflicts with 131 444 (see unverified)."
+      "observed": "Titled 'Police services and crime prevention - qld.gov.au'. Lists Policelink 131 444 '24 hours 7 days'; for non-emergency police assistance phone Policelink or use the Policelink online report; examples property damage, stealing, break and enters, stolen vehicles, lost property; urgent matters go to Triple Zero (000). police.qld.gov.au pages returned empty to automated fetches; qld.gov.au report-a-crime page 301-redirects to police.qld.gov.au/policelink-reporting. Separately, the getready.qld.gov.au emergency contacts page lists 'Policelink (general enquiries): 13 14 44', which is the same number (131444) printed with different spacing, not a conflict (corrected 2026-10-18)."
     },
     {
       "id": "qld-health",
@@ -68,7 +68,7 @@
   "unverified": [
     {
       "role": "police",
-      "why": "police.qld.gov.au (Policelink page, contact page) returned empty to automated fetches (bot protection). The record uses the official qld.gov.au page that states Policelink 131 444, 24 hours 7 days. A manual check of police.qld.gov.au/policelink-reporting is recommended. NOTE: the getready.qld.gov.au emergency contact numbers page lists 'Policelink (general enquiries): 13 14 44', which conflicts with 131 444 on the qld.gov.au police page and in search snippets of the police site; 131 444 is used, and the getready page may contain a typo worth reporting."
+      "why": "police.qld.gov.au (Policelink page, contact page) returned empty to automated fetches (bot protection). The record uses the official qld.gov.au page that states Policelink 131 444, 24 hours 7 days. A manual check of police.qld.gov.au/policelink-reporting is recommended. NOTE: the getready.qld.gov.au emergency contact numbers page prints 'Policelink (general enquiries): 13 14 44', which is the same number (131444) as 131 444 with different spacing, not a different number (corrected 2026-10-18)."
     },
     {
       "role": "fire",

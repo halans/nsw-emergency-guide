@@ -50,7 +50,7 @@
     {
       "id": "nt-fire-incident-map",
       "category": "warnings",
-      "name": "NTFRS Fire Incident Map",
+      "name": "NTFRS Fire Incident Map (fire incidents only)",
       "jurisdiction": "NT",
       "roles": [
         "warnings"

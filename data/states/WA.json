@@ -38,7 +38,7 @@
       "summary": "Western Australia's fire and emergency services agency. The site covers hazard information (bushfire, fire in the home, cyclone, storm, flood, tsunami, earthquake, hazmat), warning systems, the volunteer services and recovery funding.",
       "reviewed": "2026-10-18",
       "phone": "13 33 37",
-      "phoneLabel": "13 33 37 — DFES emergency information",
+      "phoneLabel": "13 33 37 — DFES information line (not for emergencies)",
       "caution": "13 33 37 is an information line. For fire or a life-threatening emergency call 000."
     },
     {
@@ -94,7 +94,7 @@
       "summary": "A 24-hour phone service staffed by mental health clinicians for people in a mental health crisis, plus their families, carers and people who witness a crisis. Covers the Perth metropolitan area and Peel; regional and remote WA uses Rurallink.",
       "reviewed": "2026-10-18",
       "phone": "1300 555 788",
-      "phoneLabel": "1300 555 788 — MHERL (Perth metro)",
+      "phoneLabel": "1300 555 788 — MHERL (Perth metro only; Peel and regional WA use other numbers)",
       "hours": "24 hours (Perth metro and Peel)",
       "caution": "MHERL is not an emergency service. In an emergency call 000. Peel callers use 1800 676 822. Regional and remote WA callers should use Rurallink on 1800 552 002 (4:30pm to 8:30am on weeknights, 24 hours on weekends and public holidays), as the Mental Health Commission page states."
     },

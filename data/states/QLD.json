@@ -65,7 +65,7 @@
       "phone": "131 444",
       "phoneLabel": "131 444 — Policelink",
       "hours": "24 hours, 7 days",
-      "caution": "For urgent matters or a crime in progress, call 000 instead. The number comes from a Queensland Government page; another Queensland Government page lists a different number, so confirm it on the police site if a call does not connect."
+      "caution": "For urgent matters or a crime in progress, call 000 instead. The number comes from Queensland Government pages, not the police service's own site; confirm it there if a call does not connect."
     },
     {
       "id": "qld-health",
@@ -92,7 +92,7 @@
       "summary": "Confidential mental health telephone triage line and first point of contact for Queensland public mental health services. It gives support, advice and referrals, including for mental health crises.",
       "reviewed": "2026-10-18",
       "phone": "1300 642 255",
-      "phoneLabel": "1300 642 255 — 1300 MH CALL",
+      "phoneLabel": "1300 642 255 — 1300 MH CALL (Queensland only)",
       "hours": "24 hours, 7 days",
       "caution": "Only available within Queensland. In an emergency call 000."
     },
