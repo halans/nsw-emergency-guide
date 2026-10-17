@@ -31,6 +31,8 @@ One build is focused on one main state or territory. Its national and state reso
 4. Run `npm run checksums` to refresh `SHA256SUMS.json`.
 5. Deploy `dist/` as described in [DEPLOY.md](DEPLOY.md).
 
+For your own fork, also change the project names and links that point at this repository: `name` and `description` in `package.json`, `name` in `wrangler.json`, and the GitHub repository links in the `about` page template (`data/pages.json`), the `Contact` line of `public/.well-known/security.txt` and the footer link in `blume.config.ts`. A content test pins the `security.txt` contact URL (`tests/content.test.mjs`), so update it too.
+
 To try another state without touching the committed files, generate into a scratch directory: `node scripts/generate-content.mjs --state QLD --out <dir>`. NSW has the fullest coverage; other states have a core set of seven roles (SES, fire, warnings, police, health, mental health, recovery), and a few are not yet covered (listed as `missingRoles` in `data/states/<CODE>.json`). Check [research/manual-verification.json](research/manual-verification.json) before deploying for a state other than NSW. See [MAINTAINING.md](MAINTAINING.md) for the data format.
 
 ## What's included
