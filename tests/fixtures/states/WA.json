@@ -1,0 +1,17 @@
+{
+  "phones": {
+    "wa-ses": "132 500",
+    "wa-dfes": "13 33 37",
+    "wa-police": "131 444",
+    "wa-mherl": "1300 555 788"
+  },
+  "requiredUrls": [
+    "https://www.dfes.wa.gov.au/contact",
+    "https://www.dfes.wa.gov.au/",
+    "https://www.emergency.wa.gov.au/",
+    "https://www.wa.gov.au/organisation/western-australia-police-force/contact-wa-police",
+    "https://www.healthywa.wa.gov.au/Health-conditions/Health-conditions-A-to-Z",
+    "https://mhc.wa.gov.au/getting-help/helplines/mental-health-emergency-response-line",
+    "https://recovery.dfes.wa.gov.au/"
+  ]
+}

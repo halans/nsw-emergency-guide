@@ -1,0 +1,85 @@
+{
+  "code": "WA",
+  "evidence": [
+    {
+      "id": "wa-ses",
+      "url": "https://www.dfes.wa.gov.au/contact",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "Lists 000 for life-threatening emergencies, 132 500 labelled SES Emergency Assistance for urgent property repairs (structural damage, fallen trees on homes or cars, sandbagging, pumping floodwater; not fences, permanent repairs, debris clearing), prioritised by urgency; 13 3337 DFES public information line; 106 TTY relay. No operating hours listed. A direct SES page on dfes.wa.gov.au returned 404 (dfes.wa.gov.au/contact-us/ses, /operational-information/ses, /volunteer-services/ses), so the contact page is used. The same 132 500 SES line is shown on https://www.dfes.wa.gov.au/ and https://www.dfes.wa.gov.au/emergencywa/prepare."
+    },
+    {
+      "id": "wa-dfes",
+      "url": "https://www.dfes.wa.gov.au/",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "Home page of the Department of Fire and Emergency Services, tagline Working Together For a Safer State. Covers hazard information, warning systems, regulation, volunteer services (Bush Fire Service, VFES, SES, VFRS, VMRS), funding and recovery. Shows 000, Emergency Information 13 3337 and SES 132 500. WA Government org page (wa.gov.au/organisation/department-of-fire-and-emergency-services) lists telephone 13 33 37."
+    },
+    {
+      "id": "wa-emergency-wa",
+      "url": "https://www.emergency.wa.gov.au/",
+      "checked": "2026-10-18",
+      "method": "WebFetch (page is script-rendered, only the title EmergencyWA Warnings & Incidents was returned); content verified via https://www.dfes.wa.gov.au/emergencywa/faq and https://www.dfes.wa.gov.au/hazard-information/warning-systems",
+      "observed": "FAQ: government website and app combining warnings, incident feed reported to DFES, earthquake alerts, Total Fire Bans and Fire Danger Ratings, evacuation centre and park closure info, BoM layers; app on App Store and Google Play with up to 10 watch zones; RSS and CAP AU feeds; cautions about not relying only on official messages and missed notifications; email not for emergencies; 000 for life-threatening emergencies, 13 DFES for current incidents. Warning-systems page: Emergency WA is the main source for official alerts; Advice, Watch and Act, Emergency Warning levels."
+    },
+    {
+      "id": "wa-police",
+      "url": "https://www.wa.gov.au/organisation/western-australia-police-force/contact-wa-police",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page (www.police.wa.gov.au/Contact-Us 301-redirects here)",
+      "observed": "131 444 to report crimes that have happened, request police attendance or general questions; press 1 if police need to attend now, 2 for non-urgent. Contact police on 000 in an emergency. No hours listed. Also lists SMS Assist (registration required, not for emergencies), TTY, NRS and Crime Stoppers 1800 333 000."
+    },
+    {
+      "id": "wa-health",
+      "url": "https://www.healthywa.wa.gov.au/Health-conditions/Health-conditions-A-to-Z",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "HealthyWA, the Government of Western Australia Department of Health public information site. A-Z index linking to articles including many infectious diseases (viral, bacterial, gastrointestinal, mosquito-borne, STIs) and a link to infectious diseases found overseas. No phone numbers recorded."
+    },
+    {
+      "id": "wa-health-communicable-diseases",
+      "url": "https://www.health.wa.gov.au/Health-for/Health-professionals/Communicable-Diseases",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "WA Department of Health hub described as tools, clinical resources and information for health professionals: notifiable disease lists, control guidelines, health alerts, infectious disease data and dashboard, immunisation, infection prevention, sexual health and BBV, surveillance; links to contact details for public health units. No phone numbers on the page itself. Related pages (health-alerts-infectious-diseases, Infectious-disease-data) are clinician/epidemiology oriented and contain live outbreak data, which is deliberately not summarised."
+    },
+    {
+      "id": "wa-mherl",
+      "url": "https://mhc.wa.gov.au/getting-help/helplines/mental-health-emergency-response-line",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "Mental Health Commission page. MHERL is a 24-hour telephone service for mental health crisis, Perth metro 1300 555 788, Peel 1800 676 822, Rurallink (regional and remote) 1800 552 002. Clinicians offer assessment, crisis support and planning, system navigation. Not an emergency service; call 000. Rurallink hours 4:30pm to 8:30am weeknights and 24 hours weekends and public holidays. The EMHS MHERL page (search result, last updated 17/03/2026) says a project to improve MHERL and Rurallink is under way, so details may change."
+    },
+    {
+      "id": "wa-rurallink",
+      "url": "https://mhc.wa.gov.au/getting-help/helplines/mental-health-emergency-response-line",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page (same page as wa-mherl)",
+      "observed": "Rurallink number and hours as above, stated on the Mental Health Commission page."
+    },
+    {
+      "id": "wa-recovery",
+      "url": "https://recovery.dfes.wa.gov.au/",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "Run by DFES. Lists current and past recovery pages for emergencies, Premier's Relief Payment (short-term help for essentials), hazard recovery guidance (bushfire, heatwave, storm, cyclone, flood, tsunami, earthquake, house fire), preparation info, FAQ, About. Footer numbers 000, 13 33 37, 132 500. Payment availability and event details deliberately not copied. DFES recovery-funding page (https://dfes.wa.gov.au/recovery-funding) directs the public to Recovery WA."
+    },
+    {
+      "id": "wa-disaster-relief-hotline",
+      "url": "https://www.wa.gov.au/organisation/department-of-communities/emergency-relief-and-support-services-recovery",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "Department of Communities coordinates emergency relief and support across social, built, economic and natural recovery areas under the State Support Plan. Disaster Relief Hotline 1800 032 965; 9am-4pm Monday to Friday according to hotline details for recent events. Links to the DFES Emergency WA recovery page."
+    }
+  ],
+  "unverified": [
+    {
+      "role": "health",
+      "why": "No public-facing page titled infectious diseases was found on health.wa.gov.au (guessed URLs returned 404). The HealthyWA A to Z index is used as the public page and the Communicable Diseases hub (aimed at health professionals) is added as a secondary record. A human may prefer a different health landing page, for example the WA Health public health units contact page, which was not opened."
+    },
+    {
+      "role": "recovery",
+      "why": "https://nema.gov.au/recover/recover-wa returned 403 to automated requests; not used, not a state source in any case."
+    }
+  ]
+}

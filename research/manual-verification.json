@@ -91,6 +91,24 @@
       "method": "manual review needed",
       "state": "QLD",
       "observed": "Only the SES home page opened; /contact-us and /ses-assistance returned empty (bot protection). Consider a more specific SES assistance URL after a manual check."
+    },
+    {
+      "url": "https://www.healthywa.wa.gov.au/Health-conditions/Health-conditions-A-to-Z",
+      "method": "manual review needed",
+      "state": "WA",
+      "observed": "Weak fit for the health role: no public-facing infectious-diseases or public health page was found on health.wa.gov.au (guessed URLs returned 404). The record is the HealthyWA conditions A to Z index. The Communicable Diseases hub (https://www.health.wa.gov.au/Health-for/Health-professionals/Communicable-Diseases) is aimed at health professionals and was not kept. A WA Health public health units contact page was not opened."
+    },
+    {
+      "url": "https://www.emergency.wa.gov.au/",
+      "method": "manual review needed",
+      "state": "WA",
+      "observed": "Emergency WA page is script-rendered and returned only its title; its role and features were confirmed on dfes.wa.gov.au (emergencywa/faq and warning-systems pages). Check the live site manually."
+    },
+    {
+      "url": "https://mhc.wa.gov.au/getting-help/helplines/mental-health-emergency-response-line",
+      "method": "manual review needed",
+      "state": "WA",
+      "observed": "MHERL and Rurallink numbers and hours are from this Mental Health Commission page only; a search result for another WA Health page said a project to improve MHERL and Rurallink is under way, so details may change. Recheck before relying on them."
     }
   ]
 }
