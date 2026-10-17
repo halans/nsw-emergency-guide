@@ -1,0 +1,17 @@
+{
+  "phones": {
+    "qld-ses": "132 500",
+    "qld-police": "131 444",
+    "qld-mental-health": "1300 642 255",
+    "qld-recovery": "1800 173 349"
+  },
+  "requiredUrls": [
+    "https://www.ses.qld.gov.au/",
+    "https://www.qld.gov.au/emergency/emergencies-services/response/fire-rescue",
+    "https://www.disaster.qld.gov.au/current-warnings",
+    "https://www.qld.gov.au/youth/legal-support-and-your-rights/police-services-crime-prevention",
+    "https://www.qld.gov.au/health/conditions/health-alerts",
+    "https://www.qld.gov.au/health/mental-health/help-lines/1300-mh-call",
+    "https://www.qld.gov.au/community/disasters-emergencies/disasters"
+  ]
+}

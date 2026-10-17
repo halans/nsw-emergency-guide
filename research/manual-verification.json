@@ -67,6 +67,30 @@
       "method": "manual review needed",
       "state": "VIC",
       "observed": "Fire role: the CFA/Fire Rescue Victoria boundary is not stated on either page read, so both records are listed. Neither carries a phone number (only headquarters or general-enquiry numbers appeared)."
+    },
+    {
+      "url": "https://www.police.qld.gov.au/policelink-reporting",
+      "method": "manual review needed",
+      "state": "QLD",
+      "observed": "Police assistance number conflict: qld.gov.au police page gives Policelink 131 444 (24 hours, 7 days) and the record uses it; the getready.qld.gov.au emergency contacts page lists a different Policelink general-enquiries number. police.qld.gov.au returned empty to automated requests (bot protection). Check the police site and report the discrepancy."
+    },
+    {
+      "url": "https://www.fire.qld.gov.au/",
+      "method": "manual review needed",
+      "state": "QLD",
+      "observed": "Weak fit: fire.qld.gov.au returned empty to automated requests (bot protection). The fire record is the qld.gov.au Queensland Fire Department page; no QFD phone number could be verified."
+    },
+    {
+      "url": "https://www.health.qld.gov.au/",
+      "method": "manual review needed",
+      "state": "QLD",
+      "observed": "Weak fit: health.qld.gov.au (infectious diseases, notifiable conditions) returned 403. The health record is the qld.gov.au health alerts directory; look for a dedicated Queensland Health public infectious-diseases or outbreak page."
+    },
+    {
+      "url": "https://www.ses.qld.gov.au/ses-assistance",
+      "method": "manual review needed",
+      "state": "QLD",
+      "observed": "Only the SES home page opened; /contact-us and /ses-assistance returned empty (bot protection). Consider a more specific SES assistance URL after a manual check."
     }
   ]
 }

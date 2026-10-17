@@ -1,0 +1,86 @@
+{
+  "code": "QLD",
+  "evidence": [
+    {
+      "id": "qld-ses",
+      "url": "https://www.ses.qld.gov.au/",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page (home page; /contact-us and /ses-assistance returned empty/blocked)",
+      "observed": "Site is Queensland State Emergency Service ('Queensland SES' in footer). States 132 500 for non-life-threatening flood and storm emergency assistance during severe weather events, with an online request form and the SES Assistance QLD app, and 000 for life-threatening emergencies. States no hours for the phone line. Nav includes Contact us, SES assistance, SES locations."
+    },
+    {
+      "id": "qld-ses",
+      "url": "https://www.qld.gov.au/emergency/emergencies-services/response/ses",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page (corroboration)",
+      "observed": "Titled 'State Emergency Service - qld.gov.au'. Says to request flood/storm help via the SES app, online web app or by calling 132 500; cancel or ask for status by calling 132 500 with the reference number. No hours stated. 13 QGOV (13 74 68) shown as general government line only."
+    },
+    {
+      "id": "qld-fire",
+      "url": "https://www.qld.gov.au/emergency/emergencies-services/response/fire-rescue",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "Titled 'Queensland Fire Department - qld.gov.au'. QFD described as the primary provider of fire and emergency services in Queensland; includes Queensland Fire and Rescue and Rural Fire Service Queensland (volunteer arm for rural, semi-rural and urban-fringe areas, fire permits, education). Only number on page is 13 QGOV (13 74 68). fire.qld.gov.au itself returned empty to automated fetches (bot protection); only seen via search listing."
+    },
+    {
+      "id": "qld-warnings",
+      "url": "https://www.disaster.qld.gov.au/current-warnings",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page (also https://www.disaster.qld.gov.au/ home page)",
+      "observed": "Titled 'Severe Weather, Flood, Cyclone Warnings and Emergency Alerts - Disasters' (Queensland Government). Links to official warning sources (BoM, QFD bushfire, Maritime, Queensland Health heat, council dashboards), explains how to read warnings, offers RSS/CAP-AU alert feeds. No phone numbers. Home page is branded 'Disasters', not 'Queensland Disaster Hub'; it lists Triple Zero, SES 132 500 and 106 TTY."
+    },
+    {
+      "id": "qld-police",
+      "url": "https://www.qld.gov.au/youth/legal-support-and-your-rights/police-services-crime-prevention",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "Titled 'Police services and crime prevention - qld.gov.au'. Lists Policelink 131 444 '24 hours 7 days'; for non-emergency police assistance phone Policelink or use the Policelink online report; examples property damage, stealing, break and enters, stolen vehicles, lost property; urgent matters go to Triple Zero (000). police.qld.gov.au pages returned empty to automated fetches; qld.gov.au report-a-crime page 301-redirects to police.qld.gov.au/policelink-reporting. Separately, the getready.qld.gov.au emergency contacts page lists 'Policelink (general enquiries): 13 14 44', which conflicts with 131 444 (see unverified)."
+    },
+    {
+      "id": "qld-health",
+      "url": "https://www.qld.gov.au/health/conditions/health-alerts",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "Titled 'Health alerts - qld.gov.au'. Directory listing of Queensland Government/Queensland Health health alerts, each linking to its own page. Only number shown is general 13 QGOV. health.qld.gov.au pages (infectious diseases, notifiable conditions) returned 403 to automated fetches."
+    },
+    {
+      "id": "qld-13health",
+      "url": "https://www.qld.gov.au/health/contacts/advice",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "Titled 'Health advice contacts'. 13 HEALTH is 13 43 25 84, described as a 24/7 health advice phone line for all Queenslanders where you can speak with a registered nurse; for emergencies call 000. The getready.qld.gov.au contact list also shows 13HEALTH as 13 43 25 84."
+    },
+    {
+      "id": "qld-mental-health",
+      "url": "https://www.qld.gov.au/health/mental-health/help-lines/1300-mh-call",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "Titled '1300 MH CALL: Mental health access line - qld.gov.au'. Number 1300 642 255, 24 hours a day 7 days a week. Confidential telephone triage and first point of contact for Queensland public mental health services; advises on mental health emergencies or crises, refers to acute care teams. Only available in Queensland (interstate callers use local service or healthdirect). 'In an emergency always dial Triple Zero (000)'. TTY callers 106 or NRS."
+    },
+    {
+      "id": "qld-recovery",
+      "url": "https://www.qld.gov.au/community/disasters-emergencies/disasters",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page (twice)",
+      "observed": "Titled 'Disaster recovery support - qld.gov.au'. Information on financial help and support after disasters: grant types, event-specific funding pages, emotional support contacts, rebuilding and wellbeing guidance. Lists Community Recovery Hotline 1800 173 349, no hours stated; operator not named on page. Notes eligibility criteria apply; mentions Lifeline 13 11 14, Beyond Blue 1300 22 4636 and Disaster Assist for federal grants. The Queensland Reconstruction Authority (qra.qld.gov.au, opened via curl) is the recovery and funding authority but its pages were not used for the record."
+    }
+  ],
+  "unverified": [
+    {
+      "role": "police",
+      "why": "police.qld.gov.au (Policelink page, contact page) returned empty to automated fetches (bot protection). The record uses the official qld.gov.au page that states Policelink 131 444, 24 hours 7 days. A manual check of police.qld.gov.au/policelink-reporting is recommended. NOTE: the getready.qld.gov.au emergency contact numbers page lists 'Policelink (general enquiries): 13 14 44', which conflicts with 131 444 on the qld.gov.au police page and in search snippets of the police site; 131 444 is used, and the getready page may contain a typo worth reporting."
+    },
+    {
+      "role": "fire",
+      "why": "fire.qld.gov.au returned empty to automated fetches (bot protection). The record uses the qld.gov.au Queensland Fire Department page, which was opened and verified. No QFD-specific phone number was verifiable, so none is given. Manual check of fire.qld.gov.au contact page recommended."
+    },
+    {
+      "role": "health",
+      "why": "health.qld.gov.au (infectious diseases, notifiable conditions, public health) returned 403 to automated fetches. The record points to the verified qld.gov.au 'Health alerts' directory page rather than a dedicated infectious-diseases page. A manual check for a better Queensland Health public infectious-diseases or outbreak page is recommended."
+    },
+    {
+      "role": "ses",
+      "why": "Only the SES home page opened; /contact-us and /ses-assistance returned empty (bot protection). Role is covered by the verified home page and the qld.gov.au SES page. Manual check of ses.qld.gov.au/ses-assistance recommended as a more specific url."
+    }
+  ]
+}
