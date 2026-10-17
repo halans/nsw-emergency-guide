@@ -60,7 +60,7 @@
       "url": "https://www.emergency.vic.gov.au/respond/",
       "method": "manual review needed",
       "state": "VIC",
-      "observed": "VicEmergency hotline 1800 226 226 is confirmed on CFA and VICSES pages, not on emergency.vic.gov.au itself (its support site returned 403). Hotline hours are not stated on any page read."
+      "observed": "VicEmergency hotline 1800 226 226 is confirmed on CFA and VICSES pages, not on emergency.vic.gov.au itself (its support site returned 403). Hotline hours are stated on the CFA hotline page https://cfa.vic.gov.au/contact/vicemergency-hotline (rechecked 2026-10-18): staffed Monday to Friday, 8.00am - 6.00pm, extended during significant bushfires, recorded information 24 hours a day; they are in the record caution."
     },
     {
       "url": "https://frv.vic.gov.au/contact-us",

@@ -27,7 +27,7 @@
       "url": "https://www.emergency.vic.gov.au/respond/",
       "checked": "2026-10-18",
       "method": "WebFetch plus curl of raw HTML (page title: Incidents and Warnings - VicEmergency)",
-      "observed": "Official VicEmergency site: map/list of incidents and warnings, filters, Locate Me, Watch Zones for the app, Icons Explained, Prepare and Relief and Recovery sections, app store links. WebFetch reported the banner text 'for TESTING only, Do not rely'; raw HTML shows this is a hidden dev banner (#emv-devsite, shown only for local/ci/qa/cbem environment classes; this page has class prod-au), so it is not displayed on the production site. The hotline number is not on this page; it is stated by CFA (https://www.cfa.vic.gov.au/fire-safety/bushfire-safety-basics/vicemergency-app-and-hotline: hotline 1800 226 226 for incidents and warnings, Fire Danger Ratings, fire restrictions, planned burns, relief centres; NRS access; 131 450 for translated info; app managed by Emergency Management Victoria) and by the VICSES contact page. Hours of the hotline not stated on those pages."
+      "observed": "Official VicEmergency site: map/list of incidents and warnings, filters, Locate Me, Watch Zones for the app, Icons Explained, Prepare and Relief and Recovery sections, app store links. WebFetch reported the banner text 'for TESTING only, Do not rely'; raw HTML shows this is a hidden dev banner (#emv-devsite, shown only for local/ci/qa/cbem environment classes; this page has class prod-au), so it is not displayed on the production site. The hotline number is not on this page; it is stated by CFA (https://www.cfa.vic.gov.au/fire-safety/bushfire-safety-basics/vicemergency-app-and-hotline: hotline 1800 226 226 for incidents and warnings, Fire Danger Ratings, fire restrictions, planned burns, relief centres; NRS access; 131 450 for translated info; app managed by Emergency Management Victoria) and by the VICSES contact page. Hotline hours: the CFA hotline page https://cfa.vic.gov.au/contact/vicemergency-hotline (rechecked 2026-10-18) says it is staffed Monday to Friday, 8.00am - 6.00pm, opening times are extended during significant bushfires, and recorded information on specific topics can be accessed 24 hours a day."
     },
     {
       "id": "vic-police",
@@ -83,7 +83,7 @@
     },
     {
       "role": "warnings",
-      "why": "The VicEmergency hotline 1800 226 226 and its stated features are confirmed on the CFA and VICSES pages, not on emergency.vic.gov.au itself (the support site support.emergency.vic.gov.au returned 403). Hotline hours are not stated on any page read, so no hours field."
+      "why": "The VicEmergency hotline 1800 226 226 and its stated features are confirmed on the CFA and VICSES pages, not on emergency.vic.gov.au itself (the support site support.emergency.vic.gov.au returned 403). Hotline hours are on the CFA hotline page (https://cfa.vic.gov.au/contact/vicemergency-hotline, rechecked 2026-10-18): staffed Monday to Friday, 8.00am - 6.00pm, extended during significant bushfires, recorded information 24 hours. They are in the caution, not an hours field, because the line is not staffed 24/7."
     },
     {
       "role": "fire",
