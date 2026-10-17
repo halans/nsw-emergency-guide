@@ -3,5 +3,6 @@
    "stateBlocks":{"intro":{"NSW":"NSW-only sourced text."}},
    "body":"Call {{term:ses}} on {{phone:ses}} (tel:{{tel:ses}}).\n\n{{state-block:intro}}\n\n{{resources:nat,role:ses}}\n\n{{resources:pets}}\n\n{{resources:role:fire}}"},
   {"slug":"animals","title":"Animals","description":"Animal help","roles":["health"],"stateNote":true,"body":"Intro.\n\n{{resources:nat,pets}}"},
+  {"slug":"fire","title":"Fire","description":"Fire help","roles":["fire"],"stateNote":true,"body":"Intro.\n\n{{resources:nat,ses,rfs}}"},
   {"slug":"plain","title":"Plain","description":"Plain page","body":"Intro.\n\n{{resources:relay,pets}}\n\n{{all-resources}}"}
 ]

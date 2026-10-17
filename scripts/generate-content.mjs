@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath, pathToFileURL } from 'node:url';
+import { fileURLToPath } from 'node:url';
 import { STATE_CODES, ROLE_LABELS, loadSite, assertState, loadStates, loadRegister, visibleResources, roleRecord } from './lib/register.mjs';
 const repo = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const date = r => new Date(r.reviewed + "T00:00:00Z").toLocaleDateString("en-AU", {day:"numeric",month:"short",year:"numeric",timeZone:"UTC"});
@@ -36,7 +36,8 @@ function expandStateBlocks(text, page, ctx, seen) {
 
 // {{state}}, {{state-long}}, {{term:role}}, {{phone:role}}, {{tel:role}}. A missing value always fails the build.
 function expandPlaceholders(text, page, ctx) {
-  return text.replace(/\{\{(state|state-long|term|phone|tel)(?::([^}]+))?\}\}/g, (token, kind, role) => {
+  return text.replace(/\{\{(state|state-long)\}\}|\{\{(term|phone|tel):([^}]+)\}\}/g, (token, bare, prefixed, role) => {
+    const kind = bare ?? prefixed;
     const fail = () => { throw new Error(`Page "${page.slug}": ${token} has no value for ${ctx.state}`); };
     if (kind === 'state') return ctx.info.name ?? fail();
     if (kind === 'state-long') return ctx.info.longName ?? fail();
@@ -56,7 +57,8 @@ function resolveId(id, token, page, ctx) {
   }
   const r = ctx.register.find(r => r.id === id);
   if (!r) throw new Error(`Unknown resource: ${id}`);
-  return ctx.visible.includes(r) ? r : null;
+  // Lists show national and main-state records only; other states' core records belong in the bottom section.
+  return r.jurisdiction === 'Australia' || r.jurisdiction === ctx.state ? r : null;
 }
 
 function renderList(rs, ctx, seen) {
@@ -70,7 +72,8 @@ function expandResources(text, page, ctx, seen) {
     .replace('{{all-resources}}', () => renderList(ctx.visible, ctx, seen));
 }
 
-const thinNote = ctx => `No ${ctx.info.name}-specific services are listed on this page. See [other states and territories](#other-states-and-territories) for the same kinds of service elsewhere.`;
+// The link is added only when the page's bottom section exists, so it never points at a missing anchor.
+const thinNote = (ctx, linked) => `No ${ctx.info.name}-specific services are listed on this page.${linked ? ' See [other states and territories](#other-states-and-territories) for the same kinds of service elsewhere.' : ''}`;
 
 // Plain Markdown, valid for both web and agents: one line per other state's record for the page's roles.
 function otherStatesSection(page, ctx) {
@@ -99,8 +102,8 @@ function renderPage(page, ctx) {
   const fill = text => expandPlaceholders(expandStateBlocks(text, page, ctx, seen), page, ctx);
   const title = fill(page.title), description = fill(page.description);
   let body = expandResources(wrapBlocks(fill(page.body)), page, ctx, seen);
-  if (page.stateNote && !seen.mainContent) body += `\n\n${thinNote(ctx)}`;
   const section = otherStatesSection(page, ctx);
+  if (page.stateNote && !seen.mainContent) body += `\n\n${thinNote(ctx, !!section)}`;
   if (section) body += `\n\n${section}`;
   for (const text of [title, description, body]) assertResolved(text, page);
   return `---\ntitle: ${JSON.stringify(title)}\ndescription: ${JSON.stringify(description)}\n---\n\n${body}\n`;
@@ -118,8 +121,16 @@ export function generate({ root = repo, state, outDir = root, check = false } = 
   return output;
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
-  const args = process.argv.slice(2), flag = name => { const i = args.indexOf(name); return i < 0 ? undefined : args[i + 1]; };
+const isEntryPoint = () => { try { return !!process.argv[1] && fs.realpathSync(process.argv[1]) === fs.realpathSync(fileURLToPath(import.meta.url)); } catch { return false; } };
+if (isEntryPoint()) {
+  const args = process.argv.slice(2);
+  const flag = name => {
+    const i = args.indexOf(name);
+    if (i < 0) return undefined;
+    const value = args[i + 1];
+    if (value === undefined || value.startsWith('--')) throw new Error(`${name} needs a value`);
+    return value;
+  };
   const check = args.includes('--check'), out = flag('--out');
   const output = generate({ state: flag('--state'), outDir: out ? path.resolve(out) : undefined, check });
   const pages = [...output.keys()].filter(name => name.startsWith('docs/')).length;
