@@ -1,0 +1,50 @@
+{
+  "code": "TAS",
+  "evidence": [
+    {
+      "id": "tas-ses",
+      "url": "https://www.ses.tas.gov.au/about/contact-us/",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "States 'For emergency help in flood, storm and tsunami call SES on 132 500' and 'In a life-threatening emergency call Triple Zero (000)'. General enquiries 24/7 on 03 6173 2700. No hours given for 132 500. Also corroborated by https://www.ses.tas.gov.au/ (home page lists 132 500 under Floods & storms and 000 for life-threatening emergencies) and by the emergency contacts page on alert.tas.gov.au."
+    },
+    {
+      "id": "tas-fire",
+      "url": "https://www.fire.tas.gov.au/",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page; also https://www.fire.tas.gov.au/contact-us",
+      "observed": "Site run by Tasmania Fire Service. Lists 000 as Emergency and 1800 000 699 as the Information Line (free call), also the number for fire permit and burn registration questions. No hours stated. alert.tas.gov.au emergency contacts page says report fires to 000 and gives 1800 000 699 for non-emergencies."
+    },
+    {
+      "id": "tas-tasalert",
+      "url": "https://alert.tas.gov.au/about",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page; also https://alert.tas.gov.au/ (home) and https://alert.tas.gov.au/emergency-contacts",
+      "observed": "TasALERT is the Tasmanian Government's official online platform for emergency information, run by the Department of Premier and Cabinet, carrying warnings from Tasmania Fire Service, Tasmania Police, SES, Ambulance Tasmania, Department of Health, BOM and NEMA. Page says 'In a life threatening emergency call 000.' Recorded URL is the site home (the warnings/map page); the about page was opened to confirm its role. No live data copied."
+    },
+    {
+      "id": "tas-police",
+      "url": "https://www.police.tas.gov.au/contact-us/",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page; number cross-checked on https://alert.tas.gov.au/emergency-contacts",
+      "observed": "Contact page has a Police Assistance Line header link that dials 131444 (number not spelled out in body text), and says to call Triple Zero (000) for life-threatening emergencies, danger or a crime in progress; TTY users dial 106. alert.tas.gov.au emergency contacts page lists Tasmania Police 131 444. No hours stated."
+    },
+    {
+      "id": "tas-recovery",
+      "url": "https://alert.tas.gov.au/recovery/",
+      "checked": "2026-10-18",
+      "method": "WebFetch (page content possibly truncated)",
+      "observed": "Recovery section of TasALERT, run by TasRECOVERY, helping people and communities affected by emergencies find support and advice. Topic pages: Animal Welfare, Donations and Volunteering, Financial Assistance, Health and Wellbeing, Insurance, Legal, Useful Links, Your Land and Home, plus event-specific recovery pages. No recovery phone number seen in the fetched content. Event names and grants deliberately omitted from the record."
+    }
+  ],
+  "unverified": [
+    {
+      "role": "health",
+      "why": "The Department of Health site (www.health.tas.gov.au) returned HTTP 403 to every automated request (WebFetch and curl), so the infectious diseases page could not be opened. Search results point to https://www.health.tas.gov.au/health-topics/infectious-diseases and a Public Health Hotline of 1800 671 738, but neither was opened or verified. Manual check needed."
+    },
+    {
+      "role": "mentalHealth",
+      "why": "The Department of Health pages for Access Mental Health (https://www.health.tas.gov.au/health-topics/mental-health/tasmanias-mental-health-system/access-mental-health, also /node/17556) returned HTTP 403, as did cbos.tas.gov.au. Search results consistently describe Access Mental Health on 1800 332 388 as a 24/7 line run by the Department with Lifeline Tasmania, but no official page was opened. Older sources give 9am to 10pm, and one search summary noted a typo variant 1800 332 338 on a department page. Manual check of the number and hours is required before use."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "phones": {
+    "tas-ses": "132 500",
+    "tas-fire": "1800 000 699",
+    "tas-police": "131 444"
+  },
+  "requiredUrls": [
+    "https://www.ses.tas.gov.au/about/contact-us/",
+    "https://www.fire.tas.gov.au/",
+    "https://alert.tas.gov.au/",
+    "https://www.police.tas.gov.au/contact-us/",
+    "https://alert.tas.gov.au/recovery/"
+  ]
+}

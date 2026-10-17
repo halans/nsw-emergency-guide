@@ -145,6 +145,30 @@
       "method": "manual review needed",
       "state": "SA",
       "observed": "Alert SA site itself returned 403; the warnings record uses the SAFECOM page that explains Alert SA. Terms for police, health, mental health and recovery are neutral placeholders until those roles are verified."
+    },
+    {
+      "url": "https://www.health.tas.gov.au/health-topics/infectious-diseases",
+      "method": "manual review needed",
+      "state": "TAS",
+      "observed": "Health role not covered: the Department of Health site (health.tas.gov.au) returned 403 to every automated request, so no infectious diseases or public health page was opened. Search results suggested this page and a public health hotline, but neither was verified."
+    },
+    {
+      "url": "https://www.health.tas.gov.au/health-topics/mental-health/tasmanias-mental-health-system/access-mental-health",
+      "method": "manual review needed",
+      "state": "TAS",
+      "observed": "Mental health role not covered: Access Mental Health pages on health.tas.gov.au and cbos.tas.gov.au returned 403. Search results described a 24/7 line run with Lifeline Tasmania, but older sources give different hours and one summary showed a possible typo variant of the number, so the number and hours need manual confirmation on an official page."
+    },
+    {
+      "url": "https://www.police.tas.gov.au/contact-us/",
+      "method": "manual review needed",
+      "state": "TAS",
+      "observed": "Weak evidence for the Police Assistance Line number: the contact page links a header button that dials it but does not spell it out in the body text; 131 444 was cross-checked on the alert.tas.gov.au emergency contacts page."
+    },
+    {
+      "url": "https://www.fire.tas.gov.au/",
+      "method": "manual review needed",
+      "state": "TAS",
+      "observed": "Spot check 2026-10-18: some footer icons on the site were seen linking a \"000 Emergency\" label to the Information Line number 1800 000 699; the header 000 link is correct. The record gives 1800 000 699 only as the non-emergency Information Line."
     }
   ]
 }
