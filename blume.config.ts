@@ -1,13 +1,19 @@
 import { defineConfig } from 'blume';
 import { orama } from 'blume/search';
+import fs from 'node:fs';
+import { assertState } from './scripts/lib/register.mjs';
 const localInter = { name: 'Inter', variants: [400, 500, 600, 700].map(weight => ({ src: `./fonts/inter-${weight}.woff2`, weight })) };
+// The main state comes from data/site.json; an unknown value fails the build with the generator's message.
+const { mainState } = JSON.parse(fs.readFileSync('data/site.json', 'utf8'));
+assertState(mainState);
+const { name: stateName } = JSON.parse(fs.readFileSync(`data/states/${mainState}.json`, 'utf8'));
 // Set SITE_URL to your stable production origin before the final build.
 const site = process.env.SITE_URL;
 if (site && !/^https:\/\/[^/]+\/?$/.test(site)) throw new Error('SITE_URL must be an HTTPS origin without a path.');
 export default defineConfig({
   title: 'Emergency Ready',
   poweredBy: false,
-  description: 'An independent guide to official Australian and NSW emergency contacts, warnings, preparation and recovery resources.',
+  description: `An independent guide to official Australian and ${stateName} emergency contacts, warnings, preparation and recovery resources.`,
   content: { root: 'docs' },
   theme: { accent: { light: '#075985', dark: '#7dd3fc' }, radius: 'md', mode: 'light', fonts: { display: localInter, body: localInter, mono: localInter } },
   banner: { content: 'Life-threatening emergency? Call 000.', link: { text: 'Call 000', href: 'tel:000' }, dismissible: false },

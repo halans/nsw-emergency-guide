@@ -29,7 +29,7 @@ for(const code of STATE_CODES)test(`state ${code} is complete and well formed`,(
   for(const role of ROLES){const covered=!!roleRecord(register,code,role),absent=missing.includes(role);assert.ok(covered||absent,`${role} neither mapped nor listed in missingRoles`);assert.ok(!(covered&&absent),`${role} both mapped and listed in missingRoles`);}
   assert.ok(!missing.includes('ses'),'ses must never be in missingRoles');
 });
-test('state fixtures match data',()=>{for(const code of STATE_CODES){const f=fixture(code);for(const [id,phone] of Object.entries(f.phones)){const r=register.find(x=>x.id===id);assert.ok(r,`${code} fixture: unknown record ${id}`);assert.equal(r.jurisdiction,code,`${code} fixture: ${id} belongs to ${r.jurisdiction}`);assert.equal(r.phone,phone,`${code} fixture: ${id}`);}for(const url of f.requiredUrls)assert.ok(register.some(r=>r.url===url),`${code} fixture: ${url} is not in the register`);}});
+test('state fixtures match data',()=>{for(const code of STATE_CODES){const f=fixture(code);for(const [id,phone] of Object.entries(f.phones)){const r=register.find(x=>x.id===id);assert.ok(r,`${code} fixture: unknown record ${id}`);assert.equal(r.jurisdiction,code,`${code} fixture: ${id} belongs to ${r.jurisdiction}`);assert.equal(r.phone,phone,`${code} fixture: ${id}`);}for(const url of f.requiredUrls)assert.ok(register.some(r=>r.url===url&&(r.jurisdiction===code||r.jurisdiction==='Australia')),`${code} fixture: ${url} is not in a ${code} or Australia record`);}});
 
 // Generator tests against the tiny, independent fixture in tests/fixtures/mini-root.
 import os from 'node:os';
