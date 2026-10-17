@@ -79,7 +79,8 @@ function expandResources(text, page, ctx, seen) {
 // The link is added only when the page's bottom section exists, so it never points at a missing anchor.
 const thinNote = (ctx, linked) => `No ${ctx.info.name}-specific services are listed on this page.${linked ? ' See [other states and territories](#other-states-and-territories) for the same kinds of service elsewhere.' : ''}`;
 
-// Plain Markdown, valid for both web and agents: one line per other state's record for the page's roles.
+// Plain Markdown, valid for both web and agents: an intro paragraph, then one line per other state's record for the page's roles.
+const OTHER_STATES_INTRO = "In an emergency anywhere in Australia, call 000. These are each state's own services; check the official page before calling.";
 function otherStatesSection(page, ctx) {
   const lines = [];
   for (const code of STATE_CODES) {
@@ -89,11 +90,12 @@ function otherStatesSection(page, ctx) {
     for (const role of page.roles ?? []) for (const r of roleRecords(ctx.register, code, role)) {
       if (listed.has(r.id)) continue;
       listed.add(r.id);
-      const phone = !r.phone ? '' : r.id === 'relay' ? ` — ${r.phone}` : ` — [${r.phone}](tel:${digits(r.phone)})`;
+      // The label carries the record's scope (information line, non-emergency, local only); the dial digits always come from r.phone.
+      const phone = !r.phone ? '' : r.id === 'relay' ? ` — ${r.phone}` : ` — [${r.phoneLabel || r.phone}](tel:${digits(r.phone)})`;
       lines.push(`- **${code}** — ${ROLE_LABELS[role]}: [${r.name}](${r.url})${phone}`);
     }
   }
-  return lines.length ? `## Other states and territories\n\n${lines.join('\n')}` : '';
+  return lines.length ? `## Other states and territories\n\n${OTHER_STATES_INTRO}\n\n${lines.join('\n')}` : '';
 }
 
 function assertResolved(text, page) {
