@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { STATE_CODES, ROLE_LABELS, loadSite, assertState, loadStates, loadRegister, visibleResources, roleRecord } from './lib/register.mjs';
+// Every record of a state that carries a role, in data order. Placeholders ({{phone:role}}, {{tel:role}}) use the first; lists and the bottom section use all.
+const roleRecords = (register, state, role) => register.filter(r => r.jurisdiction === state && Array.isArray(r.roles) && r.roles.includes(role));
 const repo = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const date = r => new Date(r.reviewed + "T00:00:00Z").toLocaleDateString("en-AU", {day:"numeric",month:"short",year:"numeric",timeZone:"UTC"});
 const digits = phone => phone.replace(/\D/g,'');
@@ -47,19 +49,21 @@ function expandPlaceholders(text, page, ctx) {
   });
 }
 
-// One id of a {{resources:...}} token: a register id or role:<role>. Returns null when the record is skipped in this build.
+// One id of a {{resources:...}} token: a register id, or role:<role> for every main-state record with that role. Returns [] when skipped in this build.
 function resolveId(id, token, page, ctx) {
   if (id.startsWith('role:')) {
-    const role = id.slice(5), r = roleRecord(ctx.register, ctx.state, role);
-    if (r) return r;
-    if ((ctx.info.missingRoles ?? []).includes(role)) return null;
+    const role = id.slice(5), rs = roleRecords(ctx.register, ctx.state, role);
+    if (rs.length) return rs;
+    if ((ctx.info.missingRoles ?? []).includes(role)) return [];
     throw new Error(`Page "${page.slug}": ${id} in ${token} has no record for ${ctx.state}`);
   }
   const r = ctx.register.find(r => r.id === id);
   if (!r) throw new Error(`Unknown resource: ${id}`);
   // Lists show national and main-state records only; other states' core records belong in the bottom section.
-  return r.jurisdiction === 'Australia' || r.jurisdiction === ctx.state ? r : null;
+  return r.jurisdiction === 'Australia' || r.jurisdiction === ctx.state ? [r] : [];
 }
+
+const dedupe = rs => [...new Map(rs.map(r => [r.id, r])).values()];
 
 function renderList(rs, ctx, seen) {
   if (rs.some(r => r.jurisdiction === ctx.state)) seen.mainContent = true;
@@ -68,7 +72,7 @@ function renderList(rs, ctx, seen) {
 
 function expandResources(text, page, ctx, seen) {
   return text
-    .replace(/\{\{resources:([^}]+)\}\}/g, (token, ids) => renderList(ids.split(',').map(id => resolveId(id, token, page, ctx)).filter(Boolean), ctx, seen))
+    .replace(/\{\{resources:([^}]+)\}\}/g, (token, ids) => renderList(dedupe(ids.split(',').flatMap(id => resolveId(id, token, page, ctx))), ctx, seen))
     .replace('{{all-resources}}', () => renderList(ctx.visible, ctx, seen));
 }
 
@@ -81,9 +85,9 @@ function otherStatesSection(page, ctx) {
   for (const code of STATE_CODES) {
     if (code === ctx.state || !ctx.states[code]) continue;
     const listed = new Set();
-    for (const role of page.roles ?? []) {
-      const r = roleRecord(ctx.register, code, role);
-      if (!r || listed.has(r.id)) continue;
+    // Every record for each page role (page-role order, then data order), each record once, labelled with the first page role it carries.
+    for (const role of page.roles ?? []) for (const r of roleRecords(ctx.register, code, role)) {
+      if (listed.has(r.id)) continue;
       listed.add(r.id);
       const phone = !r.phone ? '' : r.id === 'relay' ? ` — ${r.phone}` : ` — [${r.phone}](tel:${digits(r.phone)})`;
       lines.push(`- **${code}** — ${ROLE_LABELS[role]}: [${r.name}](${r.url})${phone}`);

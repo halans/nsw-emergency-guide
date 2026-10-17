@@ -10,7 +10,7 @@ Do not patch `dist/` or generated `docs/*.mdx` as the authoritative fix. The nex
 
 Required fields: `id` (unique kebab-case key), `category`, `name`, `url` (official HTTPS source), `summary`, `jurisdiction` (`Australia` or one state code: `NSW`, `VIC`, `QLD`, `WA`, `SA`, `TAS`, `ACT`, `NT`), `reviewed` (ISO date). Optional: `phone` (digits and spaces only), `phoneLabel`, `hours`, `caution`, `language`, `resolvedUrl`, `corroboratingSource`, `roles`.
 
-`roles` marks a state record as one of the seven core services shown for that state everywhere: `ses`, `fire`, `warnings`, `police`, `health`, `mentalHealth`, `recovery`. A combined agency may list several roles. If a state has more than one record for a role, only the first (in file order) is used for `role:` tokens, `{{phone:role}}` and the bottom section; the others still appear on the sources page. National records have no roles. Records with roles appear in every build (as the main state's cards, or in the "Other states and territories" section); NSW records without roles appear only when NSW is the main state.
+`roles` marks a state record as one of the seven core services shown for that state everywhere: `ses`, `fire`, `warnings`, `police`, `health`, `mentalHealth`, `recovery`. A combined agency may list several roles. A state may have more than one record for a role (for example two fire services): `role:` tokens and the bottom section show all of them, in file order, each record once per page. `{{phone:role}}` and `{{tel:role}}` use the first. National records have no roles. Records with roles appear in every build (as the main state's cards, or in the "Other states and territories" section); NSW records without roles appear only when NSW is the main state.
 
 IDs must be unique across `data/resources.json` and every state file (the loader fails on a duplicate). The tests accept the `reviewed` dates in the `REVIEWED` pattern in `tests/state.test.mjs` and `tests/content.test.mjs`; widen it deliberately when re-reviewing.
 
@@ -55,8 +55,8 @@ Each page has `slug`, `title`, `description`, `body`, and optionally `roles`, `s
 State-aware syntax, usable in `title`, `description` and `body`:
 
 - `{{state}}` and `{{state-long}}`: the main state's `name` and `longName`.
-- `{{term:role}}`: the main state's agency name for a role; `{{phone:role}}` and `{{tel:role}}`: its role record's phone, as written or as digits for a `tel:` link. A missing value fails the build.
-- `role:<role>` inside a resource list, for example `{{resources:role:fire,myfireplan}}`: the main state's record for that role (skipped if the role is in `missingRoles`).
+- `{{term:role}}`: the main state's agency name for a role; `{{phone:role}}` and `{{tel:role}}`: the phone of its first record for that role, as written or as digits for a `tel:` link. A missing value fails the build.
+- `role:<role>` inside a resource list, for example `{{resources:role:fire,myfireplan}}`: every main-state record for that role (skipped if the role is in `missingRoles`). A record already listed in the same token is not repeated.
 - `{{state-block:key}}`: the text in `stateBlocks.key.<CODE>` for the main state, else `stateBlocks.key["*"]`, else nothing. Write a state's block only from that state's own official source; keep `"*"` generic, with no state-specific claims. An empty own block suppresses the fallback.
 
 `roles` lists the core roles whose other-state records the page shows in its "Other states and territories" section. `stateNote: true` adds a short note when the build has no main-state content on that page (in practice, thin pages in non-NSW builds). The index slug maps to `/`. Other slugs map to their clean route.
