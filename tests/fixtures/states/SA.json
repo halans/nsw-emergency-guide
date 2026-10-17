@@ -1,0 +1,11 @@
+{
+  "phones": {
+    "sa-ses": "132 500",
+    "sa-cfs": "1800 362 361"
+  },
+  "requiredUrls": [
+    "https://ses.sa.gov.au/about-us/contact-us",
+    "https://www.cfs.sa.gov.au/incidents/",
+    "https://safecom.sa.gov.au/emergencies/emergenciesinformationjsp/"
+  ]
+}

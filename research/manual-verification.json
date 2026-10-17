@@ -109,6 +109,42 @@
       "method": "manual review needed",
       "state": "WA",
       "observed": "MHERL and Rurallink numbers and hours are from this Mental Health Commission page only; a search result for another WA Health page said a project to improve MHERL and Rurallink is under way, so details may change. Recheck before relying on them."
+    },
+    {
+      "url": "https://www.police.sa.gov.au/about-us/key-contacts",
+      "method": "manual review needed",
+      "state": "SA",
+      "observed": "Police role not covered: police.sa.gov.au (key contacts, contact us, make a report to police) returned 403, so the non-urgent police number could not be confirmed on an opened official page. Alternative lead: https://www.police.sa.gov.au/services-and-events/make-a-report-to-police"
+    },
+    {
+      "url": "https://www.sahealth.sa.gov.au/",
+      "method": "manual review needed",
+      "state": "SA",
+      "observed": "Health role not covered: sahealth.sa.gov.au (notifiable conditions, Communicable Disease Control Branch, home) returned 403 on every page tried; a related mirror had an expired certificate."
+    },
+    {
+      "url": "https://www.sahealth.sa.gov.au/",
+      "method": "manual review needed",
+      "state": "SA",
+      "observed": "Mental health role not covered: SA Health pages (including its mental health help page) returned 403 or a certificate error, so no crisis or triage service, number or hours were confirmed on an opened official page."
+    },
+    {
+      "url": "https://www.recovery.sa.gov.au/",
+      "method": "manual review needed",
+      "state": "SA",
+      "observed": "Recovery role not covered: recovery.sa.gov.au, dhs.sa.gov.au and housing.sa.gov.au returned 403 or a certificate error. Which agency now leads state recovery information is unconfirmed."
+    },
+    {
+      "url": "https://www.mfs.sa.gov.au/",
+      "method": "manual review needed",
+      "state": "SA",
+      "observed": "Partial fire coverage: the Metropolitan Fire Service site returned 403, so only the CFS record exists. Decide whether CFS alone satisfies the fire role."
+    },
+    {
+      "url": "https://www.alert.sa.gov.au/",
+      "method": "manual review needed",
+      "state": "SA",
+      "observed": "Alert SA site itself returned 403; the warnings record uses the SAFECOM page that explains Alert SA. Terms for police, health, mental health and recovery are neutral placeholders until those roles are verified."
     }
   ]
 }

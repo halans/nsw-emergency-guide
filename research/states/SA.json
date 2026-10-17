@@ -1,0 +1,52 @@
+{
+  "code": "SA",
+  "evidence": [
+    {
+      "id": "sa-ses",
+      "url": "https://ses.sa.gov.au/about-us/contact-us",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "Agency named South Australian State Emergency Service (SA SES). Page gives 132 500 for emergency assistance (flood/storm), states no hours for it, says the contact form will not initiate SA SES attendance, directs life-threatening emergencies to 000, and lists an infoline (1800 362 361) for incident information during significant weather events."
+    },
+    {
+      "id": "sa-cfs",
+      "url": "https://www.cfs.sa.gov.au/incidents/",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "South Australian Country Fire Service (CFS) Incidents & warnings page: map/list of incidents, explanation of warning levels, status categories and incident levels, Emergency Alert messages, link to bushfire preparedness. Names an Information Hotline 1800 362 361 with no hours stated. Directs emergencies to 000 (or Teletype 106). Live incident content deliberately not recorded. Note: a search-engine summary said 1300 362 361; the page itself says 1800 362 361."
+    },
+    {
+      "id": "sa-alert-sa",
+      "url": "https://safecom.sa.gov.au/emergencies/emergenciesinformationjsp/",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "SAFECOM page on how SA public warnings work: Alert SA described as a state-owned platform managed by SAFECOM (fire, flood, severe weather, hazmat, heatwave warnings, Total Fire Bans, relief and recovery centre locations, Watch Zones), Emergency Alert, three-level bushfire Advice/Watch and Act/Emergency Warning system, Australian Warning System, accessibility options for deaf/hearing/speech-impaired people, other sources (ABC radio, CFS and SES social media). Lists Bushfire Information Hotline 1800 362 361 (TTY 133 677). Page names the Alert SA site as alert.sa.gov.au, but that site itself returned 403 to WebFetch, so it is not used as the record URL."
+    }
+  ],
+  "unverified": [
+    {
+      "role": "police",
+      "why": "Search results indicate SAPOL (police.sa.gov.au) lists 131 444 as the Police Assistance Line for non-urgent matters, but police.sa.gov.au pages (key-contacts, contact-us, make-a-report-to-police, home) returned 403 to automated requests. Not opened, so no record created; manual check needed. Lead URLs: https://www.police.sa.gov.au/about-us/key-contacts and https://www.police.sa.gov.au/services-and-events/make-a-report-to-police. Do not use the number until confirmed on the official page."
+    },
+    {
+      "role": "health",
+      "why": "SA Health (sahealth.sa.gov.au) returned 403 to automated requests on every page tried (notifiable conditions, Communicable Disease Control Branch, SurveillanceNotifiableConditions short link, home); emergencydepartments.sa.gov.au mirror failed with an expired certificate. Manual check needed. Lead: Communicable Disease Control Branch / notifiable conditions pages on sahealth.sa.gov.au."
+    },
+    {
+      "role": "mentalHealth",
+      "why": "Search results indicate the SA Health Mental Health Triage Service on 13 14 65 (24/7), but every SA Health page returned 403 or a certificate error, so the number and hours were not confirmed on an opened official page. Manual check needed. Lead: SA Health 'Find mental health help now' page."
+    },
+    {
+      "role": "recovery",
+      "why": "recovery.sa.gov.au, dhs.sa.gov.au and housing.sa.gov.au returned 403 or a certificate error. Search results suggest recovery.sa.gov.au is the state recovery site (recovery function now with DPC Security, Emergency and Recovery Management, older DHS pages possibly out of date) and Housing SA leads emergency relief centres, but this is unconfirmed. An old recovery hotline number appeared in a search snippet; do not use it. Manual check needed."
+    },
+    {
+      "role": "fire",
+      "why": "Partial: only the CFS (rural/regional fire) page was opened. The Metropolitan Fire Service (mfs.sa.gov.au) returned 403, so no MFS record exists. Search results say MFS points to the CFS incidents table and the CFS Information Hotline for bushfire updates. Decide whether the CFS record alone satisfies the fire role."
+    },
+    {
+      "role": "terms",
+      "why": "Terms for police, health, mentalHealth and recovery are provisional (not confirmed from an opened page) and should be replaced after manual verification."
+    }
+  ]
+}
