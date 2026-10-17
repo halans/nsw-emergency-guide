@@ -1,0 +1,4 @@
+{"name":"QLD","longName":"Queensland","terms":{"ses":"Queensland SES","fire":"QFD","warnings":"QLD Disaster","police":"QPS","health":"Queensland Health","mentalHealth":"QLD Mental Health","recovery":"QLD Recovery"},"missingRoles":["fire","police","health","mentalHealth","recovery"],
+"resources":[
+  {"id":"qld-ses","category":"Urgent","name":"Queensland SES","url":"https://example.qld.gov.au/ses","summary":"Queensland state emergency service in the mini fixture.","jurisdiction":"QLD","reviewed":"2026-10-17","phone":"132 500","roles":["ses","warnings"]}
+]}

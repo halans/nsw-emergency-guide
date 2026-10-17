@@ -33,7 +33,10 @@
     "summary": "Emergency assistance for flood, storm or tsunami, including storm/wind/fallen-tree damage. Requests are prioritised.",
     "reviewed": "2026-10-14",
     "phone": "132 500",
-    "caution": "If anyone is trapped or injured, call 000. The online contact form is not monitored for storm/flood emergencies; call 132 500."
+    "caution": "If anyone is trapped or injured, call 000. The online contact form is not monitored for storm/flood emergencies; call 132 500.",
+    "roles": [
+      "ses"
+    ]
   },
   {
     "id": "police",
@@ -44,7 +47,10 @@
     "summary": "Non-urgent police assistance, minor-crime reporting and general enquiries.",
     "reviewed": "2026-10-14",
     "phone": "131 444",
-    "caution": "For emergencies or a crime in progress, call 000 instead."
+    "caution": "For emergencies or a crime in progress, call 000 instead.",
+    "roles": [
+      "police"
+    ]
   },
   {
     "id": "poisons",
@@ -117,7 +123,10 @@
     "phone": "1800 011 511",
     "hours": "24/7",
     "caution": "Not a one-off counselling service. If someone is in immediate danger, call 000 or attend an emergency department.",
-    "language": "For another language, call TIS National 131 450 and ask to be connected. Relay options are listed on the source page."
+    "language": "For another language, call TIS National 131 450 and ask to be connected. Relay options are listed on the source page.",
+    "roles": [
+      "mentalHealth"
+    ]
   },
   {
     "id": "service-nsw",
@@ -129,7 +138,10 @@
     "reviewed": "2026-10-14",
     "phone": "13 77 88",
     "hours": "Monday–Friday, 7am–7pm Sydney time",
-    "caution": "In an emergency, call 000; for flood/storm/tsunami assistance, call NSW SES 132 500."
+    "caution": "In an emergency, call 000; for flood/storm/tsunami assistance, call NSW SES 132 500.",
+    "roles": [
+      "recovery"
+    ]
   },
   {
     "id": "housing",
@@ -241,7 +253,7 @@
     "id": "tis",
     "category": "access",
     "name": "Translating and Interpreting Service (TIS National) pathway for NSW mental-health support",
-    "jurisdiction": "NSW / Australia",
+    "jurisdiction": "NSW",
     "url": "https://www.health.nsw.gov.au/mentalhealth/Pages/mental-health-line.aspx",
     "summary": "Interpreter connection pathway: ask TIS to ring NSW Mental Health Line 1800 011 511.",
     "reviewed": "2026-10-14",
@@ -265,7 +277,10 @@
     "url": "https://www.rfs.nsw.gov.au/",
     "summary": "Official NSW bushfire information, preparation resources and links to current incidents and fire danger ratings.",
     "jurisdiction": "NSW",
-    "reviewed": "2026-10-14"
+    "reviewed": "2026-10-14",
+    "roles": [
+      "fire"
+    ]
   },
   {
     "id": "rfs-incidents",
@@ -303,7 +318,10 @@
     "summary": "Official interactive hazard-warning map. NSW SES links to HazardWatch for current flood, severe weather and tsunami warnings.",
     "jurisdiction": "NSW",
     "reviewed": "2026-10-14",
-    "caution": "Check the displayed hazard coverage, location, issue time and full warning. A blank map or no displayed warnings does not mean your location is safe."
+    "caution": "Check the displayed hazard coverage, location, issue time and full warning. A blank map or no displayed warnings does not mean your location is safe.",
+    "roles": [
+      "warnings"
+    ]
   },
   {
     "id": "hazards-near-me",
@@ -401,7 +419,10 @@
     "jurisdiction": "NSW",
     "url": "https://www.health.nsw.gov.au/Infectious/Pages/default.aspx",
     "reviewed": "2026-10-16",
-    "summary": "NSW Health hub for infectious diseases: fact sheets, an A–Z of diseases, the weekly respiratory update, and outbreak alerts and guidance."
+    "summary": "NSW Health hub for infectious diseases: fact sheets, an A–Z of diseases, the weekly respiratory update, and outbreak alerts and guidance.",
+    "roles": [
+      "health"
+    ]
   },
   {
     "id": "nsw-phu",

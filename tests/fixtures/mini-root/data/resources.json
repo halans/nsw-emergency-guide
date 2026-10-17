@@ -1,0 +1,7 @@
+[
+  {"id":"nat","category":"Urgent","name":"National Line","url":"https://example.gov.au/nat","summary":"A national line used by the mini fixture.","jurisdiction":"Australia","reviewed":"2026-10-14","phone":"13 00 00"},
+  {"id":"relay","category":"Urgent","name":"Relay","url":"https://example.gov.au/relay","summary":"Relay record used by the mini fixture.","jurisdiction":"Australia","reviewed":"2026-10-14","phone":"106","phoneLabel":"106 — TTY/TDD only"},
+  {"id":"ses","category":"Urgent","name":"NSW SES","url":"https://example.nsw.gov.au/ses","summary":"NSW state emergency service in the mini fixture.","jurisdiction":"NSW","reviewed":"2026-10-14","phone":"132 500","roles":["ses"]},
+  {"id":"rfs","category":"Fire","name":"NSW RFS","url":"https://example.nsw.gov.au/rfs","summary":"NSW fire authority in the mini fixture.","jurisdiction":"NSW","reviewed":"2026-10-14","roles":["fire"]},
+  {"id":"pets","category":"Animals","name":"NSW Pets","url":"https://example.nsw.gov.au/pets","summary":"An NSW-only record without a role.","jurisdiction":"NSW","reviewed":"2026-10-14"}
+]
