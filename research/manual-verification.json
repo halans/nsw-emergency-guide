@@ -72,7 +72,7 @@
       "url": "https://www.police.qld.gov.au/policelink-reporting",
       "method": "manual review needed",
       "state": "QLD",
-      "observed": "Police assistance number conflict: qld.gov.au police page gives Policelink 131 444 (24 hours, 7 days) and the record uses it; the getready.qld.gov.au emergency contacts page lists a different Policelink general-enquiries number. police.qld.gov.au returned empty to automated requests (bot protection). Check the police site and report the discrepancy."
+      "observed": "Police assistance number conflict: qld.gov.au police page gives Policelink 131 444 (24 hours, 7 days) and the record uses it; the getready.qld.gov.au emergency contacts page lists Policelink general enquiries as 13 14 44, which conflicts. police.qld.gov.au returned empty to automated requests (bot protection). Check the police site and report the discrepancy."
     },
     {
       "url": "https://www.fire.qld.gov.au/",
