@@ -24,12 +24,12 @@ function buildContext(root, state) {
   return { state, states, info: states[state], register, visible: visibleResources(register, state) };
 }
 
-// {{state-block:key}}: the page's block for the main state, or nothing (with its leading blank lines).
+// {{state-block:key}}: the page's block for the main state, else its "*" fallback (generic wording, not main-state content), else nothing (with its leading blank lines).
 function expandStateBlocks(text, page, ctx, seen) {
   return text.replace(/(\n*)\{\{state-block:([^}]+)\}\}/g, (_, lead, key) => {
-    const block = page.stateBlocks?.[key]?.[ctx.state] ?? '';
+    const own = page.stateBlocks?.[key]?.[ctx.state], block = own ?? page.stateBlocks?.[key]?.['*'] ?? '';
     if (!block.trim()) return '';
-    seen.mainContent = true;
+    if (own !== undefined) seen.mainContent = true;
     return lead + block;
   });
 }
