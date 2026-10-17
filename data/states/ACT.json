@@ -1,0 +1,125 @@
+{
+  "name": "ACT",
+  "longName": "Australian Capital Territory",
+  "terms": {
+    "ses": "ACT SES",
+    "fire": "ACT Fire & Rescue and ACT RFS",
+    "warnings": "ACT Emergency Services Agency",
+    "police": "ACT Policing",
+    "health": "ACT Government health services",
+    "mentalHealth": "Access Mental Health",
+    "recovery": "ACT Government"
+  },
+  "resources": [
+    {
+      "id": "act-ses",
+      "category": "urgent",
+      "name": "ACT State Emergency Service (ACT SES)",
+      "jurisdiction": "ACT",
+      "roles": [
+        "ses"
+      ],
+      "url": "https://esa.act.gov.au/about-esa-emergency-services/state-emergency-service/contact-ses",
+      "summary": "Contact page for the ACT State Emergency Service, part of the ACT Emergency Services Agency. Lists the storm and flood assistance line for emergency help during floods or storms.",
+      "reviewed": "2026-10-18",
+      "phone": "132 500",
+      "phoneLabel": "132 500 — ACT SES storm and flood assistance",
+      "caution": "For a life-threatening emergency, call 000. The page states no hours for 132 500."
+    },
+    {
+      "id": "act-fire-rescue",
+      "category": "fire",
+      "name": "ACT Fire & Rescue",
+      "jurisdiction": "ACT",
+      "roles": [
+        "fire"
+      ],
+      "url": "https://esa.act.gov.au/fire-rescue",
+      "summary": "ACT Emergency Services Agency page for ACT Fire & Rescue, the territory's urban fire and rescue service, with its community programs and Community Fire Units. Grass and bushfire response is covered by the ACT Rural Fire Service.",
+      "reviewed": "2026-10-18",
+      "caution": "In a life-threatening emergency call 000. The ESA contact page says not to call fire stations to report an emergency."
+    },
+    {
+      "id": "act-rfs",
+      "category": "fire",
+      "name": "ACT Rural Fire Service (ACT RFS)",
+      "jurisdiction": "ACT",
+      "roles": [
+        "fire"
+      ],
+      "url": "https://esa.act.gov.au/rural-fire-service",
+      "summary": "ACT Emergency Services Agency page for the ACT Rural Fire Service, which protects the ACT community from grass and bushfires, with preparation information and links to fire danger ratings and total fire ban pages.",
+      "reviewed": "2026-10-18",
+      "caution": "In a life-threatening emergency call 000."
+    },
+    {
+      "id": "act-warnings",
+      "category": "warnings",
+      "name": "ACT Emergency Services Agency: warnings and alerts",
+      "jurisdiction": "ACT",
+      "roles": [
+        "warnings"
+      ],
+      "url": "https://esa.act.gov.au/be-emergency-ready/warnings-alerts",
+      "summary": "Explains how ACT emergency warnings are issued and where to find them: the ESA website and incidents map, the Hazards Near Me app, social media, ABC Local Radio, AusAlert and Emergency Alert messages. Describes the channels only; no live warnings.",
+      "reviewed": "2026-10-18"
+    },
+    {
+      "id": "act-police",
+      "category": "urgent",
+      "name": "ACT Policing: Police Assistance Line",
+      "jurisdiction": "ACT",
+      "roles": [
+        "police"
+      ],
+      "url": "https://www.afp.gov.au/about-us/contact-us",
+      "summary": "Australian Federal Police contact page with an ACT Policing section giving the Police Assistance Line for non-urgent police assistance, which connects callers to local police in the ACT.",
+      "reviewed": "2026-10-18",
+      "phone": "131 444",
+      "phoneLabel": "131 444 — ACT Policing Police Assistance Line",
+      "caution": "In an emergency, call 000 and ask for police. This number is taken from the Australian Federal Police contact page because ACT Policing's own site could not be checked."
+    },
+    {
+      "id": "act-health",
+      "category": "health",
+      "name": "ACT Health: diseases and conditions",
+      "jurisdiction": "ACT",
+      "roles": [
+        "health"
+      ],
+      "url": "https://www.act.gov.au/health/topics/diseases",
+      "summary": "ACT Government index of infectious diseases and conditions, linking to pages on topics such as measles, influenza, COVID-19 and mpox. Managed by the Health and Community Services Directorate. It is a general index, not a dedicated public health contact page.",
+      "reviewed": "2026-10-18",
+      "caution": "The page says its content is intended for health professionals and is not personal medical advice; see your own health provider about a health concern."
+    },
+    {
+      "id": "act-mental-health",
+      "category": "crisis",
+      "name": "Access Mental Health Line (Canberra Health Services)",
+      "jurisdiction": "ACT",
+      "roles": [
+        "mentalHealth"
+      ],
+      "url": "https://www.canberrahealthservices.act.gov.au/services-and-clinics/services/access-mental-health",
+      "summary": "Phone support for anyone concerned about their own or someone else's mental health, including carers and health professionals. Gives information and advice and can refer to urgent mental health assessment or other Canberra Health Services.",
+      "reviewed": "2026-10-18",
+      "phone": "1800 629 354",
+      "phoneLabel": "1800 629 354 — Access Mental Health Line",
+      "hours": "24 hours a day, 7 days a week (Access Mental Health Line)",
+      "caution": "Not for life-threatening emergencies: call 000 immediately."
+    },
+    {
+      "id": "act-recovery",
+      "category": "recovery",
+      "name": "ACT Government: support after an emergency",
+      "jurisdiction": "ACT",
+      "roles": [
+        "recovery"
+      ],
+      "url": "https://www.act.gov.au/emergency-and-safety/reduce-the-impact-of-disasters/support-after-an-emergency",
+      "summary": "ACT Government starting point for recovery: immediate relief, insurance, financial aid, legal help, replacing lost documents and mental health support. Support varies by emergency and is updated after an event.",
+      "reviewed": "2026-10-18",
+      "caution": "The page says immediate relief is generally time-limited (up to about three months) and that eligibility depends on the emergency."
+    }
+  ]
+}

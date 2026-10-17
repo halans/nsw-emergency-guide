@@ -169,6 +169,18 @@
       "method": "manual review needed",
       "state": "TAS",
       "observed": "Spot check 2026-10-18: some footer icons on the site were seen linking a \"000 Emergency\" label to the Information Line number 1800 000 699; the header 000 link is correct. The record gives 1800 000 699 only as the non-emergency Information Line."
+    },
+    {
+      "url": "https://police.act.gov.au/about-us/connect-with-us/who-to-contact",
+      "method": "manual review needed",
+      "state": "ACT",
+      "observed": "ACT Policing own site (police.act.gov.au, policenews.act.gov.au) returned 403 or a Cloudflare challenge. The police record uses the AFP contact page, which states 131 444 for ACT Policing. Check the ACT Policing page."
+    },
+    {
+      "url": "https://www.act.gov.au/health/topics/diseases",
+      "method": "manual review needed",
+      "state": "ACT",
+      "observed": "Weak fit for the health role: no dedicated public-facing ACT infectious-diseases or public health page with contact details was found. The diseases index carries a health-professionals disclaimer. Look for a better page."
     }
   ]
 }
