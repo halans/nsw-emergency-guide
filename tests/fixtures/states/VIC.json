@@ -1,0 +1,17 @@
+{
+  "phones": {
+    "vic-ses": "132 500",
+    "vic-warnings": "1800 226 226",
+    "vic-police": "131 444",
+    "vic-suicideline": "1300 651 251"
+  },
+  "requiredUrls": [
+    "https://www.ses.vic.gov.au/en/about-us/contact-us",
+    "https://www.cfa.vic.gov.au/",
+    "https://www.emergency.vic.gov.au/respond/",
+    "https://www.police.vic.gov.au/contact",
+    "https://www.health.vic.gov.au/public-health/infectious-diseases-guidelines-and-advice",
+    "https://www.health.vic.gov.au/mental-health-services/telephone-and-online-services",
+    "https://www.vic.gov.au/relief-recovery-victoria"
+  ]
+}

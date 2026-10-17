@@ -1,0 +1,141 @@
+{
+  "name": "Victoria",
+  "longName": "Victoria",
+  "terms": {
+    "ses": "VICSES",
+    "fire": "CFA and Fire Rescue Victoria",
+    "warnings": "VicEmergency",
+    "police": "Victoria Police",
+    "health": "Victorian Department of Health",
+    "mentalHealth": "Victorian Department of Health mental health services",
+    "recovery": "Emergency Management Victoria"
+  },
+  "resources": [
+    {
+      "id": "vic-ses",
+      "category": "urgent",
+      "name": "Victoria State Emergency Service (VICSES)",
+      "jurisdiction": "VIC",
+      "roles": [
+        "ses"
+      ],
+      "url": "https://www.ses.vic.gov.au/en/about-us/contact-us",
+      "summary": "Emergency help for flood, storm, tsunami and earthquake in Victoria. Requests to the help line are logged by a call centre and a local volunteer may follow up.",
+      "reviewed": "2026-10-18",
+      "phone": "132 500",
+      "phoneLabel": "132 500 — VICSES flood and storm help",
+      "hours": "24/7 call centre",
+      "caution": "If life is threatened, call 000. The website enquiry form is for general enquiries only, not emergencies. For minor leaks, superficial damage or debris removal, VICSES directs people to a tradesperson or insurer."
+    },
+    {
+      "id": "vic-cfa",
+      "category": "fire",
+      "name": "Country Fire Authority (CFA)",
+      "jurisdiction": "VIC",
+      "roles": [
+        "fire"
+      ],
+      "url": "https://www.cfa.vic.gov.au/",
+      "summary": "Victoria's CFA site covers fire safety, fire bans and Fire Danger Ratings, and how to contact CFA districts and brigades across country Victoria.",
+      "reviewed": "2026-10-18",
+      "caution": "In an emergency dial 000 for fire, police or ambulance."
+    },
+    {
+      "id": "vic-frv",
+      "category": "fire",
+      "name": "Fire Rescue Victoria (FRV)",
+      "jurisdiction": "VIC",
+      "roles": [
+        "fire"
+      ],
+      "url": "https://frv.vic.gov.au/contact-us",
+      "summary": "Contact page for Fire Rescue Victoria, the state's fire and rescue service. The page gives an enquiries form and links to its response area information.",
+      "reviewed": "2026-10-18",
+      "caution": "For fire and rescue, police or ambulance in an emergency, call 000. The page's general enquiries number is not an emergency line."
+    },
+    {
+      "id": "vic-warnings",
+      "category": "warnings",
+      "name": "VicEmergency (website, app and hotline)",
+      "jurisdiction": "VIC",
+      "roles": [
+        "warnings"
+      ],
+      "url": "https://www.emergency.vic.gov.au/respond/",
+      "summary": "Victoria's official emergency information service: a map and list of current incidents and warnings, watch zones for the VicEmergency app, and pages on preparing and recovering. This directory does not reproduce live warnings.",
+      "reviewed": "2026-10-18",
+      "phone": "1800 226 226",
+      "phoneLabel": "1800 226 226 — VicEmergency Hotline",
+      "caution": "The hotline is for emergency information, not emergencies. In an emergency call 000. Deaf, hearing or speech-impaired callers can use the National Relay Service; non-English speakers can ring 131 450 for translated information (as stated on the CFA hotline page)."
+    },
+    {
+      "id": "vic-police",
+      "category": "urgent",
+      "name": "Victoria Police Assistance Line",
+      "jurisdiction": "VIC",
+      "roles": [
+        "police"
+      ],
+      "url": "https://www.police.vic.gov.au/contact",
+      "summary": "Non-urgent police assistance, general enquiries and reporting a crime that has already occurred. Non-urgent crimes and events can also be reported online.",
+      "reviewed": "2026-10-18",
+      "phone": "131 444",
+      "phoneLabel": "131 444 — Victoria Police Assistance Line",
+      "hours": "24 hours a day, 7 days a week",
+      "caution": "For danger or a crime in progress, call 000 instead."
+    },
+    {
+      "id": "vic-health",
+      "category": "health",
+      "name": "Victorian Department of Health: infectious diseases",
+      "jurisdiction": "VIC",
+      "roles": [
+        "health"
+      ],
+      "url": "https://www.health.vic.gov.au/public-health/infectious-diseases-guidelines-and-advice",
+      "summary": "The Victorian Department of Health's infectious diseases page: guidelines, notifiable conditions, an A-Z of disease information and links to surveillance reports. It is aimed mainly at health professionals and links to the Better Health Channel for consumer information.",
+      "reviewed": "2026-10-18"
+    },
+    {
+      "id": "vic-mental-health-services",
+      "category": "crisis",
+      "name": "Victorian Department of Health: mental health telephone and online services",
+      "jurisdiction": "VIC",
+      "roles": [
+        "mentalHealth"
+      ],
+      "url": "https://www.health.vic.gov.au/mental-health-services/telephone-and-online-services",
+      "summary": "Department of Health list of mental health phone and online services. It describes area mental health triage as a 24/7 specialist response whose phone number differs by area, so there is no single statewide triage number.",
+      "reviewed": "2026-10-18",
+      "caution": "This is a directory, not a crisis line: the page lists no single statewide mental health triage number because area numbers differ."
+    },
+    {
+      "id": "vic-suicideline",
+      "category": "crisis",
+      "name": "SuicideLine Victoria (suicide crisis support)",
+      "jurisdiction": "VIC",
+      "roles": [
+        "mentalHealth"
+      ],
+      "url": "https://www.suicideline.org.au/",
+      "summary": "Suicide crisis support: free professional phone and online counselling for people living in Victoria, including people affected by suicide. Supported by the Victorian Government and delivered by Lifeline. It is not an area mental health triage line.",
+      "reviewed": "2026-10-18",
+      "phone": "1300 651 251",
+      "phoneLabel": "1300 651 251 — SuicideLine Victoria",
+      "hours": "24/7",
+      "caution": "If someone is in immediate danger or has seriously harmed themselves, call 000."
+    },
+    {
+      "id": "vic-recovery",
+      "category": "recovery",
+      "name": "Relief and recovery in Victoria (Victorian Government)",
+      "jurisdiction": "VIC",
+      "roles": [
+        "recovery"
+      ],
+      "url": "https://www.vic.gov.au/relief-recovery-victoria",
+      "summary": "Victorian Government guide to help after major emergencies: relief centres, emergency accommodation and payments, clean-up and mental health support, with guides for bushfire, storm and flood. Emergency Management Victoria coordinates state and regional relief and recovery.",
+      "reviewed": "2026-10-18"
+    }
+  ]
+}

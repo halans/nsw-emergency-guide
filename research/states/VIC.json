@@ -1,0 +1,93 @@
+{
+  "code": "VIC",
+  "evidence": [
+    {
+      "id": "vic-ses",
+      "url": "https://www.ses.vic.gov.au/en/about-us/contact-us",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page (also /who-we-are/contact variant, same content)",
+      "observed": "Page names Victoria State Emergency Service (VICSES). 132 500 for flood, storm, tsunami and earthquake emergencies, logged by a 24/7 call centre. Triple Zero for life-threatening situations. Web form is for general enquiries only. Lists when to call (tree damage, significant roof damage, blocked access, flooding) and tells people with minor damage to use a tradesperson or insurer. Head office (03) 9256 9000, 8:30am-5pm weekdays. VicEmergency hotline 1800 226 226 mentioned."
+    },
+    {
+      "id": "vic-cfa",
+      "url": "https://www.cfa.vic.gov.au/",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page; also http://www.cfa.vic.gov.au/contact/contacting-cfa (reached via 301 from /feedback)",
+      "observed": "Homepage is the official CFA site with 'Emergency? Dial 000', warnings, fire safety, fire bans/Fire Danger Ratings and volunteering. Contact page lists a state HQ, 5 regions and 21 districts, recommends contacting the nearest district HQ first, and states: dial 000 for Fire Brigade, Police or Ambulance. HQ number (03) 9262 8444 and burn-off notification line exist but are not suitable as crisis numbers so not used."
+    },
+    {
+      "id": "vic-frv",
+      "url": "https://frv.vic.gov.au/contact-us",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "FRV contact page. General enquiries 1300 367 617 or online form, response within 5 business days. In an emergency call Triple Zero for fire and rescue, police or ambulance. Links to a response area page (not read), so the CFA/FRV boundary is not stated in this record."
+    },
+    {
+      "id": "vic-warnings",
+      "url": "https://www.emergency.vic.gov.au/respond/",
+      "checked": "2026-10-18",
+      "method": "WebFetch plus curl of raw HTML (page title: Incidents and Warnings - VicEmergency)",
+      "observed": "Official VicEmergency site: map/list of incidents and warnings, filters, Locate Me, Watch Zones for the app, Icons Explained, Prepare and Relief and Recovery sections, app store links. WebFetch reported the banner text 'for TESTING only, Do not rely'; raw HTML shows this is a hidden dev banner (#emv-devsite, shown only for local/ci/qa/cbem environment classes; this page has class prod-au), so it is not displayed on the production site. The hotline number is not on this page; it is stated by CFA (https://www.cfa.vic.gov.au/fire-safety/bushfire-safety-basics/vicemergency-app-and-hotline: hotline 1800 226 226 for incidents and warnings, Fire Danger Ratings, fire restrictions, planned burns, relief centres; NRS access; 131 450 for translated info; app managed by Emergency Management Victoria) and by the VICSES contact page. Hours of the hotline not stated on those pages."
+    },
+    {
+      "id": "vic-police",
+      "url": "https://www.police.vic.gov.au/contact",
+      "checked": "2026-10-18",
+      "method": "WebFetch (from /contact-us, redirects to /contact) plus curl 200 check, title 'Contact Victoria Police | Emergency and non-emergency numbers'",
+      "observed": "Victoria Police Assistance Line 131 444, 24 hours 7 days, for non-urgent police assistance, general enquiries or to report a crime that has already occurred; online reporting of non-urgent crimes and events; emergencies or crime in progress go to Triple Zero."
+    },
+    {
+      "id": "vic-health",
+      "url": "https://www.health.vic.gov.au/public-health/infectious-diseases-guidelines-and-advice",
+      "checked": "2026-10-18",
+      "method": "WebFetch (from /infectious-diseases, redirects here) plus curl 200 check",
+      "observed": "Victorian Department of Health 'Infectious diseases: guidelines and advice'. Guidelines, notification requirements and notifiable conditions list, surveillance reports links, A-Z disease information, school exclusion periods, link to Better Health Channel. Mainly aimed at health professionals. No live outbreak figures on the page."
+    },
+    {
+      "id": "vic-suicideline",
+      "url": "https://www.suicideline.org.au/",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page; corroborated by https://www.health.vic.gov.au/mental-health-services/telephone-and-online-services",
+      "observed": "SuicideLine Victoria: 24/7 telehealth, free professional phone and online counselling for people living in Victoria, 1300 651 251, 'supported by the Victorian Government and delivered by Lifeline'. Department of Health table lists the same number, 24/7."
+    },
+    {
+      "id": "vic-mental-health-services",
+      "url": "https://www.health.vic.gov.au/mental-health-services/telephone-and-online-services",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page plus curl 200 check",
+      "observed": "Table of phone services (Nurse-on-Call, Lifeline, SuicideLine Victoria, Beyond Blue, etc). The mental health services directory entry is described as a specialist mental health response available 24/7 with phone numbers varying by area. No single statewide government crisis or triage number is stated."
+    },
+    {
+      "id": "vic-nurse-on-call",
+      "url": "https://www.health.vic.gov.au/primary-care/nurse-on-call",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "Nurse-on-Call, free, registered nurse advice 24/7, 1300 60 60 24 from anywhere in Victoria; page published by the Victorian Department of Health; not for emergencies, call 000."
+    },
+    {
+      "id": "vic-recovery",
+      "url": "https://www.vic.gov.au/relief-recovery-victoria",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page plus curl (final URL after redirects from /emergency-recovery-victoria; title 'Relief and recovery in Victoria | vic.gov.au')",
+      "observed": "Describes relief (relief centres, emergency accommodation, emergency payments) and recovery (clean-up, mental health support), guides for bushfire, storm and flood, recovery services and wellbeing support, rebuilding, translated information. States Emergency Management Victoria coordinates state and regional relief and recovery. No phone numbers on the page. Page does not name Emergency Recovery Victoria in text, though its image assets are ERV-branded."
+    }
+  ],
+  "unverified": [
+    {
+      "role": "mentalHealth",
+      "why": "The Victorian Department of Health page lists no single statewide government mental-health crisis/triage number (area mental health triage numbers vary by area). SuicideLine Victoria (state-supported, delivered by Lifeline, 24/7, statewide) is used as the closest verified fit; it is suicide-focused counselling, not an area triage line. Caller should decide whether to keep it as the mentalHealth record or add a link to the area directory instead."
+    },
+    {
+      "role": "recovery",
+      "why": "Emergency Recovery Victoria's own about page (www.emv.vic.gov.au/...) returned 403 to automated requests and the old vic.gov.au ERV page returns 404, so ERV could not be verified by name. Used the vic.gov.au Relief and recovery page, which names Emergency Management Victoria as coordinator."
+    },
+    {
+      "role": "warnings",
+      "why": "The VicEmergency hotline 1800 226 226 and its stated features are confirmed on the CFA and VICSES pages, not on emergency.vic.gov.au itself (the support site support.emergency.vic.gov.au returned 403). Hotline hours are not stated on any page read, so no hours field."
+    },
+    {
+      "role": "fire",
+      "why": "Victoria splits fire between CFA (country) and Fire Rescue Victoria (metropolitan and major centres); neither page read states the boundary. Two records provided (vic-cfa, vic-frv); keep one or both. Neither record has a phone: only HQ/general-enquiry numbers appear on the pages, which are not crisis numbers."
+    }
+  ]
+}

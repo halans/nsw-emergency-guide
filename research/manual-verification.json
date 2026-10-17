@@ -43,6 +43,30 @@
       "url": "1800 020 080 (National Coronavirus Helpline)",
       "method": "secondary sources",
       "observed": "2026-10-16: Not in service. AMA services communication kit (Nov 2023) said the helpline and Easy Vaccine Access would close after 4 December 2023; Brisbane South PHN (updated 24 January 2024) and NSW Far West LHD confirm it is no longer in service. No health.gov.au notice was found, so this rests on secondary sources. The number is deliberately excluded from the directory, and the health page warns that it still appears on older material."
+    },
+    {
+      "url": "https://www.health.vic.gov.au/mental-health-services/telephone-and-online-services",
+      "method": "manual review needed",
+      "state": "VIC",
+      "observed": "Weak fit for the mentalHealth role: the Department of Health page lists no single statewide mental health crisis or triage number (area triage numbers vary), so SuicideLine Victoria is listed second as suicide crisis support only. Check whether an area-triage directory link should replace it."
+    },
+    {
+      "url": "https://www.emv.vic.gov.au/",
+      "method": "manual review needed",
+      "state": "VIC",
+      "observed": "Emergency Recovery Victoria / Emergency Management Victoria pages returned 403 to automated requests, and the old vic.gov.au ERV page returned 404. The recovery record uses the vic.gov.au relief and recovery page, which names Emergency Management Victoria as coordinator."
+    },
+    {
+      "url": "https://www.emergency.vic.gov.au/respond/",
+      "method": "manual review needed",
+      "state": "VIC",
+      "observed": "VicEmergency hotline 1800 226 226 is confirmed on CFA and VICSES pages, not on emergency.vic.gov.au itself (its support site returned 403). Hotline hours are not stated on any page read."
+    },
+    {
+      "url": "https://frv.vic.gov.au/contact-us",
+      "method": "manual review needed",
+      "state": "VIC",
+      "observed": "Fire role: the CFA/Fire Rescue Victoria boundary is not stated on either page read, so both records are listed. Neither carries a phone number (only headquarters or general-enquiry numbers appeared)."
     }
   ]
 }
