@@ -10,15 +10,26 @@ test('visibleResources hides NSW-only records for another state',()=>{const qld=
 test('register IDs are unique and every jurisdiction is valid',()=>{assert.equal(new Set(ids(register)).size,register.length);for(const r of register)assert.ok(['Australia',...STATE_CODES].includes(r.jurisdiction),`${r.id}: ${r.jurisdiction}`);});
 test('data/site.json mainState is a valid state with a data file',()=>{const {mainState}=loadSite();assert.doesNotThrow(()=>assertState(mainState));assert.ok(loadStates()[mainState],`data/states/${mainState}.json missing`);});
 const states=loadStates();
-for(const [code,state] of Object.entries(states).filter(([c])=>c!=='NSW'))test(`state file ${code} is complete and well formed`,()=>{
-  for(const r of state.resources){assert.match(r.url,/^https:\/\//,r.id);assert.match(r.reviewed,/^2026-10-(14|16|1[7-9]|2\d|3[01])$/,r.id);if(r.phone)assert.match(r.phone,/^[\d ]+$/,r.id);assert.equal(r.jurisdiction,code,r.id);assert.ok(r.summary.length>25,r.id);}
-  assert.equal(new Set(ids(register)).size,register.length);
+const REVIEWED=/^2026-10-(14|16|1[7-9]|2\d|3[01])$/;
+const fixture=code=>JSON.parse(fs.readFileSync(`tests/fixtures/states/${code}.json`,'utf8'));
+const nonEmpty=v=>typeof v==='string'&&v.trim().length>0;
+test('every state has a data file and fixture',()=>{for(const code of STATE_CODES){assert.ok(states[code],`data/states/${code}.json missing`);assert.ok(fs.existsSync(`tests/fixtures/states/${code}.json`),`tests/fixtures/states/${code}.json missing`);const f=fixture(code);assert.ok(f.phones&&typeof f.phones==='object'&&Object.keys(f.phones).length>0,`${code} fixture needs phones`);assert.ok(Array.isArray(f.requiredUrls)&&f.requiredUrls.length>0,`${code} fixture needs requiredUrls`);}});
+// Per state: every record of that jurisdiction (NSW's live in data/resources.json, the others in their own file) is valid, and all seven roles are covered or listed as a gap.
+for(const code of STATE_CODES)test(`state ${code} is complete and well formed`,()=>{
+  const state=states[code],own=register.filter(r=>r.jurisdiction===code);
+  assert.ok(own.length>0,`no records for ${code}`);
+  for(const r of own){assert.match(r.url,/^https:\/\//,r.id);assert.match(r.reviewed,REVIEWED,r.id);if(r.phone)assert.match(r.phone,/^[\d ]+$/,r.id);assert.equal(r.jurisdiction,code,r.id);assert.ok(r.summary.length>25,r.id);}
+  for(const r of state.resources)assert.equal(r.jurisdiction,code,`${r.id} sits in data/states/${code}.json`);
+  assert.equal(new Set(ids(register)).size,register.length,'duplicate ids');
+  assert.ok(nonEmpty(state.name),'name');assert.ok(nonEmpty(state.longName),'longName');
   assert.deepEqual(Object.keys(state.terms).sort(),[...ROLES].sort());
+  for(const [role,term] of Object.entries(state.terms))assert.ok(nonEmpty(term),`terms.${role} must be a non-empty string`);
   const missing=state.missingRoles??[];
+  for(const role of missing)assert.ok(ROLES.includes(role),`missingRoles has unknown role "${role}"`);
   for(const role of ROLES){const covered=!!roleRecord(register,code,role),absent=missing.includes(role);assert.ok(covered||absent,`${role} neither mapped nor listed in missingRoles`);assert.ok(!(covered&&absent),`${role} both mapped and listed in missingRoles`);}
   assert.ok(!missing.includes('ses'),'ses must never be in missingRoles');
-  assert.ok(fs.existsSync(`tests/fixtures/states/${code}.json`),`tests/fixtures/states/${code}.json missing`);
 });
+test('state fixtures match data',()=>{for(const code of STATE_CODES){const f=fixture(code);for(const [id,phone] of Object.entries(f.phones)){const r=register.find(x=>x.id===id);assert.ok(r,`${code} fixture: unknown record ${id}`);assert.equal(r.jurisdiction,code,`${code} fixture: ${id} belongs to ${r.jurisdiction}`);assert.equal(r.phone,phone,`${code} fixture: ${id}`);}for(const url of f.requiredUrls)assert.ok(register.some(r=>r.url===url),`${code} fixture: ${url} is not in the register`);}});
 
 // Generator tests against the tiny, independent fixture in tests/fixtures/mini-root.
 import os from 'node:os';
@@ -52,3 +63,57 @@ test('generator: --check passes on an unchanged tree and fails on drift',()=>{co
 test('generator: public/resources.json equals visibleResources for the state',()=>{const reg=loadRegister(miniRoot);for(const state of ['NSW','QLD'])assert.deepEqual(JSON.parse(build(state).get('public/resources.json')),visibleResources(reg,state));});
 test('generator: "*" state block is the fallback for states without their own entry and is not main-state content',()=>{const dir=copyRoot();editJson(path.join(dir,'data/pages.json'),p=>[...p,{slug:'star',title:'S',description:'D {{state-block:d}}',stateNote:true,stateBlocks:{line:{NSW:'NSW-only line.','*':'Generic line for {{state}}.'},d:{'*':'generic'}},body:'Intro.\n\n{{state-block:line}}\n\n<div className="quick-grid">\n<a href="/x"><strong>X ↗</strong><span>{{state-block:line}}</span></a>\n</div>'}]);const nsw=generate({root:dir,state:'NSW',outDir:tmpDir()}).get('docs/star.mdx'),qld=generate({root:dir,state:'QLD',outDir:tmpDir()}).get('docs/star.mdx');assert.ok(nsw.includes('Intro.\n\nNSW-only line.'));assert.ok(!nsw.includes('Generic line'));assert.ok(!nsw.includes('specific services are listed'));assert.ok(nsw.includes('description: "D generic"'));assert.ok(qld.includes('Intro.\n\nGeneric line for QLD.'));assert.ok(qld.includes('<span>Generic line for QLD.</span>'));assert.ok(qld.includes('- [X](/x): Generic line for QLD.'));assert.ok(!qld.includes('NSW-only line.'));assert.ok(qld.includes('No QLD-specific services are listed on this page.'));});
 test('generator: an empty own state block suppresses the "*" fallback',()=>{const dir=copyRoot();editJson(path.join(dir,'data/pages.json'),p=>[...p,{slug:'empty',title:'E',description:'E',stateBlocks:{card:{NSW:'','*':'{{resources:role:ses}}'}},body:'Intro.\n\n{{state-block:card}}\n\nEnd.'}]);const nsw=generate({root:dir,state:'NSW',outDir:tmpDir()}).get('docs/empty.mdx'),qld=generate({root:dir,state:'QLD',outDir:tmpDir()}).get('docs/empty.mdx');assert.ok(nsw.includes('Intro.\n\nEnd.'));assert.ok(!nsw.includes('resource-'));assert.ok(qld.includes('id="resource-qld-ses"'));});
+
+// Whole-site tests: every page template built for every state from the real data.
+const realBuilds=new Map();
+const real=code=>{if(!realBuilds.has(code))realBuilds.set(code,generate({state:code,outDir:tmpDir()}));return realBuilds.get(code);};
+const pageSlugs=JSON.parse(fs.readFileSync('data/pages.json','utf8')).map(p=>p.slug);
+const OTHER_SECTION=/^## Other states and territories\n[\s\S]*?(?=^## |(?![\s\S]))/gm;
+test('all eight states generate',()=>{for(const code of STATE_CODES){const files=real(code);for(const slug of pageSlugs)assert.ok(files.get(`docs/${slug}.mdx`),`${code}: docs/${slug}.mdx`);assert.ok(files.get('public/resources.json'),code);assert.equal(files.size,pageSlugs.length+1,code);assert.ok(!/\{\{/.test([...files.values()].join('')),`${code}: unresolved placeholder`);}});
+// Sources and the register list every state's core set, so NSW's role records legitimately appear there.
+// Narrow allow-list of NSW wording that is legitimate outside NSW builds, keyed `STATE:slug`: none today.
+const NSW_TRACE_ALLOWED=new Set([]);
+test('non-main states leave no trace of NSW-only content',()=>{
+  const nswOnly=register.filter(r=>r.jurisdiction==='NSW'&&!(r.roles?.length>0)).map(r=>r.id);
+  assert.ok(nswOnly.length>10);
+  for(const code of STATE_CODES.filter(c=>c!=='NSW')){
+    const files=real(code);
+    for(const [name,text] of files){
+      if(!name.startsWith('docs/')||name==='docs/sources.mdx')continue;
+      const slug=name.slice(5,-4),stripped=text.replace(OTHER_SECTION,'');
+      if(NSW_TRACE_ALLOWED.has(`${code}:${slug}`))continue;
+      for(const word of ['NSW','New South Wales','Service NSW'])assert.ok(!stripped.includes(word),`${code} ${name} mentions "${word}" outside the other-states section`);
+    }
+    const sources=files.get('docs/sources.mdx'),published=new Set(JSON.parse(files.get('public/resources.json')).map(r=>r.id));
+    for(const id of nswOnly){assert.ok(!sources.includes(`id="resource-${id}"`),`${code}: sources lists NSW-only ${id}`);assert.ok(!published.has(id),`${code}: resources.json lists NSW-only ${id}`);}
+    for(const id of ['ses','rfs'])assert.ok(sources.includes(`id="resource-${id}"`),`${code}: sources should list NSW core record ${id}`);
+  }
+});
+test('106 stays plain text in every build',()=>{for(const code of STATE_CODES){const files=real(code);for(const [name,text] of files)assert.ok(!/tel:106(?!\d)/.test(text),`${code} ${name} links 106 as a dial link`);const relay=JSON.parse(files.get('public/resources.json')).find(r=>r.id==='relay');assert.equal(relay.phone,'106',code);assert.ok(files.get('docs/sources.mdx').includes('<strong className="phone-link">'),`${code}: relay card is plain text`);}});
+// Known bare headings, keyed `STATE:slug:heading`. Each entry is a template defect to fix in data/pages.json; the test fails when an entry stops being bare, so the list cannot go stale.
+const KNOWN_BARE_HEADINGS=new Set([]);
+const bareHeadings=(code,slug,text)=>{
+  const lines=text.replace(/^---\n[\s\S]*?\n---\n/,'').split('\n'),out=[];let fence=false;
+  const isHeading=l=>/^#{1,6}\s/.test(l);
+  for(let i=0;i<lines.length;i++){
+    if(/^```/.test(lines[i])){fence=!fence;continue;}
+    if(fence||!isHeading(lines[i]))continue;
+    let j=i+1;const body=[];
+    while(j<lines.length&&!isHeading(lines[j]))body.push(lines[j++]);
+    const content=body.join('\n').trim();
+    if(!content||/^No .+-specific services are listed on this page\.( See \[[^\]]+\]\([^)]*\) for the same kinds of service elsewhere\.)?$/.test(content))out.push(`${code}:${slug}:${lines[i].replace(/^#+\s*/,'')}`);
+  }
+  return out;
+};
+test('no page has a bare heading in any state build',()=>{
+  const found=[];
+  for(const code of STATE_CODES)for(const slug of pageSlugs)found.push(...bareHeadings(code,slug,real(code).get(`docs/${slug}.mdx`)));
+  const unexpected=found.filter(k=>!KNOWN_BARE_HEADINGS.has(k)),stale=[...KNOWN_BARE_HEADINGS].filter(k=>!found.includes(k));
+  assert.deepEqual(unexpected,[],'bare headings (heading followed by another heading, end of file or only the thin-page note)');
+  assert.deepEqual(stale,[],'KNOWN_BARE_HEADINGS entries that are no longer bare; remove them');
+});
+test('bare-heading detector flags headings followed by headings, end of file or only the thin note',()=>{
+  assert.deepEqual(bareHeadings('X','p','---\ntitle: "t"\n---\n\n## A\n\n## B\n\ntext\n\n## C\n'),['X:p:A','X:p:C']);
+  assert.deepEqual(bareHeadings('X','p','## A\n\nNo QLD-specific services are listed on this page. See [other](#o) for the same kinds of service elsewhere.\n\n## B\n\ntext\n'),['X:p:A']);
+  assert.deepEqual(bareHeadings('X','p','## A\n\ntext\n\n```\n## not a heading\n```\n'),[]);
+});
