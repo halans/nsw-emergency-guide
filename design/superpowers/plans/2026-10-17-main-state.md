@@ -8,7 +8,7 @@
 
 **Tech Stack:** Node >= 22.19 ESM (`.mjs`), `node:test`, Playwright, Blume 2.2.3. No new dependencies.
 
-**Spec:** `docs/superpowers/specs/2026-10-17-main-state-design.md`
+**Spec:** `design/superpowers/specs/2026-10-17-main-state-design.md`
 
 ## Global Constraints
 
