@@ -45,6 +45,14 @@
     ],
     "stateNote": true,
     "stateBlocks": {
+      "ses-card": {
+        "NSW": "",
+        "*": "{{resources:role:ses}}"
+      },
+      "evacuation": {
+        "NSW": "## Evacuation centres\n\n{{resources:evacuation}}\n\nCentres and safe routes change. Do not travel to an assumed centre based on an old screenshot, saved copy or this directory. Follow current emergency-service directions.",
+        "*": "## Evacuation centres\n\nCentres and safe routes change. Check official emergency-service channels and local emergency broadcasts for open evacuation centres. Do not travel to an assumed centre based on an old screenshot, saved copy or this directory. Follow current emergency-service directions."
+      },
       "levels": {
         "NSW": "## Understand warning levels\n\nThe NSW emergency hub explains three levels: **Advice**, **Watch and Act**, and **Emergency Warning**. Read the action statement, not just the colour or level. Different hazards and locations require different actions.\n\nSource: [NSW Government — emergencies and warning information](https://www.nsw.gov.au/emergency)."
       },
@@ -52,7 +60,7 @@
         "NSW": " Follow [Get Ready NSW](https://www.nsw.gov.au/emergency/get-ready) to prepare communication backups."
       }
     },
-    "body": "**No live warnings are reproduced here.** Open the official service, choose the right location and hazard, and read the full warning and issue time. A blank map does not mean an area is safe.\n\n## Hazard maps and local notifications\n\n{{resources:role:warnings,hazards-near-me,rfs-incidents,ses-during}}\n\n## Weather and roads\n\n{{resources:bom,bom-phone,traffic}}\n\n## Evacuation centres\n\n{{resources:evacuation}}\n\nCentres and safe routes change. Do not travel to an assumed centre based on an old screenshot, saved copy or this directory. Follow current emergency-service directions.\n\n{{state-block:levels}}\n\n## Do not rely on one channel\n\nUse relevant agency websites and apps and local emergency broadcasts. Power, mobile coverage and internet access can fail.{{state-block:get-ready}}"
+    "body": "**No live warnings are reproduced here.** Open the official service, choose the right location and hazard, and read the full warning and issue time. A blank map does not mean an area is safe.\n\n## Hazard maps and local notifications\n\n{{resources:role:warnings,hazards-near-me,rfs-incidents,ses-during}}\n\n{{state-block:ses-card}}\n\n## Weather and roads\n\n{{resources:bom,bom-phone,traffic}}\n\n{{state-block:evacuation}}\n\n{{state-block:levels}}\n\n## Do not rely on one channel\n\nUse relevant agency websites and apps and local emergency broadcasts. Power, mobile coverage and internet access can fail.{{state-block:get-ready}}"
   },
   {
     "slug": "bushfire",
@@ -72,7 +80,7 @@
       },
       "myfireplan": {
         "NSW": "MyFirePlan is an external NSW RFS tool; this directory does not assess whether your home is defendable. Leaving early is your safest choice. ",
-        "*": "This directory does not assess whether your home is defendable. "
+        "*": "Use {{term:fire}} bushfire planning guidance to make your plan. This directory does not assess whether your home is defendable. "
       }
     },
     "body": "If there is an immediate threat to life, call **000**. For current incident advice, open [official warnings](/warnings).\n\n## Start with the {{term:fire}}\n\n{{resources:role:fire,rfs-ratings}}\n\n{{state-block:ratings}}\n\n## Make and discuss your plan\n\n{{resources:myfireplan,rfs-plan}}\n\n{{state-block:myfireplan}}Discuss your plan with everyone in the household, including how to support people who need help and how to move animals safely.\n\n## Keep official information close\n\n[Current fires and warning links](/warnings) · [Household preparation](/prepare) · [Animals and assistance animals](/animals) · [Accessible planning](/accessible-help)."
@@ -128,14 +136,19 @@
     "stateNote": true,
     "stateBlocks": {
       "get-ready": {
-        "NSW": "Get Ready NSW organises preparation around **understanding your risk**, **making an emergency plan** and **packing an emergency kit**. Use the official guidance for the hazard, location and needs of your household."
+        "NSW": "Get Ready NSW organises preparation around **understanding your risk**, **making an emergency plan** and **packing an emergency kit**. Use the official guidance for the hazard, location and needs of your household.",
+        "*": "Use {{term:ses}} and {{term:fire}} planning guidance for the hazards, location and needs of your household.\n\n{{resources:role:ses,role:fire}}"
       },
       "pathways": {
         "NSW": "[Bushfire planning and MyFirePlan](/bushfire) · [Flood, storm and tsunami guidance](https://www.ses.nsw.gov.au/during-emergency) · [Disability and accessible planning](/accessible-help) · [Animal planning](/animals).",
         "*": "[Bushfire planning](/bushfire) · [Disability and accessible planning](/accessible-help) · [Animal planning](/animals)."
+      },
+      "checklists": {
+        "NSW": "Use the agency checklists below and review your plan when your circumstances change.",
+        "*": "Use the official planning guidance above and review your plan when your circumstances change."
       }
     },
-    "body": "## Start with official planning resources\n\n{{resources:get-ready,rfs-plan}}\n\n{{state-block:get-ready}}\n\n## Discuss these needs before an emergency\n\n- Who needs help, and who can provide it if the usual carer is unavailable?\n- Where will you go, how will you travel, and what is your backup route?\n- How will you receive warnings and contact people if power or mobile service fails?\n- What medicines, documents, equipment and supplies need to leave with you?\n- How will you move pets, livestock or assistance animals safely?\n\nThese are planning prompts, not an evacuation order or a complete kit specification. Use the agency checklists below and review your plan when your circumstances change.\n\n## Choose the relevant pathway\n\n{{state-block:pathways}}\n\n## Save essential contacts\n\nPrint the [urgent-help page](/urgent-help) and your household's plan. The Site's page menu offers PDF export for printing, or use your browser's Print function. A printout is a backup reference; current warnings still come from official services."
+    "body": "## Start with official planning resources\n\n{{resources:get-ready,rfs-plan}}\n\n{{state-block:get-ready}}\n\n## Discuss these needs before an emergency\n\n- Who needs help, and who can provide it if the usual carer is unavailable?\n- Where will you go, how will you travel, and what is your backup route?\n- How will you receive warnings and contact people if power or mobile service fails?\n- What medicines, documents, equipment and supplies need to leave with you?\n- How will you move pets, livestock or assistance animals safely?\n\nThese are planning prompts, not an evacuation order or a complete kit specification. {{state-block:checklists}}\n\n## Choose the relevant pathway\n\n{{state-block:pathways}}\n\n## Save essential contacts\n\nPrint the [urgent-help page](/urgent-help) and your household's plan. The Site's page menu offers PDF export for printing, or use your browser's Print function. A printout is a backup reference; current warnings still come from official services."
   },
   {
     "slug": "accessible-help",
@@ -146,9 +159,13 @@
       "tis": {
         "NSW": "The listed TIS pathway is verified for the NSW Mental Health Line. Other services may have their own interpreter arrangements and eligibility. ",
         "*": "Services may have their own interpreter arrangements and eligibility. "
+      },
+      "specialist": {
+        "NSW": "Use the linked specialist resources rather than treating this page as a complete accessibility plan.",
+        "*": "Use specialist disability and access resources rather than treating this page as a complete accessibility plan."
       }
     },
-    "body": "## Emergency calls without a standard voice call\n\n{{resources:relay}}\n\n**Do not text 106 from an ordinary mobile phone.** The 106 number is for TTY/TDD. The official AccessHub page explains current NRS Chat, SMS Relay, NRS Captions, Voice Relay and TTY pathways, including registration and service limitations. Check and practise the appropriate pathway before an emergency.\n\nVideo Relay is not recommended for emergencies: operating hours are limited and emergency calls cannot be identified and prioritised in the same way. Some internet/mobile relay pathways may not identify your location; be ready to supply it.\n\n## Tailor your preparation\n\n{{resources:accessibility}}\n\nInclude transport, communication, medicines, carers, assistance animals and backup power for essential equipment in your own plan. Use the linked specialist resources rather than treating this page as a complete accessibility plan.\n\n## Interpreting for support services\n\n{{resources:tis}}\n\n{{state-block:tis}}For immediate danger, call **000** rather than waiting for an advice-line connection."
+    "body": "## Emergency calls without a standard voice call\n\n{{resources:relay}}\n\n**Do not text 106 from an ordinary mobile phone.** The 106 number is for TTY/TDD. The official AccessHub page explains current NRS Chat, SMS Relay, NRS Captions, Voice Relay and TTY pathways, including registration and service limitations. Check and practise the appropriate pathway before an emergency.\n\nVideo Relay is not recommended for emergencies: operating hours are limited and emergency calls cannot be identified and prioritised in the same way. Some internet/mobile relay pathways may not identify your location; be ready to supply it.\n\n## Tailor your preparation\n\n{{resources:accessibility}}\n\nInclude transport, communication, medicines, carers, assistance animals and backup power for essential equipment in your own plan. {{state-block:specialist}}\n\n## Interpreting for support services\n\n{{resources:tis}}\n\n{{state-block:tis}}For immediate danger, call **000** rather than waiting for an advice-line connection."
   },
   {
     "slug": "animals",
@@ -175,9 +192,15 @@
       "advice": {
         "NSW": " Use current Service NSW advice.",
         "*": " Use current official advice."
+      },
+      "housing": {
+        "NSW": "## Accommodation and housing\n\n{{resources:housing}}\n\nAn evacuation centre is not the same as a recovery centre or temporary housing. For immediate evacuation information, open [current official warning and centre links](/warnings)."
+      },
+      "legal": {
+        "NSW": "## Legal support after a disaster\n\n{{resources:legal}}\n\nKeep relevant documents where safe to do so and seek advice suited to your circumstances. This directory does not provide legal advice."
       }
     },
-    "body": "## Start with recovery support\n\n{{resources:role:recovery}}\n\nGrants, eligibility and application windows vary by declared event, location and circumstances. This directory does not promise funding or list amounts that may expire.{{state-block:advice}}\n\n## Accommodation and housing\n\n{{resources:housing}}\n\nAn evacuation centre is not the same as a recovery centre or temporary housing. For immediate evacuation information, open [current official warning and centre links](/warnings).\n\n## Legal support after a disaster\n\n{{resources:legal}}\n\nKeep relevant documents where safe to do so and seek advice suited to your circumstances. This directory does not provide legal advice.\n\n## Emotional support\n\nRecovery can be difficult long after the immediate danger has passed. [Crisis and mental-health support](/crisis-support) is available alongside practical assistance."
+    "body": "## Start with recovery support\n\n{{resources:role:recovery}}\n\nGrants, eligibility and application windows vary by declared event, location and circumstances. This directory does not promise funding or list amounts that may expire.{{state-block:advice}}\n\n{{state-block:housing}}\n\n{{state-block:legal}}\n\n## Emotional support\n\nRecovery can be difficult long after the immediate danger has passed. [Crisis and mental-health support](/crisis-support) is available alongside practical assistance."
   },
   {
     "slug": "sources",
