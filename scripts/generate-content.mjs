@@ -70,10 +70,24 @@ function renderList(rs, ctx, seen) {
   return rs.length ? list(rs) : '';
 }
 
+// The full register, grouped for the sources page: national services, then the main state, then the other states in STATE_CODES order. States with no visible records are left out.
+const slugOf = text => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+function registerGroups(ctx) {
+  const groups = [{ name: 'National services', records: ctx.visible.filter(r => r.jurisdiction === 'Australia') }];
+  for (const code of [ctx.state, ...STATE_CODES.filter(c => c !== ctx.state)]) {
+    if (ctx.states[code]) groups.push({ name: ctx.states[code].longName, records: ctx.visible.filter(r => r.jurisdiction === code) });
+  }
+  return groups.filter(g => g.records.length);
+}
+// Plain Markdown, valid for web and agents: the jump links reuse the group headings' anchors.
+const registerNav = ctx => `Jump to: ${registerGroups(ctx).map(g => `[${g.name}](#${slugOf(g.name)})`).join(' · ')}`;
+const renderRegister = (ctx, seen) => registerGroups(ctx).map(g => `## ${g.name}\n\n${renderList(g.records, ctx, seen)}`).join('\n\n');
+
 function expandResources(text, page, ctx, seen) {
   return text
     .replace(/\{\{resources:([^}]+)\}\}/g, (token, ids) => renderList(dedupe(ids.split(',').flatMap(id => resolveId(id, token, page, ctx))), ctx, seen))
-    .replace('{{all-resources}}', () => renderList(ctx.visible, ctx, seen));
+    .replace('{{register-nav}}', () => registerNav(ctx))
+    .replace('{{all-resources}}', () => renderRegister(ctx, seen));
 }
 
 // The link is added only when the page's bottom section exists, so it never points at a missing anchor.

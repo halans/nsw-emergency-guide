@@ -133,3 +133,32 @@ test('role label for mentalHealth does not claim every record is a crisis line',
 test('real data: NSW bushfire bottom lines carry the phoneLabel scope, not a bare number',()=>{const fire=real('NSW').get('docs/bushfire.mdx');const bottom=fire.slice(fire.indexOf(BOTTOM));for(const [code,scope] of [['TAS',/Information Line/],['NT',/non-emergency/],['WA',/information line/],['SA',/Information Hotline/]]){const line=bottom.split('\n').find(l=>l.startsWith(`- **${code}** — Fire and rescue:`)&&l.includes('tel:'));assert.ok(line,`${code} fire line with a phone`);const text=line.match(/\[([^\]]+)\]\(tel:/)[1];assert.match(text,scope,`${code}: ${text}`);assert.ok(!/^[\d ]+$/.test(text),`${code}: bare number`);}});
 test('every role record with a phone has a phoneLabel (the bottom section shows it)',()=>{for(const r of register)if(r.roles?.length&&r.phone)assert.ok(nonEmpty(r.phoneLabel),r.id);});
 test('state fixtures pin missingRoles, and each missing role has a manual-verification entry',()=>{const checks=JSON.parse(fs.readFileSync('research/manual-verification.json','utf8')).checks;for(const code of STATE_CODES){const f=fixture(code);assert.ok(Array.isArray(f.missingRoles),`${code} fixture needs missingRoles`);assert.deepEqual(states[code].missingRoles??[],f.missingRoles,code);for(const role of f.missingRoles)assert.ok(checks.some(c=>c.state===code&&c.role===role),`${code}: no manual-verification check for missing role ${role}`);}});
+
+// Sources page: the register is grouped by jurisdiction (national first, then the main state, then the rest) with jump links at the top.
+const slugOf=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+const groupNames=(info,main,codes)=>['National services',info[main].longName,...codes.filter(c=>c!==main&&info[c]).map(c=>info[c].longName)];
+const sectionOf=(text,heading)=>{const start=text.indexOf(`\n## ${heading}\n`);assert.ok(start>=0,`missing "## ${heading}"`);const rest=text.slice(start+1),end=rest.slice(3).search(/\n## /);return end<0?rest:rest.slice(0,end+3);};
+test('sources page groups the register by state, main state first, with jump links',()=>{
+  for(const code of STATE_CODES){
+    const text=real(code).get('docs/sources.mdx'),expected=groupNames(states,code,STATE_CODES);
+    assert.deepEqual([...text.matchAll(/^## (.+)$/gm)].map(m=>m[1]).filter(h=>expected.includes(h)),expected,`${code}: group order`);
+    const nav=text.match(/^Jump to: (.+)$/m);assert.ok(nav,`${code}: jump links`);
+    const links=[...nav[1].matchAll(/\[([^\]]+)\]\(#([^)]+)\)/g)];
+    assert.deepEqual(links.map(l=>l[1]),expected,`${code}: link text`);assert.deepEqual(links.map(l=>l[2]),expected.map(slugOf),`${code}: link targets`);
+    assert.ok(text.indexOf('Jump to:')<text.indexOf('## National services'),`${code}: links come before the groups`);
+    const visible=visibleResources(register,code);
+    for(const [i,name] of expected.entries()){
+      const want=visible.filter(r=>i===0?r.jurisdiction==='Australia':r.jurisdiction===[code,...STATE_CODES.filter(c=>c!==code)][i-1]).map(r=>r.id).sort();
+      const got=[...sectionOf(text,name).matchAll(/id="resource-([^"]+)"/g)].map(m=>m[1]).sort();
+      assert.deepEqual(got,want,`${code}: records under "${name}"`);
+    }
+    for(const r of visible)assert.equal(text.split(`id="resource-${r.id}"`).length-1,1,`${code}: ${r.id} appears once`);
+  }
+});
+test('register grouping: a state with no visible records gets no heading or link',()=>{
+  const dir=copyRoot();editJson(path.join(dir,'data/pages.json'),ps=>[...ps,{slug:'register',title:'Register',description:'All records',body:'{{register-nav}}\n\n## All\n\n{{all-resources}}'}]);
+  editJson(path.join(dir,'data/states/QLD.json'),s=>({...s,resources:[]}));
+  const text=build('NSW',dir).get('docs/register.mdx');
+  assert.ok(!text.includes('Queensland'),'empty state omitted');assert.match(text,/^Jump to: \[National services\]\(#national-services\) · \[New South Wales\]\(#new-south-wales\)$/m);
+  assert.ok(text.indexOf('## National services')<text.indexOf('## New South Wales'));
+});
