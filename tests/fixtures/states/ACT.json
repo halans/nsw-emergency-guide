@@ -1,0 +1,17 @@
+{
+  "phones": {
+    "act-ses": "132 500",
+    "act-police": "131 444",
+    "act-mental-health": "1800 629 354"
+  },
+  "requiredUrls": [
+    "https://esa.act.gov.au/about-esa-emergency-services/state-emergency-service/contact-ses",
+    "https://esa.act.gov.au/fire-rescue",
+    "https://esa.act.gov.au/be-emergency-ready/warnings-alerts",
+    "https://www.afp.gov.au/about-us/contact-us",
+    "https://www.act.gov.au/health/topics/diseases",
+    "https://www.canberrahealthservices.act.gov.au/services-and-clinics/services/access-mental-health",
+    "https://www.act.gov.au/emergency-and-safety/reduce-the-impact-of-disasters/support-after-an-emergency"
+  ],
+  "missingRoles": []
+}

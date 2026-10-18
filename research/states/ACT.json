@@ -1,0 +1,77 @@
+{
+  "code": "ACT",
+  "evidence": [
+    {
+      "id": "act-ses",
+      "url": "https://esa.act.gov.au/about-esa-emergency-services/state-emergency-service/contact-ses",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page; also corroborated 132 500 on esa.act.gov.au home, /contact-us and /state-emergency-service",
+      "observed": "Page is the ACT SES contact page; labels 132 500 'Storm and Flood Assistance' (emergency help during floods or storms), says call 000 for life-threatening emergencies, gives no hours for the line. Also lists general enquiries number and email."
+    },
+    {
+      "id": "act-fire-rescue",
+      "url": "https://esa.act.gov.au/fire-rescue",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "ACT Fire & Rescue page: 24/7 response from fire stations, history, community programs, Community Fire Units, event and community room requests. No separate Fire & Rescue emergency number; only 000 and 132 500 banner. /contact-us (WebFetch) says do not call fire stations to report an emergency."
+    },
+    {
+      "id": "act-rfs",
+      "url": "https://esa.act.gov.au/rural-fire-service",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "ACT RFS page: protects the ACT from grass and bushfires; preparation info, Multi Hazard Advisory Council, FAQs, event requests; navigation to fire danger ratings and total fire bans pages. Only 000 and 132 500 in banner."
+    },
+    {
+      "id": "act-warnings",
+      "url": "https://esa.act.gov.au/be-emergency-ready/warnings-alerts",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "Guide to ESA warning channels: website/incidents map and feeds, Hazards Near Me app, Facebook and X, ABC Local Radio, AusAlert cell broadcast, Emergency Alert SMS/voice. No live warnings on the page."
+    },
+    {
+      "id": "act-police",
+      "url": "https://www.afp.gov.au/about-us/contact-us",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page (AFP site). police.act.gov.au returned 403 / Cloudflare challenge to WebFetch and curl, so the ACT Policing site itself was NOT opened; its 'Who to contact' page appeared in search results only.",
+      "observed": "ACT Policing section says to call the Police Assistance Line on 131 444 to be connected to local police; says 'In an emergency, call 000 and ask for police.' No ACT-specific hours stated (the Local Policing contact is described elsewhere on the page as the 24-hour Police Assistance Line, so hours omitted)."
+    },
+    {
+      "id": "act-health",
+      "url": "https://www.act.gov.au/health/topics/diseases",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page; also act.gov.au/health landing page and the Disease Surveillance Unit page",
+      "observed": "Diseases and conditions index (updated 2026-03-05), managed by Health and Community Services Directorate, linking to condition pages (measles, influenza, COVID-19, mpox, tuberculosis, dengue, pertussis, norovirus). Disclaimer: intended for health professionals, not personal medical advice. No phone numbers. The Disease Surveillance Unit page is for health professionals (notifiable-condition reporting). The old health.act.gov.au communicable-disease URL returned 404."
+    },
+    {
+      "id": "act-mental-health",
+      "url": "https://www.canberrahealthservices.act.gov.au/services-and-clinics/services/access-mental-health",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page; number also confirmed on act.gov.au/health/topics/mental-health/getting-help-for-your-mental-health (page lists 1800 629 354 and 6205 1065, no hours)",
+      "observed": "Access Mental Health: phone line open 24/7 for anyone concerned about their own or another's mental health; free call; can refer to urgent assessment, Access Comprehensive (referral only, 8:30am-5pm Mon-Sat) or other CHS services, and involve ACT Policing or ACT Ambulance Service for immediate safety concerns. Referrers can use (02) 6205 1065. Not for life-threatening emergencies; call 000."
+    },
+    {
+      "id": "act-recovery",
+      "url": "https://www.act.gov.au/emergency-and-safety/reduce-the-impact-of-disasters/support-after-an-emergency",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page; linked pages act.gov.au/open/act-disaster-assistance-guidelines and act.gov.au/open/act-social-recovery-framework also opened",
+      "observed": "Justice and Community Safety Directorate page on support after an emergency: immediate relief (generally up to three months), insurance links, Commonwealth financial aid, legal help, replacing documents, mental health. Varies by emergency; updated after events. No phone numbers or hours. The Disaster Assistance Guidelines page (JACS) explains what support might be offered if a disaster occurs, with a PDF; no phone numbers."
+    }
+  ],
+  "unverified": [
+    {
+      "role": "police",
+      "why": "police.act.gov.au (ACT Policing's own site, incl. /about-us/connect-with-us/who-to-contact) and policenews.act.gov.au returned 403 / Cloudflare challenge to automated requests, so they could not be opened. The record uses the AFP contact page (afp.gov.au), which states 131 444 for ACT Policing. Manual check of the ACT Policing page is recommended; search snippets (not verified by opening) also mention an interstate number and 131 444 for non-urgent matters."
+    },
+    {
+      "role": "health",
+      "why": "No dedicated public-facing ACT Health infectious-diseases/public-health page with contact details was found. The diseases index opened is the best public page but carries a 'for health professionals' disclaimer. Manual check for a better page is recommended."
+    }
+  ],
+  "notes": [
+    "esa.act.gov.au pages inconsistently show general enquiries as 13 22 81 (contact-us) and 132 281 (SES contact page); same number, not used in records.",
+    "Two fire records (act-fire-rescue and act-rfs) both carry role 'fire' because ACT splits urban fire and rural/bushfire services; drop one if exactly one record per role is required.",
+    "ESA fills ses, fire and warnings roles via separate pages on the same agency site (no single combined record).",
+    "ACT has no dedicated recovery agency page with a phone line; recovery page is a JACS-managed act.gov.au page (Access Canberra 13 22 81 is mentioned in search snippets only, not on the page opened, so not used)."
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "name": "SA",
+  "longName": "South Australia",
+  "terms": {
+    "ses": "SA SES",
+    "fire": "CFS",
+    "warnings": "Alert SA",
+    "police": "South Australian police services",
+    "health": "South Australian Government health authorities",
+    "mentalHealth": "South Australian Government mental health services",
+    "recovery": "South Australian Government recovery services"
+  },
+  "missingRoles": [
+    "police",
+    "health",
+    "mentalHealth",
+    "recovery"
+  ],
+  "resources": [
+    {
+      "id": "sa-ses",
+      "category": "urgent",
+      "name": "South Australian State Emergency Service (SA SES)",
+      "jurisdiction": "SA",
+      "roles": [
+        "ses"
+      ],
+      "url": "https://ses.sa.gov.au/about-us/contact-us",
+      "summary": "Official SA SES contact page. Lists 132 500 for SA SES emergency assistance (flood and storm) and an infoline for incident information during significant weather events.",
+      "reviewed": "2026-10-18",
+      "phone": "132 500",
+      "phoneLabel": "132 500 — SA SES",
+      "caution": "For life-threatening emergencies call 000. The online contact form does not start an SA SES response; call 132 500 for help."
+    },
+    {
+      "id": "sa-cfs",
+      "category": "fire",
+      "name": "South Australian Country Fire Service (CFS) — Incidents & warnings",
+      "jurisdiction": "SA",
+      "roles": [
+        "fire"
+      ],
+      "url": "https://www.cfs.sa.gov.au/incidents/",
+      "summary": "Official CFS incidents and warnings page. Explains the warning levels and incident categories used in CFS listings and links to bushfire preparedness information. It also lists the CFS Information Hotline.",
+      "reviewed": "2026-10-18",
+      "phone": "1800 362 361",
+      "phoneLabel": "1800 362 361 — CFS Information Hotline",
+      "caution": "The Information Hotline is for information, not emergencies. In an emergency call 000."
+    },
+    {
+      "id": "sa-alert-sa",
+      "category": "warnings",
+      "name": "SAFECOM — Emergency Information (Alert SA)",
+      "jurisdiction": "SA",
+      "roles": [
+        "warnings"
+      ],
+      "url": "https://safecom.sa.gov.au/emergencies/emergenciesinformationjsp/",
+      "summary": "Official SAFECOM page explaining how South Australia's public emergency warnings work, including the Alert SA platform, Emergency Alert, the bushfire Advice and warning levels, accessibility options and other recommended information sources.",
+      "reviewed": "2026-10-18",
+      "caution": "Do not rely on a single source: check Alert SA, local ABC radio and the CFS and SES channels, as communications can be unreliable during emergencies."
+    }
+  ]
+}

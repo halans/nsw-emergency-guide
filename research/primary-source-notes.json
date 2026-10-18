@@ -175,6 +175,16 @@
       "source_url": "https://www.nsw.gov.au/emergency/get-ready/get-ready-animals"
     },
     {
+      "name": "Translating and Interpreting Service (TIS National)",
+      "jurisdiction": "Australia",
+      "phone": "131 450",
+      "scope": "Immediate phone interpreting for people with limited or no English; the operator connects the caller and an interpreter to the organisation requested. Most interpreting services are free to non-English speakers.",
+      "hours": "Immediate phone interpreting: 24 hours a day, every day of the year",
+      "safety_caveat": "For immediate danger, call 000 rather than waiting for an interpreter connection. Mobile calls may cost more.",
+      "source_url": "https://www.tisnational.gov.au/en/Non-English-speakers/Interpreting-services",
+      "verification": "Page fetched 2026-10-18 with WebFetch; the 131 450 number, 24-hour availability, steps and cost statement were read on the page."
+    },
+    {
       "name": "Translating and Interpreting Service (TIS National) pathway for NSW mental-health support",
       "jurisdiction": "NSW / Australia",
       "phone": "131 450",

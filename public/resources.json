@@ -33,7 +33,11 @@
     "summary": "Emergency assistance for flood, storm or tsunami, including storm/wind/fallen-tree damage. Requests are prioritised.",
     "reviewed": "2026-10-14",
     "phone": "132 500",
-    "caution": "If anyone is trapped or injured, call 000. The online contact form is not monitored for storm/flood emergencies; call 132 500."
+    "caution": "If anyone is trapped or injured, call 000. The online contact form is not monitored for storm/flood emergencies; call 132 500.",
+    "roles": [
+      "ses"
+    ],
+    "phoneLabel": "132 500 — NSW SES (flood, storm or tsunami)"
   },
   {
     "id": "police",
@@ -44,7 +48,11 @@
     "summary": "Non-urgent police assistance, minor-crime reporting and general enquiries.",
     "reviewed": "2026-10-14",
     "phone": "131 444",
-    "caution": "For emergencies or a crime in progress, call 000 instead."
+    "caution": "For emergencies or a crime in progress, call 000 instead.",
+    "roles": [
+      "police"
+    ],
+    "phoneLabel": "131 444 — Police Assistance Line (non-urgent)"
   },
   {
     "id": "poisons",
@@ -117,7 +125,11 @@
     "phone": "1800 011 511",
     "hours": "24/7",
     "caution": "Not a one-off counselling service. If someone is in immediate danger, call 000 or attend an emergency department.",
-    "language": "For another language, call TIS National 131 450 and ask to be connected. Relay options are listed on the source page."
+    "language": "For another language, call TIS National 131 450 and ask to be connected. Relay options are listed on the source page.",
+    "roles": [
+      "mentalHealth"
+    ],
+    "phoneLabel": "1800 011 511 — NSW Mental Health Line (24/7)"
   },
   {
     "id": "service-nsw",
@@ -129,7 +141,11 @@
     "reviewed": "2026-10-14",
     "phone": "13 77 88",
     "hours": "Monday–Friday, 7am–7pm Sydney time",
-    "caution": "In an emergency, call 000; for flood/storm/tsunami assistance, call NSW SES 132 500."
+    "caution": "In an emergency, call 000; for flood/storm/tsunami assistance, call NSW SES 132 500.",
+    "roles": [
+      "recovery"
+    ],
+    "phoneLabel": "13 77 88 — Service NSW (Mon–Fri, 7am–7pm)"
   },
   {
     "id": "housing",
@@ -238,10 +254,22 @@
     "caution": "Plan safe animal transport and alternative accommodation early. Do not re-enter an unsafe area to retrieve an animal; follow emergency-service directions."
   },
   {
+    "id": "tis-national",
+    "category": "access",
+    "name": "Translating and Interpreting Service (TIS National)",
+    "jurisdiction": "Australia",
+    "url": "https://www.tisnational.gov.au/en/Non-English-speakers/Interpreting-services",
+    "summary": "Immediate phone interpreting for people with limited or no English, provided by the Department of Home Affairs. Call 131 450 and say the language you need; the operator finds an interpreter and connects you both to the organisation you want to contact. Most TIS National interpreting services are free to non-English speakers.",
+    "reviewed": "2026-10-18",
+    "phone": "131 450",
+    "hours": "Immediate phone interpreting: 24 hours a day, every day of the year",
+    "caution": "For immediate danger, call 000 rather than waiting for an interpreter connection. Calls from mobile phones may cost more than a local call. If no interpreter is available in your language, the operator may ask you to call back."
+  },
+  {
     "id": "tis",
     "category": "access",
     "name": "Translating and Interpreting Service (TIS National) pathway for NSW mental-health support",
-    "jurisdiction": "NSW / Australia",
+    "jurisdiction": "NSW",
     "url": "https://www.health.nsw.gov.au/mentalhealth/Pages/mental-health-line.aspx",
     "summary": "Interpreter connection pathway: ask TIS to ring NSW Mental Health Line 1800 011 511.",
     "reviewed": "2026-10-14",
@@ -265,7 +293,10 @@
     "url": "https://www.rfs.nsw.gov.au/",
     "summary": "Official NSW bushfire information, preparation resources and links to current incidents and fire danger ratings.",
     "jurisdiction": "NSW",
-    "reviewed": "2026-10-14"
+    "reviewed": "2026-10-14",
+    "roles": [
+      "fire"
+    ]
   },
   {
     "id": "rfs-incidents",
@@ -303,7 +334,10 @@
     "summary": "Official interactive hazard-warning map. NSW SES links to HazardWatch for current flood, severe weather and tsunami warnings.",
     "jurisdiction": "NSW",
     "reviewed": "2026-10-14",
-    "caution": "Check the displayed hazard coverage, location, issue time and full warning. A blank map or no displayed warnings does not mean your location is safe."
+    "caution": "Check the displayed hazard coverage, location, issue time and full warning. A blank map or no displayed warnings does not mean your location is safe.",
+    "roles": [
+      "warnings"
+    ]
   },
   {
     "id": "hazards-near-me",
@@ -401,7 +435,10 @@
     "jurisdiction": "NSW",
     "url": "https://www.health.nsw.gov.au/Infectious/Pages/default.aspx",
     "reviewed": "2026-10-16",
-    "summary": "NSW Health hub for infectious diseases: fact sheets, an A–Z of diseases, the weekly respiratory update, and outbreak alerts and guidance."
+    "summary": "NSW Health hub for infectious diseases: fact sheets, an A–Z of diseases, the weekly respiratory update, and outbreak alerts and guidance.",
+    "roles": [
+      "health"
+    ]
   },
   {
     "id": "nsw-phu",
@@ -413,5 +450,614 @@
     "phone": "1300 066 055",
     "summary": "Calling this number connects you automatically to your local NSW Health Public Health Unit. The source page also lists a Public Health Unit directory.",
     "caution": "Not an emergency or clinical advice line. The source does not state hours or whether the number is intended for the public or for clinicians. For personal health advice, call healthdirect or see a GP; for urgent medical help, call 000."
+  },
+  {
+    "id": "vic-ses",
+    "category": "urgent",
+    "name": "Victoria State Emergency Service (VICSES)",
+    "jurisdiction": "VIC",
+    "roles": [
+      "ses"
+    ],
+    "url": "https://www.ses.vic.gov.au/en/about-us/contact-us",
+    "summary": "Emergency help for flood, storm, tsunami and earthquake in Victoria. Requests to the help line are logged by a call centre and a local volunteer may follow up.",
+    "reviewed": "2026-10-18",
+    "phone": "132 500",
+    "phoneLabel": "132 500 — VICSES flood and storm help",
+    "hours": "24/7 call centre",
+    "caution": "If life is threatened, call 000. The website enquiry form is for general enquiries only, not emergencies. For minor leaks, superficial damage or debris removal, VICSES directs people to a tradesperson or insurer."
+  },
+  {
+    "id": "vic-cfa",
+    "category": "fire",
+    "name": "Country Fire Authority (CFA)",
+    "jurisdiction": "VIC",
+    "roles": [
+      "fire"
+    ],
+    "url": "https://www.cfa.vic.gov.au/",
+    "summary": "Victoria's CFA site covers fire safety, fire bans and Fire Danger Ratings, and how to contact CFA districts and brigades across country Victoria.",
+    "reviewed": "2026-10-18",
+    "caution": "In an emergency dial 000 for fire, police or ambulance."
+  },
+  {
+    "id": "vic-frv",
+    "category": "fire",
+    "name": "Fire Rescue Victoria (FRV)",
+    "jurisdiction": "VIC",
+    "roles": [
+      "fire"
+    ],
+    "url": "https://frv.vic.gov.au/contact-us",
+    "summary": "Contact page for Fire Rescue Victoria, the state's fire and rescue service. The page gives an enquiries form and links to its response area information.",
+    "reviewed": "2026-10-18",
+    "caution": "For fire and rescue, police or ambulance in an emergency, call 000. The page's general enquiries number is not an emergency line."
+  },
+  {
+    "id": "vic-warnings",
+    "category": "warnings",
+    "name": "VicEmergency (website, app and hotline)",
+    "jurisdiction": "VIC",
+    "roles": [
+      "warnings"
+    ],
+    "url": "https://www.emergency.vic.gov.au/respond/",
+    "summary": "Victoria's official emergency information service: a map and list of current incidents and warnings, watch zones for the VicEmergency app, and pages on preparing and recovering. This directory does not reproduce live warnings.",
+    "reviewed": "2026-10-18",
+    "phone": "1800 226 226",
+    "phoneLabel": "1800 226 226 — VicEmergency Hotline (information, not emergencies; staffed Mon–Fri 8am–6pm)",
+    "caution": "The hotline is for emergency information, not emergencies. In an emergency call 000. The hotline is staffed Monday to Friday, 8.00am to 6.00pm, with opening times extended during significant bushfires; recorded information on specific topics is available 24 hours a day (CFA hotline page). Deaf, hearing or speech-impaired callers can use the National Relay Service; non-English speakers can ring 131 450 for translated information (as stated on the CFA hotline page)."
+  },
+  {
+    "id": "vic-police",
+    "category": "urgent",
+    "name": "Victoria Police Assistance Line",
+    "jurisdiction": "VIC",
+    "roles": [
+      "police"
+    ],
+    "url": "https://www.police.vic.gov.au/contact",
+    "summary": "Non-urgent police assistance, general enquiries and reporting a crime that has already occurred. Non-urgent crimes and events can also be reported online.",
+    "reviewed": "2026-10-18",
+    "phone": "131 444",
+    "phoneLabel": "131 444 — Victoria Police Assistance Line",
+    "hours": "24 hours a day, 7 days a week",
+    "caution": "For danger or a crime in progress, call 000 instead."
+  },
+  {
+    "id": "vic-health",
+    "category": "health",
+    "name": "Victorian Department of Health: infectious diseases",
+    "jurisdiction": "VIC",
+    "roles": [
+      "health"
+    ],
+    "url": "https://www.health.vic.gov.au/public-health/infectious-diseases-guidelines-and-advice",
+    "summary": "The Victorian Department of Health's infectious diseases page: guidelines, notifiable conditions, an A-Z of disease information and links to surveillance reports. It is aimed mainly at health professionals and links to the Better Health Channel for consumer information.",
+    "reviewed": "2026-10-18"
+  },
+  {
+    "id": "vic-mental-health-services",
+    "category": "crisis",
+    "name": "Victorian Department of Health: mental health telephone and online services",
+    "jurisdiction": "VIC",
+    "roles": [
+      "mentalHealth"
+    ],
+    "url": "https://www.health.vic.gov.au/mental-health-services/telephone-and-online-services",
+    "summary": "Department of Health list of mental health phone and online services. It describes area mental health triage as a 24/7 specialist response whose phone number differs by area, so there is no single statewide triage number.",
+    "reviewed": "2026-10-18",
+    "caution": "This is a directory, not a crisis line: the page lists no single statewide mental health triage number because area numbers differ."
+  },
+  {
+    "id": "vic-suicideline",
+    "category": "crisis",
+    "name": "SuicideLine Victoria (suicide crisis support)",
+    "jurisdiction": "VIC",
+    "roles": [
+      "mentalHealth"
+    ],
+    "url": "https://www.suicideline.org.au/",
+    "summary": "Suicide crisis support: free professional phone and online counselling for people living in Victoria, including people affected by suicide. Supported by the Victorian Government and delivered by Lifeline. It is not an area mental health triage line.",
+    "reviewed": "2026-10-18",
+    "phone": "1300 651 251",
+    "phoneLabel": "1300 651 251 — SuicideLine Victoria",
+    "hours": "24/7",
+    "caution": "If someone is in immediate danger or has seriously harmed themselves, call 000."
+  },
+  {
+    "id": "vic-recovery",
+    "category": "recovery",
+    "name": "Relief and recovery in Victoria (Victorian Government)",
+    "jurisdiction": "VIC",
+    "roles": [
+      "recovery"
+    ],
+    "url": "https://www.vic.gov.au/relief-recovery-victoria",
+    "summary": "Victorian Government guide to help after major emergencies: relief centres, emergency accommodation and payments, clean-up and mental health support, with guides for bushfire, storm and flood. Emergency Management Victoria coordinates state and regional relief and recovery.",
+    "reviewed": "2026-10-18"
+  },
+  {
+    "id": "qld-ses",
+    "category": "urgent",
+    "name": "Queensland State Emergency Service (Queensland SES)",
+    "jurisdiction": "QLD",
+    "roles": [
+      "ses"
+    ],
+    "url": "https://www.ses.qld.gov.au/",
+    "summary": "Help for non-life-threatening flood and storm emergencies during severe weather. Request help by phone, online or through the SES Assistance QLD app.",
+    "reviewed": "2026-10-18",
+    "phone": "132 500",
+    "phoneLabel": "132 500 — Queensland SES",
+    "caution": "If life is in danger, call 000. 132 500 is for non-life-threatening flood and storm help."
+  },
+  {
+    "id": "qld-fire",
+    "category": "fire",
+    "name": "Queensland Fire Department (QFD)",
+    "jurisdiction": "QLD",
+    "roles": [
+      "fire"
+    ],
+    "url": "https://www.qld.gov.au/emergency/emergencies-services/response/fire-rescue",
+    "summary": "State government page about Queensland's primary fire and emergency service, which includes Queensland Fire and Rescue and the volunteer Rural Fire Service Queensland (rural, semi-rural and urban-fringe areas, fire permits). The agency's own site could not be checked.",
+    "reviewed": "2026-10-18",
+    "caution": "For a fire or any emergency, call 000. The page lists only the general Queensland Government line (13 74 68) for enquiries, not a fire emergency number."
+  },
+  {
+    "id": "qld-warnings",
+    "category": "warnings",
+    "name": "Queensland Disasters: current warnings",
+    "jurisdiction": "QLD",
+    "roles": [
+      "warnings"
+    ],
+    "url": "https://www.disaster.qld.gov.au/current-warnings",
+    "summary": "Queensland Government page linking to official severe weather, flood, cyclone, bushfire, maritime and heat warning sources and local council disaster dashboards. It also offers machine-readable alert feeds and guidance on acting on warnings.",
+    "reviewed": "2026-10-18"
+  },
+  {
+    "id": "qld-police",
+    "category": "urgent",
+    "name": "Policelink (Queensland Police non-urgent reporting and enquiries)",
+    "jurisdiction": "QLD",
+    "roles": [
+      "police"
+    ],
+    "url": "https://www.qld.gov.au/youth/legal-support-and-your-rights/police-services-crime-prevention",
+    "summary": "State government page on Policelink, Queensland's phone and online reporting for police matters that are not emergencies, such as property damage, stealing, break-ins, stolen vehicles and lost property. The police service's own site could not be checked.",
+    "reviewed": "2026-10-18",
+    "phone": "131 444",
+    "phoneLabel": "131 444 — Policelink",
+    "hours": "24 hours, 7 days",
+    "caution": "For urgent matters or a crime in progress, call 000 instead. The number comes from Queensland Government pages, not the police service's own site; confirm it there if a call does not connect."
+  },
+  {
+    "id": "qld-health",
+    "category": "health",
+    "name": "Queensland Health: health alerts",
+    "jurisdiction": "QLD",
+    "roles": [
+      "health"
+    ],
+    "url": "https://www.qld.gov.au/health/conditions/health-alerts",
+    "summary": "State government listing of health alerts published by Queensland Health, each linking to its own page. Use it to find official public health information on outbreaks and other health risks. Queensland Health's own site could not be checked.",
+    "reviewed": "2026-10-18",
+    "caution": "A directory of alerts, not a dedicated infectious diseases page. For emergencies call 000."
+  },
+  {
+    "id": "qld-mental-health",
+    "category": "crisis",
+    "name": "1300 MH CALL (Queensland mental health access line)",
+    "jurisdiction": "QLD",
+    "roles": [
+      "mentalHealth"
+    ],
+    "url": "https://www.qld.gov.au/health/mental-health/help-lines/1300-mh-call",
+    "summary": "Confidential mental health telephone triage line and first point of contact for Queensland public mental health services. It gives support, advice and referrals, including for mental health crises.",
+    "reviewed": "2026-10-18",
+    "phone": "1300 642 255",
+    "phoneLabel": "1300 642 255 — 1300 MH CALL (Queensland only)",
+    "hours": "24 hours, 7 days",
+    "caution": "Only available within Queensland. In an emergency call 000."
+  },
+  {
+    "id": "qld-recovery",
+    "category": "recovery",
+    "name": "Queensland Government disaster recovery support",
+    "jurisdiction": "QLD",
+    "roles": [
+      "recovery"
+    ],
+    "url": "https://www.qld.gov.au/community/disasters-emergencies/disasters",
+    "summary": "Queensland Government information on financial help and support services after a disaster, including grants, event-specific funding pages and wellbeing contacts. The Community Recovery Hotline can give advice.",
+    "reviewed": "2026-10-18",
+    "phone": "1800 173 349",
+    "phoneLabel": "1800 173 349 — Community Recovery Hotline",
+    "caution": "Grants have eligibility criteria. For emergencies call 000."
+  },
+  {
+    "id": "wa-ses",
+    "category": "urgent",
+    "name": "WA State Emergency Service (SES) emergency assistance (DFES)",
+    "jurisdiction": "WA",
+    "roles": [
+      "ses"
+    ],
+    "url": "https://www.dfes.wa.gov.au/contact",
+    "summary": "In Western Australia the SES is delivered through the Department of Fire and Emergency Services (DFES). The DFES contact page lists the SES emergency assistance number for urgent property repairs you cannot manage yourself, such as storm or flood damage.",
+    "reviewed": "2026-10-18",
+    "phone": "132 500",
+    "phoneLabel": "132 500 — SES emergency assistance",
+    "caution": "Call 000 for fire or a life-threatening emergency. Requests are prioritised by urgency, so there may be waits during a natural disaster. The page says SES help does not cover fences, permanent repairs, debris clearing or basic repairs."
+  },
+  {
+    "id": "wa-dfes",
+    "category": "fire",
+    "name": "Department of Fire and Emergency Services (DFES)",
+    "jurisdiction": "WA",
+    "roles": [
+      "fire"
+    ],
+    "url": "https://www.dfes.wa.gov.au/",
+    "summary": "Western Australia's fire and emergency services agency. The site covers hazard information (bushfire, fire in the home, cyclone, storm, flood, tsunami, earthquake, hazmat), warning systems, the volunteer services and recovery funding.",
+    "reviewed": "2026-10-18",
+    "phone": "13 33 37",
+    "phoneLabel": "13 33 37 — DFES information line (not for emergencies)",
+    "caution": "13 33 37 is an information line. For fire or a life-threatening emergency call 000."
+  },
+  {
+    "id": "wa-emergency-wa",
+    "category": "warnings",
+    "name": "Emergency WA — Warnings and Incidents",
+    "jurisdiction": "WA",
+    "roles": [
+      "warnings"
+    ],
+    "url": "https://www.emergency.wa.gov.au/",
+    "summary": "Western Australia's official site and app for emergency warnings and incident information, including Total Fire Bans and Fire Danger Ratings. The app lets you set watch zones and RSS and CAP feeds are available.",
+    "reviewed": "2026-10-18",
+    "caution": "The site says not to wait for an official message before acting, and that warnings may not be issued before life or property is threatened. Notifications may not arrive if an alert is outside your watch zone or your phone has Do Not Disturb or Battery Saver on. Call 000 in a life-threatening emergency."
+  },
+  {
+    "id": "wa-police",
+    "category": "urgent",
+    "name": "WA Police Force — Contact WA Police (131 444)",
+    "jurisdiction": "WA",
+    "roles": [
+      "police"
+    ],
+    "url": "https://www.wa.gov.au/organisation/western-australia-police-force/contact-wa-police",
+    "summary": "Non-emergency police contact: report a crime that has already happened, request police attendance or ask a general question. The page also lists TTY, SMS Assist (registration required) and Crime Stoppers contacts.",
+    "reviewed": "2026-10-18",
+    "phone": "131 444",
+    "phoneLabel": "131 444 — WA Police non-emergency",
+    "caution": "In an emergency, or for an immediate threat to people or property, call 000. SMS Assist must be registered for first and must not be used for emergencies."
+  },
+  {
+    "id": "wa-health",
+    "category": "health",
+    "name": "HealthyWA — Health conditions A to Z (WA Department of Health)",
+    "jurisdiction": "WA",
+    "roles": [
+      "health"
+    ],
+    "url": "https://www.healthywa.wa.gov.au/Health-conditions/Health-conditions-A-to-Z",
+    "summary": "Weak fit for infectious diseases: the HealthyWA conditions A to Z, the WA Department of Health's public information site. The index links to articles on many infectious diseases (for example influenza, measles, COVID-19, whooping cough and mosquito-borne diseases) and other conditions, but it is not a dedicated outbreak or public health page.",
+    "reviewed": "2026-10-18",
+    "caution": "General information only. For urgent symptoms call 000."
+  },
+  {
+    "id": "wa-mherl",
+    "category": "crisis",
+    "name": "Mental Health Emergency Response Line (MHERL)",
+    "jurisdiction": "WA",
+    "roles": [
+      "mentalHealth"
+    ],
+    "url": "https://mhc.wa.gov.au/getting-help/helplines/mental-health-emergency-response-line",
+    "summary": "A 24-hour phone service staffed by mental health clinicians for people in a mental health crisis, plus their families, carers and people who witness a crisis. Covers the Perth metropolitan area and Peel; regional and remote WA uses Rurallink.",
+    "reviewed": "2026-10-18",
+    "phone": "1300 555 788",
+    "phoneLabel": "1300 555 788 — MHERL (Perth metro only; Peel and regional WA use other numbers)",
+    "hours": "24 hours (Perth metro and Peel)",
+    "caution": "MHERL is not an emergency service. In an emergency call 000. Peel callers use 1800 676 822. Regional and remote WA callers should use Rurallink on 1800 552 002 (4:30pm to 8:30am on weeknights, 24 hours on weekends and public holidays), as the Mental Health Commission page states."
+  },
+  {
+    "id": "wa-recovery",
+    "category": "recovery",
+    "name": "Recovery WA — Recovering from an Emergency (DFES)",
+    "jurisdiction": "WA",
+    "roles": [
+      "recovery"
+    ],
+    "url": "https://recovery.dfes.wa.gov.au/",
+    "summary": "Western Australia's emergency recovery site run by DFES. It lists recovery pages for individual emergencies, information on the Premier's Relief Payment and guidance on recovering from bushfire, storm, cyclone, flood and other hazards.",
+    "reviewed": "2026-10-18",
+    "caution": "What help is available depends on the emergency and whether assistance has been activated; check the site for current eligibility."
+  },
+  {
+    "id": "sa-ses",
+    "category": "urgent",
+    "name": "South Australian State Emergency Service (SA SES)",
+    "jurisdiction": "SA",
+    "roles": [
+      "ses"
+    ],
+    "url": "https://ses.sa.gov.au/about-us/contact-us",
+    "summary": "Official SA SES contact page. Lists 132 500 for SA SES emergency assistance (flood and storm) and an infoline for incident information during significant weather events.",
+    "reviewed": "2026-10-18",
+    "phone": "132 500",
+    "phoneLabel": "132 500 — SA SES",
+    "caution": "For life-threatening emergencies call 000. The online contact form does not start an SA SES response; call 132 500 for help."
+  },
+  {
+    "id": "sa-cfs",
+    "category": "fire",
+    "name": "South Australian Country Fire Service (CFS) — Incidents & warnings",
+    "jurisdiction": "SA",
+    "roles": [
+      "fire"
+    ],
+    "url": "https://www.cfs.sa.gov.au/incidents/",
+    "summary": "Official CFS incidents and warnings page. Explains the warning levels and incident categories used in CFS listings and links to bushfire preparedness information. It also lists the CFS Information Hotline.",
+    "reviewed": "2026-10-18",
+    "phone": "1800 362 361",
+    "phoneLabel": "1800 362 361 — CFS Information Hotline",
+    "caution": "The Information Hotline is for information, not emergencies. In an emergency call 000."
+  },
+  {
+    "id": "sa-alert-sa",
+    "category": "warnings",
+    "name": "SAFECOM — Emergency Information (Alert SA)",
+    "jurisdiction": "SA",
+    "roles": [
+      "warnings"
+    ],
+    "url": "https://safecom.sa.gov.au/emergencies/emergenciesinformationjsp/",
+    "summary": "Official SAFECOM page explaining how South Australia's public emergency warnings work, including the Alert SA platform, Emergency Alert, the bushfire Advice and warning levels, accessibility options and other recommended information sources.",
+    "reviewed": "2026-10-18",
+    "caution": "Do not rely on a single source: check Alert SA, local ABC radio and the CFS and SES channels, as communications can be unreliable during emergencies."
+  },
+  {
+    "id": "tas-ses",
+    "category": "urgent",
+    "name": "Tasmania State Emergency Service (Tasmania SES)",
+    "jurisdiction": "TAS",
+    "roles": [
+      "ses"
+    ],
+    "url": "https://www.ses.tas.gov.au/about/contact-us/",
+    "summary": "Tasmania SES contact page: the emergency help line for flood, storm and tsunami, general enquiries, and relay and interpreter options.",
+    "reviewed": "2026-10-18",
+    "phone": "132 500",
+    "phoneLabel": "132 500 — Tasmania SES (flood, storm, tsunami)",
+    "caution": "In a life-threatening emergency call Triple Zero (000). The 132 500 line is described only for flood, storm and tsunami emergencies."
+  },
+  {
+    "id": "tas-fire",
+    "category": "fire",
+    "name": "Tasmania Fire Service (TFS)",
+    "jurisdiction": "TAS",
+    "roles": [
+      "fire"
+    ],
+    "url": "https://www.fire.tas.gov.au/",
+    "summary": "Tasmania's fire service site: fire danger ratings, fire bans and permits, bushfire and home fire safety guidance, and links to incidents and warnings.",
+    "reviewed": "2026-10-18",
+    "phone": "1800 000 699",
+    "phoneLabel": "1800 000 699 — TFS Information Line (free call)",
+    "caution": "The Information Line is not for emergencies. Report a fire on 000."
+  },
+  {
+    "id": "tas-tasalert",
+    "category": "warnings",
+    "name": "TasALERT",
+    "jurisdiction": "TAS",
+    "roles": [
+      "warnings"
+    ],
+    "url": "https://alert.tas.gov.au/",
+    "summary": "The Tasmanian Government's official emergency information site and app, carrying warnings from agencies such as Tasmania Fire Service, Tasmania Police and SES, with a map and preparedness guidance.",
+    "reviewed": "2026-10-18",
+    "caution": "In a life-threatening emergency call 000."
+  },
+  {
+    "id": "tas-police",
+    "category": "urgent",
+    "name": "Tasmania Police: Police Assistance Line",
+    "jurisdiction": "TAS",
+    "roles": [
+      "police"
+    ],
+    "url": "https://www.police.tas.gov.au/contact-us/",
+    "summary": "Tasmania Police contact page for non-emergency police assistance and online reporting of some matters.",
+    "reviewed": "2026-10-18",
+    "phone": "131 444",
+    "phoneLabel": "131 444 — Tasmania Police Assistance Line",
+    "caution": "For a life-threatening emergency, if you are in danger, or if a crime is in progress, call Triple Zero (000). TTY users dial 106."
+  },
+  {
+    "id": "tas-recovery",
+    "category": "recovery",
+    "name": "TasRECOVERY (TasALERT recovery pages)",
+    "jurisdiction": "TAS",
+    "roles": [
+      "recovery"
+    ],
+    "url": "https://alert.tas.gov.au/recovery/",
+    "summary": "The Tasmanian Government's recovery information after emergencies, with topic pages on financial assistance, health and wellbeing, insurance, legal matters, animal welfare, and your land and home.",
+    "reviewed": "2026-10-18"
+  },
+  {
+    "id": "act-ses",
+    "category": "urgent",
+    "name": "ACT State Emergency Service (ACT SES)",
+    "jurisdiction": "ACT",
+    "roles": [
+      "ses"
+    ],
+    "url": "https://esa.act.gov.au/about-esa-emergency-services/state-emergency-service/contact-ses",
+    "summary": "Contact page for the ACT State Emergency Service, part of the ACT Emergency Services Agency. Lists the storm and flood assistance line for emergency help during floods or storms.",
+    "reviewed": "2026-10-18",
+    "phone": "132 500",
+    "phoneLabel": "132 500 — ACT SES storm and flood assistance",
+    "caution": "For a life-threatening emergency, call 000. The page states no hours for 132 500."
+  },
+  {
+    "id": "act-fire-rescue",
+    "category": "fire",
+    "name": "ACT Fire & Rescue",
+    "jurisdiction": "ACT",
+    "roles": [
+      "fire"
+    ],
+    "url": "https://esa.act.gov.au/fire-rescue",
+    "summary": "ACT Emergency Services Agency page for ACT Fire & Rescue, the territory's urban fire and rescue service, with its community programs and Community Fire Units. Grass and bushfire response is covered by the ACT Rural Fire Service.",
+    "reviewed": "2026-10-18",
+    "caution": "In a life-threatening emergency call 000. The ESA contact page says not to call fire stations to report an emergency."
+  },
+  {
+    "id": "act-rfs",
+    "category": "fire",
+    "name": "ACT Rural Fire Service (ACT RFS)",
+    "jurisdiction": "ACT",
+    "roles": [
+      "fire"
+    ],
+    "url": "https://esa.act.gov.au/rural-fire-service",
+    "summary": "ACT Emergency Services Agency page for the ACT Rural Fire Service, which protects the ACT community from grass and bushfires, with preparation information and links to fire danger ratings and total fire ban pages.",
+    "reviewed": "2026-10-18",
+    "caution": "In a life-threatening emergency call 000."
+  },
+  {
+    "id": "act-warnings",
+    "category": "warnings",
+    "name": "ACT Emergency Services Agency: warnings and alerts",
+    "jurisdiction": "ACT",
+    "roles": [
+      "warnings"
+    ],
+    "url": "https://esa.act.gov.au/be-emergency-ready/warnings-alerts",
+    "summary": "Explains how ACT emergency warnings are issued and where to find them: the ESA website and incidents map, the Hazards Near Me app, social media, ABC Local Radio, AusAlert and Emergency Alert messages. Describes the channels only; no live warnings.",
+    "reviewed": "2026-10-18"
+  },
+  {
+    "id": "act-police",
+    "category": "urgent",
+    "name": "ACT Policing: Police Assistance Line",
+    "jurisdiction": "ACT",
+    "roles": [
+      "police"
+    ],
+    "url": "https://www.afp.gov.au/about-us/contact-us",
+    "summary": "Australian Federal Police contact page with an ACT Policing section giving the Police Assistance Line for non-urgent police assistance, which connects callers to local police in the ACT.",
+    "reviewed": "2026-10-18",
+    "phone": "131 444",
+    "phoneLabel": "131 444 — ACT Policing Police Assistance Line",
+    "caution": "In an emergency, call 000 and ask for police. This number is taken from the Australian Federal Police contact page because ACT Policing's own site could not be checked."
+  },
+  {
+    "id": "act-health",
+    "category": "health",
+    "name": "ACT Health: diseases and conditions",
+    "jurisdiction": "ACT",
+    "roles": [
+      "health"
+    ],
+    "url": "https://www.act.gov.au/health/topics/diseases",
+    "summary": "ACT Government index of infectious diseases and conditions, linking to pages on topics such as measles, influenza, COVID-19 and mpox. Managed by the Health and Community Services Directorate. It is a general index, not a dedicated public health contact page.",
+    "reviewed": "2026-10-18",
+    "caution": "The page says its content is intended for health professionals and is not personal medical advice; see your own health provider about a health concern."
+  },
+  {
+    "id": "act-mental-health",
+    "category": "crisis",
+    "name": "Access Mental Health Line (Canberra Health Services)",
+    "jurisdiction": "ACT",
+    "roles": [
+      "mentalHealth"
+    ],
+    "url": "https://www.canberrahealthservices.act.gov.au/services-and-clinics/services/access-mental-health",
+    "summary": "Phone support for anyone concerned about their own or someone else's mental health, including carers and health professionals. Gives information and advice and can refer to urgent mental health assessment or other Canberra Health Services.",
+    "reviewed": "2026-10-18",
+    "phone": "1800 629 354",
+    "phoneLabel": "1800 629 354 — Access Mental Health Line",
+    "hours": "24 hours a day, 7 days a week (Access Mental Health Line)",
+    "caution": "Not for life-threatening emergencies: call 000 immediately."
+  },
+  {
+    "id": "act-recovery",
+    "category": "recovery",
+    "name": "ACT Government: support after an emergency",
+    "jurisdiction": "ACT",
+    "roles": [
+      "recovery"
+    ],
+    "url": "https://www.act.gov.au/emergency-and-safety/reduce-the-impact-of-disasters/support-after-an-emergency",
+    "summary": "ACT Government starting point for recovery: immediate relief, insurance, financial aid, legal help, replacing lost documents and mental health support. Support varies by emergency and is updated after an event.",
+    "reviewed": "2026-10-18",
+    "caution": "The page says immediate relief is generally time-limited (up to about three months) and that eligibility depends on the emergency."
+  },
+  {
+    "id": "nt-ses",
+    "category": "urgent",
+    "name": "NT Emergency Service (NTES)",
+    "jurisdiction": "NT",
+    "roles": [
+      "ses"
+    ],
+    "url": "https://pfes.nt.gov.au/nt-emergency-service-general-enquiries",
+    "summary": "Help from the NT Emergency Service during floods, storms or cyclones, plus headquarters contacts and an email address for general enquiries. NTES is part of NT Police, Fire and Emergency Services.",
+    "reviewed": "2026-10-18",
+    "phone": "132 500",
+    "phoneLabel": "132 500 — NTES (floods, storms, cyclones)",
+    "caution": "The official page says to save 000 for other emergencies. Headquarters numbers (Northern 08 8922 3630, Southern 08 8951 9300) are listed under business hours, not for emergencies."
+  },
+  {
+    "id": "nt-fire",
+    "category": "fire",
+    "name": "NT Fire and Rescue Service (NTFRS)",
+    "jurisdiction": "NT",
+    "roles": [
+      "fire"
+    ],
+    "url": "https://pfes.nt.gov.au/fire-and-rescue-service",
+    "summary": "NT Fire and Rescue Service responds to fires, road crash rescues and hazardous materials incidents. The site has bushfire safety guidance, permits to burn, fire station profiles and a fire incident map.",
+    "reviewed": "2026-10-18",
+    "phone": "08 8999 3473",
+    "phoneLabel": "08 8999 3473 — NTFRS (non-emergency)",
+    "hours": "24 hours (listed under 24 hour assistance lines for non-emergencies)",
+    "caution": "This number is for non-emergency fire assistance only. In an emergency always dial 000."
+  },
+  {
+    "id": "nt-fire-incident-map",
+    "category": "warnings",
+    "name": "NTFRS Fire Incident Map (fire incidents only)",
+    "jurisdiction": "NT",
+    "roles": [
+      "warnings"
+    ],
+    "url": "https://pfes.nt.gov.au/fire-and-rescue-service/fire-incident-map",
+    "summary": "Interactive map of NT Fire and Rescue Service incidents and bushfire warning levels, published by NT Police, Fire and Emergency Services.",
+    "reviewed": "2026-10-18",
+    "caution": "Partial coverage only: this is a fire-focused incident map, not an all-hazards warnings site, and it is not real time (the page says it updates roughly every 10 to 15 minutes and advises using more than one source). It does not cover flood, storm or cyclone warnings. In an emergency call 000."
+  },
+  {
+    "id": "nt-police",
+    "category": "urgent",
+    "name": "NT Police Force: police contacts",
+    "jurisdiction": "NT",
+    "roles": [
+      "police"
+    ],
+    "url": "https://pfes.nt.gov.au/online-services/police-contacts",
+    "summary": "Police assistance where there is no immediate danger, with local station numbers and other police contacts.",
+    "reviewed": "2026-10-18",
+    "phone": "131 444",
+    "phoneLabel": "131 444 — NT Police (non-emergency)",
+    "hours": "24 hours (listed under 24 hour assistance lines for non-emergencies)",
+    "caution": "For non-emergencies only. In an emergency or life-threatening situation call 000."
   }
 ]

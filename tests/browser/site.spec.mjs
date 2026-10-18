@@ -52,3 +52,11 @@ test('print layout keeps headings with their content and source links on one lin
   expect(s.h2).toBe('avoid');expect(s.h3).toBe('avoid');
   expect(s.link).not.toMatch(/flex/);expect(s.card).toBe('avoid');
 });
+test('other states section is present',async({page})=>{
+  for(const route of ['/health','/bushfire','/urgent-help']){
+    await page.goto(route);
+    const heading=page.getByRole('heading',{level:2,name:/^Other states and territories#?$/});await expect(heading).toBeVisible();
+    const links=heading.locator('xpath=following-sibling::ul[1]').locator('a[href^="https://"]');
+    expect(await links.count(),route).toBeGreaterThan(0);await expect(links.first()).toBeVisible();
+  }
+});

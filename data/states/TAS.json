@@ -1,0 +1,89 @@
+{
+  "name": "Tasmania",
+  "longName": "Tasmania",
+  "terms": {
+    "ses": "Tasmania SES",
+    "fire": "Tasmania Fire Service",
+    "warnings": "TasALERT",
+    "police": "Tasmania Police",
+    "health": "Tasmanian Government health authorities",
+    "mentalHealth": "Tasmanian Government mental health services",
+    "recovery": "TasRECOVERY"
+  },
+  "missingRoles": [
+    "health",
+    "mentalHealth"
+  ],
+  "resources": [
+    {
+      "id": "tas-ses",
+      "category": "urgent",
+      "name": "Tasmania State Emergency Service (Tasmania SES)",
+      "jurisdiction": "TAS",
+      "roles": [
+        "ses"
+      ],
+      "url": "https://www.ses.tas.gov.au/about/contact-us/",
+      "summary": "Tasmania SES contact page: the emergency help line for flood, storm and tsunami, general enquiries, and relay and interpreter options.",
+      "reviewed": "2026-10-18",
+      "phone": "132 500",
+      "phoneLabel": "132 500 — Tasmania SES (flood, storm, tsunami)",
+      "caution": "In a life-threatening emergency call Triple Zero (000). The 132 500 line is described only for flood, storm and tsunami emergencies."
+    },
+    {
+      "id": "tas-fire",
+      "category": "fire",
+      "name": "Tasmania Fire Service (TFS)",
+      "jurisdiction": "TAS",
+      "roles": [
+        "fire"
+      ],
+      "url": "https://www.fire.tas.gov.au/",
+      "summary": "Tasmania's fire service site: fire danger ratings, fire bans and permits, bushfire and home fire safety guidance, and links to incidents and warnings.",
+      "reviewed": "2026-10-18",
+      "phone": "1800 000 699",
+      "phoneLabel": "1800 000 699 — TFS Information Line (free call)",
+      "caution": "The Information Line is not for emergencies. Report a fire on 000."
+    },
+    {
+      "id": "tas-tasalert",
+      "category": "warnings",
+      "name": "TasALERT",
+      "jurisdiction": "TAS",
+      "roles": [
+        "warnings"
+      ],
+      "url": "https://alert.tas.gov.au/",
+      "summary": "The Tasmanian Government's official emergency information site and app, carrying warnings from agencies such as Tasmania Fire Service, Tasmania Police and SES, with a map and preparedness guidance.",
+      "reviewed": "2026-10-18",
+      "caution": "In a life-threatening emergency call 000."
+    },
+    {
+      "id": "tas-police",
+      "category": "urgent",
+      "name": "Tasmania Police: Police Assistance Line",
+      "jurisdiction": "TAS",
+      "roles": [
+        "police"
+      ],
+      "url": "https://www.police.tas.gov.au/contact-us/",
+      "summary": "Tasmania Police contact page for non-emergency police assistance and online reporting of some matters.",
+      "reviewed": "2026-10-18",
+      "phone": "131 444",
+      "phoneLabel": "131 444 — Tasmania Police Assistance Line",
+      "caution": "For a life-threatening emergency, if you are in danger, or if a crime is in progress, call Triple Zero (000). TTY users dial 106."
+    },
+    {
+      "id": "tas-recovery",
+      "category": "recovery",
+      "name": "TasRECOVERY (TasALERT recovery pages)",
+      "jurisdiction": "TAS",
+      "roles": [
+        "recovery"
+      ],
+      "url": "https://alert.tas.gov.au/recovery/",
+      "summary": "The Tasmanian Government's recovery information after emergencies, with topic pages on financial assistance, health and wellbeing, insurance, legal matters, animal welfare, and your land and home.",
+      "reviewed": "2026-10-18"
+    }
+  ]
+}

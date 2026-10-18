@@ -43,6 +43,188 @@
       "url": "1800 020 080 (National Coronavirus Helpline)",
       "method": "secondary sources",
       "observed": "2026-10-16: Not in service. AMA services communication kit (Nov 2023) said the helpline and Easy Vaccine Access would close after 4 December 2023; Brisbane South PHN (updated 24 January 2024) and NSW Far West LHD confirm it is no longer in service. No health.gov.au notice was found, so this rests on secondary sources. The number is deliberately excluded from the directory, and the health page warns that it still appears on older material."
+    },
+    {
+      "url": "https://www.health.vic.gov.au/mental-health-services/telephone-and-online-services",
+      "method": "manual review needed",
+      "state": "VIC",
+      "observed": "Weak fit for the mentalHealth role: the Department of Health page lists no single statewide mental health crisis or triage number (area triage numbers vary), so SuicideLine Victoria is listed second as suicide crisis support only. Check whether an area-triage directory link should replace it."
+    },
+    {
+      "url": "https://www.emv.vic.gov.au/",
+      "method": "manual review needed",
+      "state": "VIC",
+      "observed": "Emergency Recovery Victoria / Emergency Management Victoria pages returned 403 to automated requests, and the old vic.gov.au ERV page returned 404. The recovery record uses the vic.gov.au relief and recovery page, which names Emergency Management Victoria as coordinator."
+    },
+    {
+      "url": "https://www.emergency.vic.gov.au/respond/",
+      "method": "manual review needed",
+      "state": "VIC",
+      "observed": "VicEmergency hotline 1800 226 226 is confirmed on CFA and VICSES pages, not on emergency.vic.gov.au itself (its support site returned 403). Hotline hours are stated on the CFA hotline page https://cfa.vic.gov.au/contact/vicemergency-hotline (rechecked 2026-10-18): staffed Monday to Friday, 8.00am - 6.00pm, extended during significant bushfires, recorded information 24 hours a day; they are in the record caution."
+    },
+    {
+      "url": "https://frv.vic.gov.au/contact-us",
+      "method": "manual review needed",
+      "state": "VIC",
+      "observed": "Fire role: the CFA/Fire Rescue Victoria boundary is not stated on either page read, so both records are listed. Neither carries a phone number (only headquarters or general-enquiry numbers appeared)."
+    },
+    {
+      "url": "https://www.police.qld.gov.au/policelink-reporting",
+      "method": "manual review needed",
+      "state": "QLD",
+      "observed": "Police assistance number: the qld.gov.au police page gives Policelink 131 444 (24 hours, 7 days) and the record uses it. The getready.qld.gov.au emergency contacts page prints Policelink general enquiries as 13 14 44: the same digits (131444) with different spacing, not a different number (corrected 2026-10-18; earlier notes called this a conflict). police.qld.gov.au returned empty to automated requests (bot protection), so the police site itself was not opened."
+    },
+    {
+      "url": "https://www.fire.qld.gov.au/",
+      "method": "manual review needed",
+      "state": "QLD",
+      "observed": "Weak fit: fire.qld.gov.au returned empty to automated requests (bot protection). The fire record is the qld.gov.au Queensland Fire Department page; no QFD phone number could be verified."
+    },
+    {
+      "url": "https://www.health.qld.gov.au/",
+      "method": "manual review needed",
+      "state": "QLD",
+      "observed": "Weak fit: health.qld.gov.au (infectious diseases, notifiable conditions) returned 403. The health record is the qld.gov.au health alerts directory; look for a dedicated Queensland Health public infectious-diseases or outbreak page."
+    },
+    {
+      "url": "https://www.ses.qld.gov.au/ses-assistance",
+      "method": "manual review needed",
+      "state": "QLD",
+      "observed": "Only the SES home page opened; /contact-us and /ses-assistance returned empty (bot protection). Consider a more specific SES assistance URL after a manual check."
+    },
+    {
+      "url": "https://www.healthywa.wa.gov.au/Health-conditions/Health-conditions-A-to-Z",
+      "method": "manual review needed",
+      "state": "WA",
+      "observed": "Weak fit for the health role: no public-facing infectious-diseases or public health page was found on health.wa.gov.au (guessed URLs returned 404). The record is the HealthyWA conditions A to Z index. The Communicable Diseases hub (https://www.health.wa.gov.au/Health-for/Health-professionals/Communicable-Diseases) is aimed at health professionals and was not kept. A WA Health public health units contact page was not opened."
+    },
+    {
+      "url": "https://www.emergency.wa.gov.au/",
+      "method": "manual review needed",
+      "state": "WA",
+      "observed": "Emergency WA page is script-rendered and returned only its title; its role and features were confirmed on dfes.wa.gov.au (emergencywa/faq and warning-systems pages). Check the live site manually."
+    },
+    {
+      "url": "https://mhc.wa.gov.au/getting-help/helplines/mental-health-emergency-response-line",
+      "method": "manual review needed",
+      "state": "WA",
+      "observed": "MHERL and Rurallink numbers and hours are from this Mental Health Commission page only; a search result for another WA Health page said a project to improve MHERL and Rurallink is under way, so details may change. Recheck before relying on them."
+    },
+    {
+      "url": "https://www.police.sa.gov.au/about-us/key-contacts",
+      "method": "manual review needed",
+      "state": "SA",
+      "observed": "Police role not covered: police.sa.gov.au (key contacts, contact us, make a report to police) returned 403, so the non-urgent police number could not be confirmed on an opened official page. Alternative lead: https://www.police.sa.gov.au/services-and-events/make-a-report-to-police",
+      "role": "police"
+    },
+    {
+      "url": "https://www.sahealth.sa.gov.au/",
+      "method": "manual review needed",
+      "state": "SA",
+      "observed": "Health role not covered: sahealth.sa.gov.au (notifiable conditions, Communicable Disease Control Branch, home) returned 403 on every page tried; a related mirror had an expired certificate.",
+      "role": "health"
+    },
+    {
+      "url": "https://www.sahealth.sa.gov.au/",
+      "method": "manual review needed",
+      "state": "SA",
+      "observed": "Mental health role not covered: SA Health pages (including its mental health help page) returned 403 or a certificate error, so no crisis or triage service, number or hours were confirmed on an opened official page.",
+      "role": "mentalHealth"
+    },
+    {
+      "url": "https://www.recovery.sa.gov.au/",
+      "method": "manual review needed",
+      "state": "SA",
+      "observed": "Recovery role not covered: recovery.sa.gov.au, dhs.sa.gov.au and housing.sa.gov.au returned 403 or a certificate error. Which agency now leads state recovery information is unconfirmed.",
+      "role": "recovery"
+    },
+    {
+      "url": "https://www.mfs.sa.gov.au/",
+      "method": "manual review needed",
+      "state": "SA",
+      "observed": "Partial fire coverage: the Metropolitan Fire Service site returned 403, so only the CFS record exists. Decide whether CFS alone satisfies the fire role."
+    },
+    {
+      "url": "https://www.alert.sa.gov.au/",
+      "method": "manual review needed",
+      "state": "SA",
+      "observed": "Alert SA site itself returned 403; the warnings record uses the SAFECOM page that explains Alert SA. Terms for police, health, mental health and recovery are neutral placeholders until those roles are verified."
+    },
+    {
+      "url": "https://www.health.tas.gov.au/health-topics/infectious-diseases",
+      "method": "manual review needed",
+      "state": "TAS",
+      "observed": "Health role not covered: the Department of Health site (health.tas.gov.au) returned 403 to every automated request, so no infectious diseases or public health page was opened. Search results suggested this page and a public health hotline, but neither was verified.",
+      "role": "health"
+    },
+    {
+      "url": "https://www.health.tas.gov.au/health-topics/mental-health/tasmanias-mental-health-system/access-mental-health",
+      "method": "manual review needed",
+      "state": "TAS",
+      "observed": "Mental health role not covered: Access Mental Health pages on health.tas.gov.au and cbos.tas.gov.au returned 403. Search results described a 24/7 line run with Lifeline Tasmania, but older sources give different hours and one summary showed a possible typo variant of the number, so the number and hours need manual confirmation on an official page.",
+      "role": "mentalHealth"
+    },
+    {
+      "url": "https://www.police.tas.gov.au/contact-us/",
+      "method": "manual review needed",
+      "state": "TAS",
+      "observed": "Weak evidence for the Police Assistance Line number: the contact page links a header button that dials it but does not spell it out in the body text; 131 444 was cross-checked on the alert.tas.gov.au emergency contacts page."
+    },
+    {
+      "url": "https://www.fire.tas.gov.au/",
+      "method": "manual review needed",
+      "state": "TAS",
+      "observed": "Spot check 2026-10-18: some footer icons on the site were seen linking a \"000 Emergency\" label to the Information Line number 1800 000 699; the header 000 link is correct. The record gives 1800 000 699 only as the non-emergency Information Line."
+    },
+    {
+      "url": "https://police.act.gov.au/about-us/connect-with-us/who-to-contact",
+      "method": "manual review needed",
+      "state": "ACT",
+      "observed": "ACT Policing own site (police.act.gov.au, policenews.act.gov.au) returned 403 or a Cloudflare challenge. The police record uses the AFP contact page, which states 131 444 for ACT Policing. Check the ACT Policing page."
+    },
+    {
+      "url": "https://www.act.gov.au/health/topics/diseases",
+      "method": "manual review needed",
+      "state": "ACT",
+      "observed": "Weak fit for the health role: no dedicated public-facing ACT infectious-diseases or public health page with contact details was found. The diseases index carries a health-professionals disclaimer. Look for a better page."
+    },
+    {
+      "url": "https://securent.nt.gov.au/alerts",
+      "method": "manual review needed",
+      "state": "NT",
+      "observed": "Warnings only partly covered: the all-hazards NT warnings site appears to be SecureNT, which returned 403 to automated requests, so it was not opened. The warnings record is the fire-focused NTFRS Fire Incident Map. Check SecureNT before adding it."
+    },
+    {
+      "url": "https://health.nt.gov.au/",
+      "method": "manual review needed",
+      "state": "NT",
+      "observed": "Health role not covered: health.nt.gov.au returned 403 to automated requests; no infectious diseases or public health page was opened.",
+      "role": "health"
+    },
+    {
+      "url": "https://nt.gov.au/wellbeing/mental-health/24-hour-mental-health-hotlines",
+      "method": "manual review needed",
+      "state": "NT",
+      "observed": "Mental health role not covered: nt.gov.au returned 403, so no NT mental health line, number or hours were confirmed on an opened official page.",
+      "role": "mentalHealth"
+    },
+    {
+      "url": "https://nt.gov.au/emergency",
+      "method": "manual review needed",
+      "state": "NT",
+      "observed": "Recovery role not covered: nt.gov.au and securent.nt.gov.au returned 403 and no NT recovery page was opened. Terms for health, mental health and recovery are neutral placeholders.",
+      "role": "recovery"
+    },
+    {
+      "url": "https://nt.gov.au/emergency/bushfire/managing/bushfires-nt",
+      "method": "manual review needed",
+      "state": "NT",
+      "observed": "Bushfires NT (rural bushfire body) returned 403, so the fire role is filled by NTFRS only. A manual check could add a separate Bushfires NT record."
+    },
+    {
+      "url": "https://www.tisnational.gov.au/en/Non-English-speakers/Interpreting-services",
+      "method": "WebFetch full page (2026-10-18)",
+      "observed": "TIS National \"Interpreting services\" page (Department of Home Affairs; home page names \"The Translating and Interpreting Service (TIS National)\"). States: \"TIS National's immediate phone interpreting service is available 24 hours a day, every day of the year by calling 131 450.\" Steps: call 131 450, state the language, the operator finds an interpreter and connects you to the organisation requested. \"The majority of TIS National interpreting services are free to non-English speakers.\" Mobile calls may attract a higher rate. No statement about emergencies or Triple Zero. Used for the national tis-national record."
     }
   ]
 }

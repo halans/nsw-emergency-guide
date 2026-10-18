@@ -1,0 +1,115 @@
+{
+  "name": "WA",
+  "longName": "Western Australia",
+  "terms": {
+    "ses": "SES",
+    "fire": "DFES",
+    "warnings": "Emergency WA",
+    "police": "WA Police",
+    "health": "WA Health",
+    "mentalHealth": "MHERL",
+    "recovery": "Recovery WA"
+  },
+  "resources": [
+    {
+      "id": "wa-ses",
+      "category": "urgent",
+      "name": "WA State Emergency Service (SES) emergency assistance (DFES)",
+      "jurisdiction": "WA",
+      "roles": [
+        "ses"
+      ],
+      "url": "https://www.dfes.wa.gov.au/contact",
+      "summary": "In Western Australia the SES is delivered through the Department of Fire and Emergency Services (DFES). The DFES contact page lists the SES emergency assistance number for urgent property repairs you cannot manage yourself, such as storm or flood damage.",
+      "reviewed": "2026-10-18",
+      "phone": "132 500",
+      "phoneLabel": "132 500 — SES emergency assistance",
+      "caution": "Call 000 for fire or a life-threatening emergency. Requests are prioritised by urgency, so there may be waits during a natural disaster. The page says SES help does not cover fences, permanent repairs, debris clearing or basic repairs."
+    },
+    {
+      "id": "wa-dfes",
+      "category": "fire",
+      "name": "Department of Fire and Emergency Services (DFES)",
+      "jurisdiction": "WA",
+      "roles": [
+        "fire"
+      ],
+      "url": "https://www.dfes.wa.gov.au/",
+      "summary": "Western Australia's fire and emergency services agency. The site covers hazard information (bushfire, fire in the home, cyclone, storm, flood, tsunami, earthquake, hazmat), warning systems, the volunteer services and recovery funding.",
+      "reviewed": "2026-10-18",
+      "phone": "13 33 37",
+      "phoneLabel": "13 33 37 — DFES information line (not for emergencies)",
+      "caution": "13 33 37 is an information line. For fire or a life-threatening emergency call 000."
+    },
+    {
+      "id": "wa-emergency-wa",
+      "category": "warnings",
+      "name": "Emergency WA — Warnings and Incidents",
+      "jurisdiction": "WA",
+      "roles": [
+        "warnings"
+      ],
+      "url": "https://www.emergency.wa.gov.au/",
+      "summary": "Western Australia's official site and app for emergency warnings and incident information, including Total Fire Bans and Fire Danger Ratings. The app lets you set watch zones and RSS and CAP feeds are available.",
+      "reviewed": "2026-10-18",
+      "caution": "The site says not to wait for an official message before acting, and that warnings may not be issued before life or property is threatened. Notifications may not arrive if an alert is outside your watch zone or your phone has Do Not Disturb or Battery Saver on. Call 000 in a life-threatening emergency."
+    },
+    {
+      "id": "wa-police",
+      "category": "urgent",
+      "name": "WA Police Force — Contact WA Police (131 444)",
+      "jurisdiction": "WA",
+      "roles": [
+        "police"
+      ],
+      "url": "https://www.wa.gov.au/organisation/western-australia-police-force/contact-wa-police",
+      "summary": "Non-emergency police contact: report a crime that has already happened, request police attendance or ask a general question. The page also lists TTY, SMS Assist (registration required) and Crime Stoppers contacts.",
+      "reviewed": "2026-10-18",
+      "phone": "131 444",
+      "phoneLabel": "131 444 — WA Police non-emergency",
+      "caution": "In an emergency, or for an immediate threat to people or property, call 000. SMS Assist must be registered for first and must not be used for emergencies."
+    },
+    {
+      "id": "wa-health",
+      "category": "health",
+      "name": "HealthyWA — Health conditions A to Z (WA Department of Health)",
+      "jurisdiction": "WA",
+      "roles": [
+        "health"
+      ],
+      "url": "https://www.healthywa.wa.gov.au/Health-conditions/Health-conditions-A-to-Z",
+      "summary": "Weak fit for infectious diseases: the HealthyWA conditions A to Z, the WA Department of Health's public information site. The index links to articles on many infectious diseases (for example influenza, measles, COVID-19, whooping cough and mosquito-borne diseases) and other conditions, but it is not a dedicated outbreak or public health page.",
+      "reviewed": "2026-10-18",
+      "caution": "General information only. For urgent symptoms call 000."
+    },
+    {
+      "id": "wa-mherl",
+      "category": "crisis",
+      "name": "Mental Health Emergency Response Line (MHERL)",
+      "jurisdiction": "WA",
+      "roles": [
+        "mentalHealth"
+      ],
+      "url": "https://mhc.wa.gov.au/getting-help/helplines/mental-health-emergency-response-line",
+      "summary": "A 24-hour phone service staffed by mental health clinicians for people in a mental health crisis, plus their families, carers and people who witness a crisis. Covers the Perth metropolitan area and Peel; regional and remote WA uses Rurallink.",
+      "reviewed": "2026-10-18",
+      "phone": "1300 555 788",
+      "phoneLabel": "1300 555 788 — MHERL (Perth metro only; Peel and regional WA use other numbers)",
+      "hours": "24 hours (Perth metro and Peel)",
+      "caution": "MHERL is not an emergency service. In an emergency call 000. Peel callers use 1800 676 822. Regional and remote WA callers should use Rurallink on 1800 552 002 (4:30pm to 8:30am on weeknights, 24 hours on weekends and public holidays), as the Mental Health Commission page states."
+    },
+    {
+      "id": "wa-recovery",
+      "category": "recovery",
+      "name": "Recovery WA — Recovering from an Emergency (DFES)",
+      "jurisdiction": "WA",
+      "roles": [
+        "recovery"
+      ],
+      "url": "https://recovery.dfes.wa.gov.au/",
+      "summary": "Western Australia's emergency recovery site run by DFES. It lists recovery pages for individual emergencies, information on the Premier's Relief Payment and guidance on recovering from bushfire, storm, cyclone, flood and other hazards.",
+      "reviewed": "2026-10-18",
+      "caution": "What help is available depends on the emergency and whether assistance has been activated; check the site for current eligibility."
+    }
+  ]
+}

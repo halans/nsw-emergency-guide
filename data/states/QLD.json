@@ -1,0 +1,115 @@
+{
+  "name": "Queensland",
+  "longName": "Queensland",
+  "terms": {
+    "ses": "Queensland SES",
+    "fire": "Queensland Fire Department",
+    "warnings": "Queensland Disasters site",
+    "police": "Policelink",
+    "health": "Queensland Health",
+    "mentalHealth": "1300 MH CALL",
+    "recovery": "Queensland Government disaster recovery support"
+  },
+  "resources": [
+    {
+      "id": "qld-ses",
+      "category": "urgent",
+      "name": "Queensland State Emergency Service (Queensland SES)",
+      "jurisdiction": "QLD",
+      "roles": [
+        "ses"
+      ],
+      "url": "https://www.ses.qld.gov.au/",
+      "summary": "Help for non-life-threatening flood and storm emergencies during severe weather. Request help by phone, online or through the SES Assistance QLD app.",
+      "reviewed": "2026-10-18",
+      "phone": "132 500",
+      "phoneLabel": "132 500 — Queensland SES",
+      "caution": "If life is in danger, call 000. 132 500 is for non-life-threatening flood and storm help."
+    },
+    {
+      "id": "qld-fire",
+      "category": "fire",
+      "name": "Queensland Fire Department (QFD)",
+      "jurisdiction": "QLD",
+      "roles": [
+        "fire"
+      ],
+      "url": "https://www.qld.gov.au/emergency/emergencies-services/response/fire-rescue",
+      "summary": "State government page about Queensland's primary fire and emergency service, which includes Queensland Fire and Rescue and the volunteer Rural Fire Service Queensland (rural, semi-rural and urban-fringe areas, fire permits). The agency's own site could not be checked.",
+      "reviewed": "2026-10-18",
+      "caution": "For a fire or any emergency, call 000. The page lists only the general Queensland Government line (13 74 68) for enquiries, not a fire emergency number."
+    },
+    {
+      "id": "qld-warnings",
+      "category": "warnings",
+      "name": "Queensland Disasters: current warnings",
+      "jurisdiction": "QLD",
+      "roles": [
+        "warnings"
+      ],
+      "url": "https://www.disaster.qld.gov.au/current-warnings",
+      "summary": "Queensland Government page linking to official severe weather, flood, cyclone, bushfire, maritime and heat warning sources and local council disaster dashboards. It also offers machine-readable alert feeds and guidance on acting on warnings.",
+      "reviewed": "2026-10-18"
+    },
+    {
+      "id": "qld-police",
+      "category": "urgent",
+      "name": "Policelink (Queensland Police non-urgent reporting and enquiries)",
+      "jurisdiction": "QLD",
+      "roles": [
+        "police"
+      ],
+      "url": "https://www.qld.gov.au/youth/legal-support-and-your-rights/police-services-crime-prevention",
+      "summary": "State government page on Policelink, Queensland's phone and online reporting for police matters that are not emergencies, such as property damage, stealing, break-ins, stolen vehicles and lost property. The police service's own site could not be checked.",
+      "reviewed": "2026-10-18",
+      "phone": "131 444",
+      "phoneLabel": "131 444 — Policelink",
+      "hours": "24 hours, 7 days",
+      "caution": "For urgent matters or a crime in progress, call 000 instead. The number comes from Queensland Government pages, not the police service's own site; confirm it there if a call does not connect."
+    },
+    {
+      "id": "qld-health",
+      "category": "health",
+      "name": "Queensland Health: health alerts",
+      "jurisdiction": "QLD",
+      "roles": [
+        "health"
+      ],
+      "url": "https://www.qld.gov.au/health/conditions/health-alerts",
+      "summary": "State government listing of health alerts published by Queensland Health, each linking to its own page. Use it to find official public health information on outbreaks and other health risks. Queensland Health's own site could not be checked.",
+      "reviewed": "2026-10-18",
+      "caution": "A directory of alerts, not a dedicated infectious diseases page. For emergencies call 000."
+    },
+    {
+      "id": "qld-mental-health",
+      "category": "crisis",
+      "name": "1300 MH CALL (Queensland mental health access line)",
+      "jurisdiction": "QLD",
+      "roles": [
+        "mentalHealth"
+      ],
+      "url": "https://www.qld.gov.au/health/mental-health/help-lines/1300-mh-call",
+      "summary": "Confidential mental health telephone triage line and first point of contact for Queensland public mental health services. It gives support, advice and referrals, including for mental health crises.",
+      "reviewed": "2026-10-18",
+      "phone": "1300 642 255",
+      "phoneLabel": "1300 642 255 — 1300 MH CALL (Queensland only)",
+      "hours": "24 hours, 7 days",
+      "caution": "Only available within Queensland. In an emergency call 000."
+    },
+    {
+      "id": "qld-recovery",
+      "category": "recovery",
+      "name": "Queensland Government disaster recovery support",
+      "jurisdiction": "QLD",
+      "roles": [
+        "recovery"
+      ],
+      "url": "https://www.qld.gov.au/community/disasters-emergencies/disasters",
+      "summary": "Queensland Government information on financial help and support services after a disaster, including grants, event-specific funding pages and wellbeing contacts. The Community Recovery Hotline can give advice.",
+      "reviewed": "2026-10-18",
+      "phone": "1800 173 349",
+      "phoneLabel": "1800 173 349 — Community Recovery Hotline",
+      "caution": "Grants have eligibility criteria. For emergencies call 000."
+    }
+  ]
+}

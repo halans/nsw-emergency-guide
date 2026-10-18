@@ -2,26 +2,88 @@
   {
     "slug": "index",
     "title": "Find the right help. Fast.",
-    "description": "Australian national services and NSW emergency resources, in one independent directory.",
-    "body": "<div className=\"urgent-box\">\n\n**Immediate danger or a life-threatening emergency?**\n\n[Call 000 — Police, Fire or Ambulance](tel:000)\n\nFor NSW flood, storm or tsunami assistance that is not life-threatening: [call NSW SES on 132 500](tel:132500).\n\n</div>\n\n## What do you need?\n\n<div className=\"quick-grid\">\n<a href=\"/urgent-help\"><strong>Urgent help ↗</strong><span>Emergency calls, police assistance, poisons and nurse advice.</span></a>\n<a href=\"/warnings\"><strong>Warnings & conditions ↗</strong><span>HazardWatch, Hazards Near Me, BOM, fire incidents and roads.</span></a>\n<a href=\"/bushfire\"><strong>Bushfire readiness ↗</strong><span>NSW RFS, fire danger ratings and MyFirePlan.</span></a>\n<a href=\"/bird-flu\"><strong>Bird flu & animals ↗</strong><span>Official H5 guidance and animal-disease reporting.</span></a>\n<a href=\"/health\"><strong>Health & outbreaks ↗</strong><span>Flu, COVID-19, RSV, vaccination and public health contacts.</span></a>\n<a href=\"/crisis-support\"><strong>Crisis & personal safety ↗</strong><span>Mental health, violence support and help for young people.</span></a>\n<a href=\"/recovery\"><strong>After a disaster ↗</strong><span>Recovery assistance, temporary housing and legal help.</span></a>\n</div>\n\n## Prepare before you need help\n\n[Build a household plan](/prepare), [plan for animals](/animals), and [find accessible or language support](/accessible-help). Keep important contacts somewhere you can reach without power or internet.\n\n## Four useful starting points\n\n{{resources:myfireplan,hazardwatch,rfs,birdflu}}\n\n<div className=\"scope-note\">\n\n**Independent directory. Not a live alert service.** Content reviewed 14 October 2026. Open official sources for current warnings, eligibility, opening hours and instructions. Do not use this site to decide whether an area is safe. [About this directory](/about) · [Full source register](/sources).\n\n</div>"
+    "description": "Australian national services and {{state}} emergency resources, in one independent directory.",
+    "stateNote": true,
+    "stateBlocks": {
+      "ses-line": {
+        "NSW": "For NSW flood, storm or tsunami assistance that is not life-threatening: [call NSW SES on 132 500](tel:132500).",
+        "*": "For {{state}} flood or storm assistance that is not life-threatening: [call {{term:ses}} on {{phone:ses}}](tel:{{tel:ses}})."
+      },
+      "warnings-tile": {
+        "NSW": "HazardWatch, Hazards Near Me, BOM, fire incidents and roads.",
+        "*": "{{term:warnings}}, BOM weather warnings and official incident information."
+      },
+      "bushfire-tile": {
+        "NSW": "NSW RFS, fire danger ratings and MyFirePlan.",
+        "*": "Fire authority information, fire danger ratings and household planning."
+      },
+      "recovery-tile": {
+        "NSW": "Recovery assistance, temporary housing and legal help.",
+        "*": "Recovery assistance and support after a disaster."
+      }
+    },
+    "body": "<div className=\"urgent-box\">\n\n**Immediate danger or a life-threatening emergency?**\n\n[Call 000 — Police, Fire or Ambulance](tel:000)\n\n{{state-block:ses-line}}\n\n</div>\n\n## What do you need?\n\n<div className=\"quick-grid\">\n<a href=\"/urgent-help\"><strong>Urgent help ↗</strong><span>Emergency calls, police assistance, poisons and nurse advice.</span></a>\n<a href=\"/warnings\"><strong>Warnings & conditions ↗</strong><span>{{state-block:warnings-tile}}</span></a>\n<a href=\"/bushfire\"><strong>Bushfire readiness ↗</strong><span>{{state-block:bushfire-tile}}</span></a>\n<a href=\"/bird-flu\"><strong>Bird flu & animals ↗</strong><span>Official H5 guidance and animal-disease reporting.</span></a>\n<a href=\"/health\"><strong>Health & outbreaks ↗</strong><span>Flu, COVID-19, RSV, vaccination and public health contacts.</span></a>\n<a href=\"/crisis-support\"><strong>Crisis & personal safety ↗</strong><span>Mental health, violence support and help for young people.</span></a>\n<a href=\"/recovery\"><strong>After a disaster ↗</strong><span>{{state-block:recovery-tile}}</span></a>\n</div>\n\n## Prepare before you need help\n\n[Build a household plan](/prepare), [plan for animals](/animals), and [find accessible or language support](/accessible-help). Keep important contacts somewhere you can reach without power or internet.\n\n## Useful starting points\n\n{{resources:myfireplan,role:warnings,role:fire,birdflu}}\n\n<div className=\"scope-note\">\n\n**Independent directory. Not a live alert service.** Records were reviewed between 14 and 18 October 2026; each card shows its own review date. Open official sources for current warnings, eligibility, opening hours and instructions. Do not use this site to decide whether an area is safe. [About this directory](/about) · [Full source register](/sources).\n\n</div>"
   },
   {
     "slug": "urgent-help",
     "title": "Urgent help & essential numbers",
     "description": "Know which number to call, and when to use a non-emergency service.",
-    "body": "For an immediate or life-threatening emergency, call **000**. Ask for Police, Fire or Ambulance, give your exact location and follow the call-taker’s instructions. Do not delay an emergency call to browse this directory.\n\n## Emergency response\n\n{{resources:triple-zero,ses}}\n\n## Police assistance and health advice\n\nThese are not substitutes for emergency response. If someone is seriously ill or injured, or a crime is happening now, call **000**.\n\n{{resources:police,poisons,healthdirect}}\n\n## If a voice call is not accessible\n\n[Accessible emergency calls and relay options](/accessible-help) explains 106 and links to the National Relay Service. **106 is for TTY/TDD emergency calls, not ordinary SMS.**\n\n## Crisis support\n\nFor emotional distress, mental-health support or family/sexual violence support, see [crisis and personal safety](/crisis-support). If someone’s life is in immediate danger, call **000**."
+    "roles": [
+      "ses",
+      "police"
+    ],
+    "stateNote": true,
+    "body": "For an immediate or life-threatening emergency, call **000**. Ask for Police, Fire or Ambulance, give your exact location and follow the call-taker’s instructions. Do not delay an emergency call to browse this directory.\n\n## Emergency response\n\n{{resources:triple-zero,role:ses}}\n\n## Police assistance and health advice\n\nThese are not substitutes for emergency response. If someone is seriously ill or injured, or a crime is happening now, call **000**.\n\n{{resources:role:police,poisons,healthdirect}}\n\n## If a voice call is not accessible\n\n[Accessible emergency calls and relay options](/accessible-help) explains 106 and links to the National Relay Service. **106 is for TTY/TDD emergency calls, not ordinary SMS.**\n\n## Crisis support\n\nFor emotional distress, mental-health support or family/sexual violence support, see [crisis and personal safety](/crisis-support). If someone’s life is in immediate danger, call **000**."
   },
   {
     "slug": "warnings",
     "title": "Warnings, roads & evacuation",
     "description": "Go directly to official current information. This page does not display live alerts.",
-    "body": "**No live warnings are reproduced here.** Open the official service, choose the right location and hazard, and read the full warning and issue time. A blank map does not mean an area is safe.\n\n## Hazard maps and local notifications\n\n{{resources:hazardwatch,hazards-near-me,rfs-incidents,ses-during}}\n\n## Weather and roads\n\n{{resources:bom,bom-phone,traffic}}\n\n## Evacuation centres\n\n{{resources:evacuation}}\n\nCentres and safe routes change. Do not travel to an assumed centre based on an old screenshot, saved copy or this directory. Follow current emergency-service directions.\n\n## Understand warning levels\n\nThe NSW emergency hub explains three levels: **Advice**, **Watch and Act**, and **Emergency Warning**. Read the action statement, not just the colour or level. Different hazards and locations require different actions.\n\nSource: [NSW Government — emergencies and warning information](https://www.nsw.gov.au/emergency).\n\n## Do not rely on one channel\n\nUse relevant agency websites and apps and local emergency broadcasts. Power, mobile coverage and internet access can fail. Follow [Get Ready NSW](https://www.nsw.gov.au/emergency/get-ready) to prepare communication backups."
+    "roles": [
+      "warnings",
+      "ses"
+    ],
+    "stateNote": true,
+    "stateBlocks": {
+      "ses-card": {
+        "NSW": "",
+        "*": "{{resources:role:ses}}"
+      },
+      "evacuation": {
+        "NSW": "## Evacuation centres\n\n{{resources:evacuation}}\n\nCentres and safe routes change. Do not travel to an assumed centre based on an old screenshot, saved copy or this directory. Follow current emergency-service directions.",
+        "*": "## Evacuation centres\n\nCentres and safe routes change. Check official emergency-service channels and local emergency broadcasts for open evacuation centres. Do not travel to an assumed centre based on an old screenshot, saved copy or this directory. Follow current emergency-service directions."
+      },
+      "levels": {
+        "NSW": "## Understand warning levels\n\nThe NSW emergency hub explains three levels: **Advice**, **Watch and Act**, and **Emergency Warning**. Read the action statement, not just the colour or level. Different hazards and locations require different actions.\n\nSource: [NSW Government — emergencies and warning information](https://www.nsw.gov.au/emergency)."
+      },
+      "get-ready": {
+        "NSW": " Follow [Get Ready NSW](https://www.nsw.gov.au/emergency/get-ready) to prepare communication backups."
+      }
+    },
+    "body": "**No live warnings are reproduced here.** Open the official service, choose the right location and hazard, and read the full warning and issue time. A blank map does not mean an area is safe.\n\n## Hazard maps and local notifications\n\n{{resources:role:warnings,hazards-near-me,rfs-incidents,ses-during}}\n\n{{state-block:ses-card}}\n\n## Weather and roads\n\n{{resources:bom,bom-phone,traffic}}\n\n{{state-block:evacuation}}\n\n{{state-block:levels}}\n\n## Do not rely on one channel\n\nUse relevant agency websites and apps and local emergency broadcasts. Power, mobile coverage and internet access can fail.{{state-block:get-ready}}"
   },
   {
     "slug": "bushfire",
     "title": "Bushfire: prepare early",
-    "description": "NSW Rural Fire Service information, fire danger ratings and household planning.",
-    "body": "If there is an immediate threat to life, call **000**. For current incident advice, open [official warnings](/warnings).\n\n## Start with the NSW RFS\n\n{{resources:rfs,rfs-ratings}}\n\nA fire danger rating describes the possible consequences **if a fire starts**. It is different from an incident warning. Check both the rating and current incident advice.\n\n## Make and discuss your plan\n\n{{resources:myfireplan,rfs-plan}}\n\nMyFirePlan is an external NSW RFS tool; this directory does not assess whether your home is defendable. Leaving early is your safest choice. Discuss your plan with everyone in the household, including how to support people who need help and how to move animals safely.\n\n## Keep official information close\n\n[Current fires and warning links](/warnings) · [Household preparation](/prepare) · [Animals and assistance animals](/animals) · [Accessible planning](/accessible-help)."
+    "description": "{{state-block:description}}",
+    "roles": [
+      "fire"
+    ],
+    "stateNote": true,
+    "stateBlocks": {
+      "description": {
+        "NSW": "NSW Rural Fire Service information, fire danger ratings and household planning.",
+        "*": "{{term:fire}} information, fire danger ratings and household planning."
+      },
+      "ratings": {
+        "NSW": "A fire danger rating describes the possible consequences **if a fire starts**. It is different from an incident warning. Check both the rating and current incident advice."
+      },
+      "myfireplan": {
+        "NSW": "MyFirePlan is an external NSW RFS tool; this directory does not assess whether your home is defendable. Leaving early is your safest choice. ",
+        "*": "Use {{term:fire}} bushfire planning guidance to make your plan. This directory does not assess whether your home is defendable. "
+      }
+    },
+    "body": "If there is an immediate threat to life, call **000**. For current incident advice, open [official warnings](/warnings).\n\n## Start with the {{term:fire}}\n\n{{resources:role:fire,rfs-ratings}}\n\n{{state-block:ratings}}\n\n## Make and discuss your plan\n\n{{resources:myfireplan,rfs-plan}}\n\n{{state-block:myfireplan}}Discuss your plan with everyone in the household, including how to support people who need help and how to move animals safely.\n\n## Keep official information close\n\n[Current fires and warning links](/warnings) · [Household preparation](/prepare) · [Animals and assistance animals](/animals) · [Accessible planning](/accessible-help)."
   },
   {
     "slug": "bird-flu",
@@ -32,49 +94,130 @@
   {
     "slug": "health",
     "title": "Health, flu & outbreaks",
-    "description": "Official NSW and Australian information on flu, COVID-19, RSV, vaccination and public health.",
-    "body": "<div className=\"scope-note\">\n\n**Medical emergency?** Call **000**. This page links to official health information and is not medical advice.\n\n</div>\n\n## Unwell and unsure what to do?\n\n{{resources:healthdirect}}\n\n## Flu, COVID-19 and RSV\n\nNSW Health’s respiratory illness guidance centres on vaccination, staying home when unwell, wearing a mask if you must go out, and avoiding crowded or poorly ventilated spaces. It also suggests considering a rapid antigen test before visiting people at higher risk, and making a plan with your doctor if you are at higher risk of severe illness.\n\n{{resources:nsw-respiratory,covid-info}}\n\n## Vaccination\n\nAsk your GP, pharmacist or Aboriginal Medical Service which vaccines and timing suit you. Eligibility for free vaccines changes, so check the official pages below rather than a copy here.\n\n{{resources:flu-vaccine,covid-vaccine,nsw-immunisation}}\n\n## Outbreaks and public health\n\n{{resources:nsw-infectious,nsw-phu}}\n\nFor H5 bird flu, which is an animal-disease issue, use [Bird flu & biosecurity](/bird-flu).\n\n## Old numbers and current status\n\nThe former National Coronavirus Helpline (1800 020 080) is no longer in service, but it still appears on older printed material and some websites. Use the healthdirect helpline or your GP instead.\n\nThis directory deliberately does **not** reproduce case numbers, outbreak totals, testing or antiviral eligibility, or public health orders. If a new outbreak or pandemic response is announced, follow NSW Health and Australian Government directions."
+    "description": "Official {{state}} and Australian information on flu, COVID-19, RSV, vaccination and public health.",
+    "roles": [
+      "health"
+    ],
+    "stateNote": true,
+    "stateBlocks": {
+      "respiratory": {
+        "NSW": "NSW Health’s respiratory illness guidance centres on vaccination, staying home when unwell, wearing a mask if you must go out, and avoiding crowded or poorly ventilated spaces. It also suggests considering a rapid antigen test before visiting people at higher risk, and making a plan with your doctor if you are at higher risk of severe illness."
+      },
+      "directions": {
+        "NSW": " If a new outbreak or pandemic response is announced, follow NSW Health and Australian Government directions.",
+        "*": " If a new outbreak or pandemic response is announced, follow {{term:health}} and Australian Government directions."
+      }
+    },
+    "body": "<div className=\"scope-note\">\n\n**Medical emergency?** Call **000**. This page links to official health information and is not medical advice.\n\n</div>\n\n## Unwell and unsure what to do?\n\n{{resources:healthdirect}}\n\n## Flu, COVID-19 and RSV\n\n{{state-block:respiratory}}\n\n{{resources:nsw-respiratory,covid-info}}\n\n## Vaccination\n\nAsk your GP, pharmacist or Aboriginal Medical Service which vaccines and timing suit you. Eligibility for free vaccines changes, so check the official pages below rather than a copy here.\n\n{{resources:flu-vaccine,covid-vaccine,nsw-immunisation}}\n\n## Outbreaks and public health\n\n{{resources:role:health,nsw-phu}}\n\nFor H5 bird flu, which is an animal-disease issue, use [Bird flu & biosecurity](/bird-flu).\n\n## Old numbers and current status\n\nThe former National Coronavirus Helpline (1800 020 080) is no longer in service, but it still appears on older printed material and some websites. Use the healthdirect helpline or your GP instead.\n\nThis directory deliberately does **not** reproduce case numbers, outbreak totals, testing or antiviral eligibility, or public health orders.{{state-block:directions}}"
   },
   {
     "slug": "crisis-support",
     "title": "Crisis support & personal safety",
-    "description": "National and NSW services for distress, mental health and violence support.",
-    "body": "**If someone is in immediate danger, call 000.** These services provide support and connection to care, not emergency dispatch.\n\n## Talk to someone\n\n{{resources:lifeline,mental-health,kids}}\n\n## Domestic, family or sexual violence\n\n{{resources:respect}}\n\n**Device safety:** calls, messages and browsing may leave traces. This site does not have a quick-exit feature and cannot clear browser history or records on a phone bill. Use a safer device if possible and follow the service’s own safety guidance.\n\n## Language and relay access\n\nSee [accessible and language support](/accessible-help). For the NSW Mental Health Line, NSW Health lists a TIS National pathway on **131 450**."
+    "description": "National and {{state}} services for distress, mental health and violence support.",
+    "roles": [
+      "mentalHealth"
+    ],
+    "stateNote": true,
+    "stateBlocks": {
+      "tis": {
+        "NSW": " For the NSW Mental Health Line, NSW Health lists a TIS National pathway on **131 450**."
+      }
+    },
+    "body": "**If someone is in immediate danger, call 000.** These services provide support and connection to care, not emergency dispatch.\n\n## Talk to someone\n\n{{resources:lifeline,role:mentalHealth,kids}}\n\n## Domestic, family or sexual violence\n\n{{resources:respect}}\n\n**Device safety:** calls, messages and browsing may leave traces. This site does not have a quick-exit feature and cannot clear browser history or records on a phone bill. Use a safer device if possible and follow the service’s own safety guidance.\n\n## Language and relay access\n\nSee [accessible and language support](/accessible-help).{{state-block:tis}}"
   },
   {
     "slug": "prepare",
     "title": "Make a household emergency plan",
-    "description": "Prepare for NSW fires, floods, storms, heatwaves and other disruptions.",
-    "body": "## Start with official planning resources\n\n{{resources:get-ready,rfs-plan}}\n\nGet Ready NSW organises preparation around **understanding your risk**, **making an emergency plan** and **packing an emergency kit**. Use the official guidance for the hazard, location and needs of your household.\n\n## Discuss these needs before an emergency\n\n- Who needs help, and who can provide it if the usual carer is unavailable?\n- Where will you go, how will you travel, and what is your backup route?\n- How will you receive warnings and contact people if power or mobile service fails?\n- What medicines, documents, equipment and supplies need to leave with you?\n- How will you move pets, livestock or assistance animals safely?\n\nThese are planning prompts, not an evacuation order or a complete kit specification. Use the agency checklists below and review your plan when your circumstances change.\n\n## Choose the relevant pathway\n\n[Bushfire planning and MyFirePlan](/bushfire) · [Flood, storm and tsunami guidance](https://www.ses.nsw.gov.au/during-emergency) · [Disability and accessible planning](/accessible-help) · [Animal planning](/animals).\n\n## Save essential contacts\n\nPrint the [urgent-help page](/urgent-help) and your household's plan. The Site's page menu offers PDF export for printing, or use your browser's Print function. A printout is a backup reference; current warnings still come from official services."
+    "description": "Prepare for {{state}} fires, floods, storms, heatwaves and other disruptions.",
+    "roles": [
+      "ses",
+      "fire"
+    ],
+    "stateNote": true,
+    "stateBlocks": {
+      "get-ready": {
+        "NSW": "Get Ready NSW organises preparation around **understanding your risk**, **making an emergency plan** and **packing an emergency kit**. Use the official guidance for the hazard, location and needs of your household.",
+        "*": "Use {{term:ses}} and {{term:fire}} planning guidance for the hazards, location and needs of your household.\n\n{{resources:role:ses,role:fire}}"
+      },
+      "pathways": {
+        "NSW": "[Bushfire planning and MyFirePlan](/bushfire) · [Flood, storm and tsunami guidance](https://www.ses.nsw.gov.au/during-emergency) · [Disability and accessible planning](/accessible-help) · [Animal planning](/animals).",
+        "*": "[Bushfire planning](/bushfire) · [Disability and accessible planning](/accessible-help) · [Animal planning](/animals)."
+      },
+      "checklists": {
+        "NSW": "Use the agency checklists below and review your plan when your circumstances change.",
+        "*": "Use the official planning guidance above and review your plan when your circumstances change."
+      }
+    },
+    "body": "## Start with official planning resources\n\n{{resources:get-ready,rfs-plan}}\n\n{{state-block:get-ready}}\n\n## Discuss these needs before an emergency\n\n- Who needs help, and who can provide it if the usual carer is unavailable?\n- Where will you go, how will you travel, and what is your backup route?\n- How will you receive warnings and contact people if power or mobile service fails?\n- What medicines, documents, equipment and supplies need to leave with you?\n- How will you move pets, livestock or assistance animals safely?\n\nThese are planning prompts, not an evacuation order or a complete kit specification. {{state-block:checklists}}\n\n## Choose the relevant pathway\n\n{{state-block:pathways}}\n\n## Save essential contacts\n\nPrint the [urgent-help page](/urgent-help) and your household's plan. The Site's page menu offers PDF export for printing, or use your browser's Print function. A printout is a backup reference; current warnings still come from official services."
   },
   {
     "slug": "accessible-help",
     "title": "Accessible help & language support",
     "description": "Emergency relay options and preparation resources for different access needs.",
-    "body": "## Emergency calls without a standard voice call\n\n{{resources:relay}}\n\n**Do not text 106 from an ordinary mobile phone.** The 106 number is for TTY/TDD. The official AccessHub page explains current NRS Chat, SMS Relay, NRS Captions, Voice Relay and TTY pathways, including registration and service limitations. Check and practise the appropriate pathway before an emergency.\n\nVideo Relay is not recommended for emergencies: operating hours are limited and emergency calls cannot be identified and prioritised in the same way. Some internet/mobile relay pathways may not identify your location; be ready to supply it.\n\n## Tailor your preparation\n\n{{resources:accessibility}}\n\nInclude transport, communication, medicines, carers, assistance animals and backup power for essential equipment in your own plan. Use the linked specialist resources rather than treating this page as a complete accessibility plan.\n\n## Interpreting for support services\n\n{{resources:tis}}\n\nThe listed TIS pathway is verified for the NSW Mental Health Line. Other services may have their own interpreter arrangements and eligibility. For immediate danger, call **000** rather than waiting for an advice-line connection."
+    "stateNote": true,
+    "stateBlocks": {
+      "tis": {
+        "NSW": "The NSW TIS pathway is verified for the NSW Mental Health Line. Other services may have their own interpreter arrangements and eligibility. ",
+        "*": "Services may have their own interpreter arrangements and eligibility. "
+      },
+      "specialist": {
+        "NSW": "Use the linked specialist resources rather than treating this page as a complete accessibility plan.",
+        "*": "Use specialist disability and access resources rather than treating this page as a complete accessibility plan."
+      }
+    },
+    "body": "## Emergency calls without a standard voice call\n\n{{resources:relay}}\n\n**Do not text 106 from an ordinary mobile phone.** The 106 number is for TTY/TDD. The official AccessHub page explains current NRS Chat, SMS Relay, NRS Captions, Voice Relay and TTY pathways, including registration and service limitations. Check and practise the appropriate pathway before an emergency.\n\nVideo Relay is not recommended for emergencies: operating hours are limited and emergency calls cannot be identified and prioritised in the same way. Some internet/mobile relay pathways may not identify your location; be ready to supply it.\n\n## Tailor your preparation\n\n{{resources:accessibility}}\n\nInclude transport, communication, medicines, carers, assistance animals and backup power for essential equipment in your own plan. {{state-block:specialist}}\n\n## Interpreting for support services\n\n{{resources:tis-national,tis}}\n\n{{state-block:tis}}For immediate danger, call **000** rather than waiting for an advice-line connection."
   },
   {
     "slug": "animals",
     "title": "Pets, livestock & assistance animals",
     "description": "Include animals in your emergency plan before conditions deteriorate.",
-    "body": "## Make animal arrangements early\n\n{{resources:get-ready-animals,pets,assistance-animals}}\n\nCheck current evacuation-centre arrangements and identify suitable alternatives for animals. Assistance animals have distinct access protections; use the linked SES guidance for those arrangements. Never re-enter an unsafe location to retrieve an animal.\n\n## Sick or dead birds and wildlife\n\nFor suspected bird flu, [open the official H5 reporting guidance](/bird-flu). Do not touch or closely approach sick or dead birds or other animals. The Emergency Animal Disease Hotline is **1800 675 888**.\n\n## Related information\n\n[Evacuation and road conditions](/warnings) · [Household plan](/prepare) · [Accessible planning](/accessible-help)."
+    "stateNote": true,
+    "stateBlocks": {
+      "assistance-animals": {
+        "NSW": "Assistance animals have distinct access protections; use the linked SES guidance for those arrangements. ",
+        "*": "Assistance animals have distinct access protections. "
+      }
+    },
+    "body": "## Make animal arrangements early\n\n{{resources:get-ready-animals,pets,assistance-animals}}\n\nCheck current evacuation-centre arrangements and identify suitable alternatives for animals. {{state-block:assistance-animals}}Never re-enter an unsafe location to retrieve an animal.\n\n## Sick or dead birds and wildlife\n\nFor suspected bird flu, [open the official H5 reporting guidance](/bird-flu). Do not touch or closely approach sick or dead birds or other animals. The Emergency Animal Disease Hotline is **1800 675 888**.\n\n## Related information\n\n[Evacuation and road conditions](/warnings) · [Household plan](/prepare) · [Accessible planning](/accessible-help)."
   },
   {
     "slug": "recovery",
     "title": "Recovery, housing & legal help",
-    "description": "NSW services to help after a disaster or emergency.",
-    "body": "## Start with recovery support\n\n{{resources:service-nsw}}\n\nGrants, eligibility and application windows vary by declared event, location and circumstances. This directory does not promise funding or list amounts that may expire. Use current Service NSW advice.\n\n## Accommodation and housing\n\n{{resources:housing}}\n\nAn evacuation centre is not the same as a recovery centre or temporary housing. For immediate evacuation information, open [current official warning and centre links](/warnings).\n\n## Legal support after a disaster\n\n{{resources:legal}}\n\nKeep relevant documents where safe to do so and seek advice suited to your circumstances. This directory does not provide legal advice.\n\n## Emotional support\n\nRecovery can be difficult long after the immediate danger has passed. [Crisis and mental-health support](/crisis-support) is available alongside practical assistance."
+    "description": "{{state}} services to help after a disaster or emergency.",
+    "roles": [
+      "recovery"
+    ],
+    "stateNote": true,
+    "stateBlocks": {
+      "advice": {
+        "NSW": " Use current Service NSW advice.",
+        "*": " Use current official advice."
+      },
+      "housing": {
+        "NSW": "## Accommodation and housing\n\n{{resources:housing}}\n\nAn evacuation centre is not the same as a recovery centre or temporary housing. For immediate evacuation information, open [current official warning and centre links](/warnings).",
+        "*": "An evacuation centre is not the same as a recovery centre or temporary housing. For immediate evacuation information, open [current official warning and centre links](/warnings)."
+      },
+      "legal": {
+        "NSW": "## Legal support after a disaster\n\n{{resources:legal}}\n\nKeep relevant documents where safe to do so and seek advice suited to your circumstances. This directory does not provide legal advice."
+      }
+    },
+    "body": "## Start with recovery support\n\n{{resources:role:recovery}}\n\nGrants, eligibility and application windows vary by declared event, location and circumstances. This directory does not promise funding or list amounts that may expire.{{state-block:advice}}\n\n{{state-block:housing}}\n\n{{state-block:legal}}\n\n## Emotional support\n\nRecovery can be difficult long after the immediate danger has passed. [Crisis and mental-health support](/crisis-support) is available alongside practical assistance."
   },
   {
     "slug": "sources",
     "title": "Sources & verification",
     "description": "The complete resource register, with primary-source links and review dates.",
-    "body": "## How this directory was checked\n\nResource names, contact details and summaries were reviewed against government, emergency-service or service-provider pages on **14 October 2026**. Hours appear only where supported by the cited research. A review date is not a guarantee of continuing accuracy or current service availability.\n\nEach entry links directly to its official source. MyFirePlan, NSW RFS, HazardWatch and birdflu.gov.au are included explicitly. The bird flu short address redirects to DAFF’s H5 campaign.\n\nThe source project includes machine-readable resource data, research notes and test reports. You can also download the [resource register as JSON](/resources.json).\n\n## Full register\n\n{{all-resources}}\n\n## Technical references\n\n[Blume quickstart](https://useblume.dev/docs/quickstart) · [Blume deployment](https://useblume.dev/docs/deployment) · [Cloudflare Pages direct upload](https://developers.cloudflare.com/pages/get-started/direct-upload/) · [Cloudflare Workers static assets](https://developers.cloudflare.com/workers/static-assets/).\n\n## Maintaining accuracy\n\nReview urgent phone numbers and URLs regularly and after any agency restructure or announced service change. Treat a network failure during link checking as unverified, not proof that a service has closed. Check changed content manually before changing the directory."
+    "stateBlocks": {
+      "explicit": {
+        "NSW": " MyFirePlan, NSW RFS, HazardWatch and birdflu.gov.au are included explicitly."
+      }
+    },
+    "body": "## How this directory was checked\n\nResource names, contact details and summaries were reviewed against government, emergency-service or service-provider pages. Records were reviewed between 14 and 18 October 2026; each card shows its own review date. Hours appear only where supported by the cited research. A review date is not a guarantee of continuing accuracy or current service availability.\n\nEach entry links directly to its official source.{{state-block:explicit}} The bird flu short address redirects to DAFF’s H5 campaign.\n\nThe source project includes machine-readable resource data, research notes and test reports. You can also download the [resource register as JSON](/resources.json).\n\n## Full register\n\n{{all-resources}}\n\n## Technical references\n\n[Blume quickstart](https://useblume.dev/docs/quickstart) · [Blume deployment](https://useblume.dev/docs/deployment) · [Cloudflare Pages direct upload](https://developers.cloudflare.com/pages/get-started/direct-upload/) · [Cloudflare Workers static assets](https://developers.cloudflare.com/workers/static-assets/).\n\n## Maintaining accuracy\n\nReview urgent phone numbers and URLs regularly and after any agency restructure or announced service change. Treat a network failure during link checking as unverified, not proof that a service has closed. Check changed content manually before changing the directory."
   },
   {
     "slug": "about",
     "title": "About this directory",
     "description": "An independent reference, not an emergency service or live warning feed.",
-    "body": "## Purpose and scope\n\nEmergency Ready brings together Australian national contacts and NSW emergency resources. NSW-specific numbers, planning resources and recovery pathways are labelled. It is not a complete directory of every state, council or utility service.\n\n## Important limitations\n\n- This site is **independent** and is not operated or endorsed by government or the linked services.\n- It does not receive emergency requests, dispatch help, provide medical/legal advice or assess whether a route or location is safe.\n- It does not display live warnings. Use official current sources and emergency-service directions.\n- Links, hours, eligibility and service arrangements can change after the review date.\n- For immediate danger or a life-threatening emergency, call **000**.\n\n## Privacy and safety\n\nThe site has no analytics, advertising, account signup, embedded third-party maps or AI advice assistant. Search runs locally in your browser after its index loads. Fonts are hosted with the site. Hosting providers can still process ordinary request logs, and external resources have their own privacy policies.\n\nYour browser may remember visits and preferences, and device/network records may remain. This is **not** a private browsing or quick-exit tool. See [personal safety considerations](/crisis-support).\n\n## Offline and printing\n\nImportant content is static HTML and can be read with JavaScript disabled. Search and mobile drawer interactions need JavaScript; an always-visible page directory is provided below for a no-script fallback. The deployed site does not install a service worker or promise offline access. Save or print essential details in advance and open current official warnings when connected.\n\n## Page directory\n\n[Start](/) · [Urgent help](/urgent-help) · [Warnings](/warnings) · [Bushfire](/bushfire) · [Bird flu](/bird-flu) · [Health & outbreaks](/health) · [Crisis support](/crisis-support) · [Prepare](/prepare) · [Accessible help](/accessible-help) · [Animals](/animals) · [Recovery](/recovery) · [Sources](/sources).\n\n## Corrections and maintenance\n\nTo report a wrong, missing or out-of-date contact or link, open an issue on the project’s [GitHub repository](https://github.com/halans/nsw-emergency-guide/issues). Do not include personal or sensitive information, and do not use GitHub to ask for emergency help: call **000**. The site itself has no backend or reporting inbox. Maintainers can edit the resource register and page templates, run the documented checks and rebuild.\n\n[Sources and review policy](/sources)."
+    "body": "## Purpose and scope\n\nEmergency Ready brings together Australian national contacts and {{state}} emergency resources. {{state}}-specific numbers, planning resources and recovery pathways are labelled. It is not a complete directory of every state, council or utility service. Pages on urgent help, warnings, bushfire, preparing, health, crisis support and recovery end with core services for the other states and territories, and the [sources page](/sources) lists every resource in this build.\n\n## Important limitations\n\n- This site is **independent** and is not operated or endorsed by government or the linked services.\n- It does not receive emergency requests, dispatch help, provide medical/legal advice or assess whether a route or location is safe.\n- It does not display live warnings. Use official current sources and emergency-service directions.\n- Links, hours, eligibility and service arrangements can change after the review date.\n- For immediate danger or a life-threatening emergency, call **000**.\n\n## Privacy and safety\n\nThe site has no analytics, advertising, account signup, embedded third-party maps or AI advice assistant. Search runs locally in your browser after its index loads. Fonts are hosted with the site. Hosting providers can still process ordinary request logs, and external resources have their own privacy policies.\n\nYour browser may remember visits and preferences, and device/network records may remain. This is **not** a private browsing or quick-exit tool. See [personal safety considerations](/crisis-support).\n\n## Offline and printing\n\nImportant content is static HTML and can be read with JavaScript disabled. Search and mobile drawer interactions need JavaScript; an always-visible page directory is provided below for a no-script fallback. The deployed site does not install a service worker or promise offline access. Save or print essential details in advance and open current official warnings when connected.\n\n## Page directory\n\n[Start](/) · [Urgent help](/urgent-help) · [Warnings](/warnings) · [Bushfire](/bushfire) · [Bird flu](/bird-flu) · [Health & outbreaks](/health) · [Crisis support](/crisis-support) · [Prepare](/prepare) · [Accessible help](/accessible-help) · [Animals](/animals) · [Recovery](/recovery) · [Sources](/sources).\n\n## Corrections and maintenance\n\nTo report a wrong, missing or out-of-date contact or link, open an issue on the project’s [GitHub repository](https://github.com/halans/nsw-emergency-guide/issues). Do not include personal or sensitive information, and do not use GitHub to ask for emergency help: call **000**. The site itself has no backend or reporting inbox. Maintainers can edit the resource register and page templates, run the documented checks and rebuild.\n\n[Sources and review policy](/sources)."
   }
 ]

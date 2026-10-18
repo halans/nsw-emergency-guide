@@ -1,0 +1,56 @@
+{
+  "code": "NT",
+  "evidence": [
+    {
+      "id": "nt-ses",
+      "url": "https://pfes.nt.gov.au/nt-emergency-service-general-enquiries",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page (also /node/340 and /emergency-service, same content)",
+      "observed": "Page titled NT Emergency Service General Enquiries on the NTPFES site. Gives 132 500 for help during floods, storms or cyclones and says to save 000 for other emergencies. Northern HQ 08 8922 3630 and Southern HQ 08 8951 9300 appear under business hours, plus ntes@pfes.nt.gov.au. No hours stated for 132 500."
+    },
+    {
+      "id": "nt-fire",
+      "url": "https://pfes.nt.gov.au/fire-and-rescue-service",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page; number and hours cross-checked on https://pfes.nt.gov.au/contact-us",
+      "observed": "NTFRS page lists Fire Incident Map, NTFAST, fire safety, station profiles, publications. Fire assistance 08 8999 3473 labelled non-emergencies, with 'in emergencies always dial 000'. contact-us page lists the same number under '24 hour assistance lines for non-emergencies'."
+    },
+    {
+      "id": "nt-fire-incident-map",
+      "url": "https://pfes.nt.gov.au/fire-and-rescue-service/fire-incident-map",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page",
+      "observed": "Describes itself as the single website for NTFRS incident information and warnings. Shows incident types beyond fire and BushfiresNT warning levels. Not all-hazards. States it updates about every 10 to 15 minutes. Does not mention SecureNT."
+    },
+    {
+      "id": "nt-police",
+      "url": "https://pfes.nt.gov.au/online-services/police-contacts",
+      "checked": "2026-10-18",
+      "method": "WebFetch full page; number and hours cross-checked on https://pfes.nt.gov.au/contact-us",
+      "observed": "Says 'For police assistance where there is no immediate danger please call 131444'. Lists local station numbers and 000 for emergencies. contact-us lists 131 444 under 24 hour assistance lines for non-emergencies."
+    }
+  ],
+  "unverified": [
+    {
+      "role": "warnings",
+      "why": "The all-hazards official warnings site appears to be SecureNT (https://securent.nt.gov.au/, alerts at https://securent.nt.gov.au/alerts). It returns 403 to automated requests, so it was not opened. NTFRS pages link to securent.nt.gov.au without describing it, and the NTFRS bushfire safety page confirms that link exists. Only the fire-focused NTFRS Fire Incident Map is recorded. Manual check needed before adding SecureNT as a record."
+    },
+    {
+      "role": "health",
+      "why": "NT Health (health.nt.gov.au) returns 403 to automated requests. Search results suggested https://health.nt.gov.au/public-health-notifiable-diseases and the Centre for Disease Control pages, but none were opened. Manual check needed."
+    },
+    {
+      "role": "mentalHealth",
+      "why": "nt.gov.au (https://nt.gov.au/wellbeing/mental-health/24-hour-mental-health-hotlines) returns 403 to automated requests. Search snippets indicate an NT Mental Health Line (CATT) but the number was not confirmed on an official page, so none is recorded. Manual check needed."
+    },
+    {
+      "role": "recovery",
+      "why": "nt.gov.au and securent.nt.gov.au return 403 to automated requests, and search found only news and ministerial releases. No NT recovery page was opened. Manual check needed."
+    },
+    {
+      "role": "fire (Bushfires NT)",
+      "why": "Bushfires NT (nt.gov.au/emergency/bushfire/managing/bushfires-nt, denr/depws pages) returns 403 to automated requests. The fire role is filled by NTFRS instead. Bushfires NT is the rural bushfire body, so a manual check could add a separate record."
+    }
+  ],
+  "termsNote": "health and mentalHealth terms come from search-result snippets only (nt.gov.au and health.nt.gov.au returned 403), so treat them as provisional. recovery has no verified agency name. warnings term is partial: the verified page is fire-only (see unverified)."
+}
