@@ -50,7 +50,7 @@ Evidence for each state goes in `research/states/<CODE>.json` (URL, date checked
 
 ## Page template
 
-Each page has `slug`, `title`, `description`, `body`, and optionally `roles`, `stateBlocks` and `stateNote`. Use `{{resources:id-one,id-two}}` to render selected resource cards; `{{all-resources}}` renders every record visible in the build. A list shows only national and main-state records, so other states' ids are skipped.
+Each page has `slug`, `title`, `description`, `body`, and optionally `roles`, `stateBlocks` and `stateNote`. Use `{{resources:id-one,id-two}}` to render selected resource cards; `{{all-resources}}` renders every record visible in the build, grouped under a `##` heading per jurisdiction (national services, then the main state, then the other states in the fixed state order; a state with no visible records is left out), and `{{register-nav}}` renders the matching "Jump to:" links (one per group heading, using the heading text as the anchor). A list shows only national and main-state records, so other states' ids are skipped.
 
 State-aware syntax, usable in `title`, `description` and `body`:
 
